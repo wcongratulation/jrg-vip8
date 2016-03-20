@@ -2,4 +2,4 @@
 
 Show me your code!
 
-- 课程表[./课程表.html]
+- [课程表](./课程表.html)
