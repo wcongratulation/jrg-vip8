@@ -10,9 +10,15 @@
          line-height: 1.5;
          color: #333;
          }
+    
 	</style>
 </head>
-<body style="font-family: 微软雅黑;color：#333;font-size: 20px;line-height: 1.5">
+<body bgcolor="#d0d0d0">
+    <h1>代码</h1>
+    <ol>
+    	<li>设置body的字体为微软雅黑，字号16px，行高1.5倍，字体颜色 #333</li>
+    	<li>设置段落颜色#000, 首行缩进两个字体宽度，1.5倍行高</li>
+    </ol>
 	<h1>问题</h1>
 	<ul>
        <li>样式有几种引入方式? <code>link</code> 和 <code>@import</code>有什么区别</li>
@@ -36,16 +42,37 @@
           	<dd>比如可以创建一个主样式表，在主样式表中再引入其他的样式表</dd>
           </dl>
        <li>文件路径<code>../main.css</code> 、<code>./main.css</code>、<code>main.css</code>有什么区别</li>
-
+          <p>“..”表示上一级文件夹，“.”表示当前文件夹，所以../main.css表示的是上一级文件夹下的main.css文件，而./main.css表示的是当前文件夹下的main.css文件，效果等同main.css。</p>
        <li><code>console.log</code>是做什么用的</li>
+       <p>前端开发者可以在js代码的任何部分调用console.log，然后你就可以在浏览器的开发者控制台里，看到这个函数调用的那一瞬间你指定的变量或表达式的值。</p>
        <li><code>text-align: justify</code>是什么</li>
+       <p>text-align 属性规定元素中的文本的水平对齐方式。值justify可以使文本的两端都对齐。在两端对齐文本中，文本行的左右两端都放在父元素的内边界上。然后，调整单词和字母间的间隔，使各行的长度恰好相等。</p>
        <li><code>px</code>、<code>em</code>、<code>rem</code>分别是什么？有什么区别？如何使用</li>
+       <ol><li>px</li>
+       <p>像素px是相对于显示器屏幕分辨率而言的。</p>
+       <li>em</li>
+       <p>em相对于当前对象内文本的字体尺寸。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。em会继承父级元素的字体大小。</p>
+       <li>rem</li>
+       <p>rem是CSS3新增的一个相对单位（root em，根em）。使用rem为元素设定字体大小时，仍然是相对大小，但相对的只是HTML根元素。通过它既可以做到<strong>只修改根元素</strong>就成比例地调整所有字体大小，又可以避免字体大小<strong>逐层复合</strong>的连锁反应。</p></ol>
        <li>对chrome 审查元素的功能做个简单的截图介绍</li>
+       <img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/af57d909-5c5e-4774-9485-9a814853077a.png" width="90%" height="90%">
+       <dl>
+       	<dt>Elements</dt>
+       	<dd>这个就是查看、编辑页面上的元素，包括HTML和CSS</dd>
+       	<dt>Console</dt>
+       	<dd>Javascript控制台</dd>
+       	<dt>Network</dt>
+       	<dd>分析当前网络状况</dd>
+       	<dt>Timeline</dt>
+       	<dd>timeline显示执行请求的时间</dd>
+       	<dt>Scripts</dt>
+       	<dd>查看JS文件、调试JS代码</dd>
+       	<dt>Profiles</dt>
+       	<dd>做性能优化的，包括查看CPU执行时间与内存占用</dd>
+       	<dt>Audits</dt>
+       	<dd>用于优化前端页面、加速网页加载速度</dd>
+       </dl>
     </ul>
-    <h2>代码</h2>
-    <ol>
-    	<li>设置body的字体为微软雅黑，字号16px，行高1.5倍，字体颜色 #333</li>
-    	<li>设置段落颜色#000, 首行缩进两个字体宽度，1.5倍行高</li>
-    </ol>
+    
 </body>
 </html>
