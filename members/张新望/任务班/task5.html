@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务5</title>
+	<style>
+	p{color: #000;line-height: 1.5;text-indent: 2em;}
+	body{font-family: "微软雅黑";
+         font-size: 20px;
+         line-height: 1.5;
+         color: #333;
+         }
+	</style>
+</head>
+<body style="font-family: 微软雅黑;color：#333;font-size: 20px;line-height: 1.5">
+	<h1>问题</h1>
+	<ul>
+       <li>样式有几种引入方式? <code>link</code> 和 <code>@import</code>有什么区别</li>
+          <p>样式的引入方式：</p>
+          <ol>
+          	<li>最常用的，引入样式表，在样式表中编写样式，引入方式如下：&lt;link href="css/style.css" rel="stylesheet" type="text/css"&gt;</li>
+          	<li>在Html头部用<code><style></style></code>包起来，在这里面编写样式：&lt;style type="text/css"&gt;*{padding: 0;margin: 0}&lt;/style&gt;</li>
+          	<li>在标签里面直接编写行内样式。&lt;div style="color: #333"&gt;&lt;/div&gt;</li>
+          </ol>
+          <p>link和@import的区别：</p>
+          <dl>
+          	<dt><strong>老祖宗的差别</strong></dt>
+          	<dd>link属于XHTML标签，而@import完全是CSS提供的一种方式。link标签除了可以加载CSS外，还可以做很多其它的事情，比如定义RSS，定义rel连接属性等，@import就只能加载CSS了。 </dd>
+          	<dt><strong>加载顺序的差别</strong></dt>
+          	<dd>当一个页面被加载的时候（就是被浏览者浏览的时候），link引用的CSS会同时被加载，而@import引用的CSS会等到页面全部被下载完再被加载。所以有时候浏览@import加载CSS的页面时开始会没有样式（就是闪烁），网速慢的时候还挺明显。 </dd>
+          	<dt><strong>兼容性的差别 </strong></dt>
+          	<dd>由于@import是CSS2.1提出的所以老的浏览器不支持，@import只有在IE5以上的才能识别，而link标签无此问题。</dd>
+          	<dt><strong>使用DOM控制样式时的差别</strong></dt>
+          	<dd>当使用JavaScript控制DOM去改变样式的时候，只能使用link标签，因为@import不是DOM可以控制的。 </dd>
+          	<dt><strong>@import可以在CSS中再次引入其他样式表 </strong></dt>
+          	<dd>比如可以创建一个主样式表，在主样式表中再引入其他的样式表</dd>
+          </dl>
+       <li>文件路径<code>../main.css</code> 、<code>./main.css</code>、<code>main.css</code>有什么区别</li>
+
+       <li><code>console.log</code>是做什么用的</li>
+       <li><code>text-align: justify</code>是什么</li>
+       <li><code>px</code>、<code>em</code>、<code>rem</code>分别是什么？有什么区别？如何使用</li>
+       <li>对chrome 审查元素的功能做个简单的截图介绍</li>
+    </ul>
+    <h2>代码</h2>
+    <ol>
+    	<li>设置body的字体为微软雅黑，字号16px，行高1.5倍，字体颜色 #333</li>
+    	<li>设置段落颜色#000, 首行缩进两个字体宽度，1.5倍行高</li>
+    </ol>
+</body>
+</html>
