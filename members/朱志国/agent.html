@@ -64,20 +64,8 @@
         </a>
     </li>
     
-  <script>
-  $('.item').on('click',function(){ 
-    var url = $(this).attr('data-target');
-    location.href = url;
-    //location.href="http://baidu.com"
-  })
-  $('.btn-bookme').on('click', function(e){ 
-    var url = $(this).attr('data-target');
-    location.href = url;
-    //location.href="http://yuyuewo.com"  
-  })
-  </script>
     
-    <li class="btn-bookme" data-target="contact.html">
+    <li class="item" data-target="contact.html">
     	<div class="photo"><img src="http://pres.vobao.com/Images/V3/hk/ipro_img1.jpg"></div>
         <div class="con">
             <div class="clear">
@@ -208,6 +196,19 @@
         </ul>
     </div>
 </div>
+
+  <script>
+  $('.item').on('click',function(){ 
+    var url = $(this).attr('data-target');
+    location.href = url;
+    //location.href="http://baidu.com"
+  })
+  $('.btn-bookme').on('click', function(e){ 
+    var url = $(this).attr('data-target');
+    location.href = url;
+    //location.href="http://yuyuewo.com"  
+  })
+  </script>
 
 </body>
 </html>
