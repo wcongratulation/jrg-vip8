@@ -1,6 +1,5 @@
 ## HTML2的一些问题及其答案
 
-一些问题02
 1.样式有几种引入方式? link 和 @import有什么区别<br>
 2.文件路径../main.css 、./main.css、main.css有什么区别<br>
 3.console.log是做什么用的<br>
