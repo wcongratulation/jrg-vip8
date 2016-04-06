@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>三列布局1</title>
+	<title>三列布局2</title>
 	<style>
     *{
     	padding: 0;margin: 0;
@@ -10,9 +10,13 @@
     .father{
     	width: 1200px;
     	margin: 0 auto;
+    	
+    	position: relative;
     }
     .aside{
-    	float: left;
+    	position: absolute;
+    	top: 0px;
+    	left: 0px;
 
     	background-color: green;
     	width: 150px;
@@ -20,15 +24,16 @@
 
     }
     .main{
-    	float: left;
+    	margin: 0 auto;
 
     	background-color: red;
-    	margin-left: 10px;
     	width: 880px;
     	min-height: 450px;
     }
     .ad{
-        float: left;
+        position: absolute;
+        top: 0px;
+        right: 0px;
 
     	background-color: green;
     	width: 150px;
