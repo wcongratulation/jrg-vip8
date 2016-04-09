@@ -7,7 +7,7 @@ categories:
  -任务代码展示
 ---
 # 问答
-### ling-height有什么作用
+### line-height有什么作用
 答：line-height属性设置行间的距离（行高）。
 1.对于块级元素，CSS属性line-height指定了元素内部行块的**最小**高度。
 2.对于非替代行内元素，line-height用于计算**行块**的高度。
