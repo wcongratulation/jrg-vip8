@@ -10,4 +10,4 @@ p+p{color:purple;}/*这是兄弟选择器*/
 [title=hi]{color:#8B0000;}/*这是选择title属性值为hi的元素*/
 [title~=hello]{color:#D2691E;}/*这是选择title属性值包含hello的元素*/
 [lang|=en]{color:#FF1493;}/*这是选择lang属性值包含en的元素：中间用连字符分隔*/
-ul~p{color:#00FF00;}/*这是选择前面有ul元素的所有li元素*/
+ul~p{color:#00FF00;}/*这是选择前面有ul元素的所有p元素*/
