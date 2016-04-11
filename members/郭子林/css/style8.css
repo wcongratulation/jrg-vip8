@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* reset */
+*{
+    padding:0;
+    margin:0;
+}
+li{
+    list-style-type:none;
+}
+a{
+    text-decoration:none;
+}
+body{
+    font-family:"微软雅黑", "Arial", "Helvetica", "sans-serif";
+    font-size:16px;
+}
+/* style for homework 8-2*/
+.page{
+    width:80%;
+    margin:0 auto;
+}
+.page .items{
+    width:100%;
+    border-bottom:1px dotted #4E474D;
+    padding:20px;
+}
+.items p{
+    text-indent:2em;
+}
+.items .threesub,.items .threespan,.items .threeli{
+    width:100%;
+    border:1px solid #ccc;
+}
+.items .threesub{
+    text-align:center;
+}
+.items .threespan{
+    font-size:0;
+    text-align: center;
+}
+.items .threespan span,.items .threespan ul li,.items .threeli li{
+    font-size:16px;
+    border:1px solid #7CD2F9;
+}
+.items .threespan ul li{
+    display: inline-block;
+}
+.items .threeli ul{
+    width:246px;
+    margin:0 auto;
+    border:1px solid #f00;
+}
+.items .threeli li{
+    text-align:center;
+     float:left;
+     width:80px;
+ }
+.clearfix:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+
+/* style for homework 8-3*/
