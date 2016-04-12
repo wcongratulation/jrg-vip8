@@ -13,6 +13,7 @@ a{
 body{
     font-family:"微软雅黑", "Arial", "Helvetica", "sans-serif";
     font-size:16px;
+    min-width:700px;
 }
 /* style for homework 8-2*/
 .page{
@@ -61,4 +62,65 @@ body{
     clear: both;
 }
 
-/* style for homework 8-3*/
+/* style for homework 8-3-圣杯布局*/
+.header,.footer{
+    height:30px;
+    background:#f5dead;
+    text-align:center;
+}
+.content{
+    padding:0 220px 0 200px;
+}
+.middle,.left,.right{
+    float:left;
+    height:300px;
+    position:relative;
+}
+.middle{
+    width:100%;
+    background:#1A9C9B;
+}
+.left{
+    width:200px;
+    background:#4169E1;
+    margin-left:-100%;
+    left:-200px;
+}
+.right{
+    width: 220px;
+    background: #0AA301;
+    margin-left:-220px;
+    right:-220px;
+}
+
+/* style for homework 8-3-双飞翼布局*/
+#header,#footer{
+    height:30px;
+    background:#1A9C9B;
+    text-align:center;
+}
+#main{
+    border:1px solid #f00;
+}
+#middle,#left,#right{
+    float:left;
+    height:300px;
+}
+#middle{
+    background:blue;
+    width:100%;
+}
+#middle > #inner{
+    margin:0 250px 0 200px;
+}
+
+#left{
+    width:200px;
+    background:yellow;
+    margin-left:-100%;
+}
+#right{
+    width:250px;
+    background:green;
+    margin-left:-250px;
+}
