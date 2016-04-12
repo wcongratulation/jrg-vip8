@@ -71,8 +71,8 @@ class称为“类”，在CSS中用小写的"."点来选择，class在同一个h
 ID的样式优先级高于class。
 
 #### 块级元素、行内元素是什么？有什么区别？分别对应哪些常用标签？
-块级元素：显示时独自占据一行（<b>/<td>/<a>/<img>）
-行内元素：行内元素会挨个排列，不会出现独占一行的情况。（<h1>/<p>/<ul>/<table>）
+块级元素：显示时独自占据一行（b,td,a,img）
+行内元素：行内元素会挨个排列，不会出现独占一行的情况。（h1,p,ul,table）
 
 #### display: block、display: inline、display: inline-block分别有什么作用
 display: block 元素会显示为块级元素，该元素会独占一行
