@@ -7,7 +7,7 @@
     border-bottom:1px dotted gray;
 }
 .nav{
-    width:89%;
+    width:100%;
     margin:0 auto;
 }
 .sprite{
@@ -18,6 +18,7 @@ ul > li{
     float: left;
 }
 .apple-nav-1{height:37px;width:105px;background-position:0 0;}
+.apple-nav-1:hover{height:37px;width:105px;background-position:0 -38px;}
 .apple-nav-2{height:37px;width:104px;background-position:-105px 0;}
 .apple-nav-3{height:37px;width:104px;background-position:-209px 0;}
 .apple-nav-4{height:37px;width:105px;background-position:-314px 0;}

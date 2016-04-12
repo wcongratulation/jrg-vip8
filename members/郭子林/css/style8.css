@@ -1,7 +1,11 @@
 @charset "UTF-8";
 /* style for homework 8-1-clearfix的理解*/
-{
-
+p{
+    text-indent: 2em;
+    line-height: 30px;
+}
+h3,h4{
+    margin-top:10px;
 }
 /* style for homework 8-2*/
 .page{
