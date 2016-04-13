@@ -7,7 +7,7 @@ p{
 h3,h4{
     margin-top:10px;
 }
-/* style for homework 8-2*/
+/* style for homework 8-2---begin ----*/
 .page{
     width:80%;
     margin:0 auto;
@@ -53,8 +53,9 @@ h3,h4{
     display: block;
     clear: both;
 }
+/*---homework8-2---end---*/
 
-/* style for homework 8-3-圣杯布局*/
+/* style for homework 8-3-圣杯布局--begin----*/
 .header,.footer{
     height:30px;
     background:#f5dead;
@@ -84,8 +85,9 @@ h3,h4{
     margin-left:-220px;
     right:-220px;
 }
+/*---圣杯---end---*/
 
-/* style for homework 8-3-双飞翼布局*/
+/* style for homework 8-3-双飞翼布局--begin---*/
 #header,#footer{
     height:30px;
     background:#1A9C9B;
@@ -112,3 +114,4 @@ h3,h4{
     background:green;
     margin-left:-250px;
 }
+/*--双飞翼--end---*/
