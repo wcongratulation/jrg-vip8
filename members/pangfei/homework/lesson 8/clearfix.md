@@ -18,6 +18,7 @@
 ---
 **content属性**
 content 属性与 :before 及 :after 伪元素配合使用，来插入生成内容。
+
 **说明：**
 该属性用于定义元素之前或之后放置的生成内容。默认地，这往往是*行内内容*，不过该内容创建的框类型可以用属性 display 控制。
 
@@ -63,6 +64,9 @@ clear 属性规定元素的哪一侧不允许其他浮动元素。不论哪一�
 ---
 参考：
 [理解伪元素 :Before 和 :After](http://http://www.igooda.cn/jzjl/20131009384.html)
+
 [CSS 伪元素 (Pseudo-elements)](http://http://www.w3school.com.cn/css/css_pseudo_elements.asp)
+
 [CSS content 属性](http://http://www.w3school.com.cn/cssref/pr_gen_content.asp)
+
 [CSS clear 属性](http://http://www.w3school.com.cn/cssref/pr_class_clear.asp)
