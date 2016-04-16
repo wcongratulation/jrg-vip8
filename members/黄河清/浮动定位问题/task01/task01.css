@@ -28,7 +28,7 @@ ul>li a:hover{
 
 #content{
 	margin: 0 auto; /*使用 margin 0 auto 注意一定要设定宽度*/
-	width: 100%;
+	width: 910px;
 }
 
 .clearfix:after{
