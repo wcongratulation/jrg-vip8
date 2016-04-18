@@ -18,11 +18,6 @@ ul{
 	display: inline-block;
 	margin-left: 20px;
     overflow: hidden;
-
-}
-ul>li>a{
-	text-decoration: none;
-	color: rgb(9,131,9);
 }
 #content{
 	position: relative;
@@ -40,17 +35,21 @@ ul>li>a{
 	border-style: dashed;
 }
 #content>p{padding-left: 40px;}
+ul>li>a{
+	text-decoration: none;
+	color: rgb(9,131,9);
+}
 .tree>li>a::before{
-	content: '+';
+	content: '＋';
+	color: black;
+	margin-right: 5px;
+	font-weight: bolder;
+}
+.tree>li>a:hover::before{
+	content: '－';
 	color: black;
 	margin-right: 5px;
 	font-weight: bolder;
 }
 .has-child>a~ul{display: none;}
-.has-child>a:hover::before{
-	content: '-';
-	color: black;
-	margin-right: 5px;
-	font-weight: bolder;
-}
 .has-child>a:hover~ul{display: block;}

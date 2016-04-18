@@ -9,9 +9,14 @@
             float: left;
             margin-left:10px;
         }
+        span,a{
+            display:inline-block;
+            width:50px;
+            height:30px;
+            vertical-align: bottom;
+        }
         .sprite{
             background:url(img/img.png) no-repeat;
-            display: block;
         }
         .stop:hover{height:32px;width:30px;background-position:-35px -43px;}
         .start{height:33px;width:31px;background-position:0 0;}
@@ -24,9 +29,9 @@
 <body>
 <div class="demo">
     <ul class="clearfix">
-        <li><a class="sprite next" href=""></a>前进</li>
-        <li><a class="sprite start" href=""></a>开始</li>
-        <li><a class="sprite stop" href=""></a>停止</li>
+        <li><span class="sprite next" ></span><a href="">前进</a></li>
+        <li><span class="sprite start" ></span><a href="">开始</a></li>
+        <li><span class="sprite stop" ></span><a href="">停止</a></li>
     </ul>
 </div>
 </body>
