@@ -14,13 +14,14 @@
 .wrapper{
   text-align: center;
   margin-top: 20px;
+  vertical-align:top;             
 }
 
 ul{
   list-style:none;
   display:inline-block;
   border:1px solid #575754;
-  border-radius: 7px;
+  border-radius: 6px;
   box-shadow:0px 1px 2px #7c7c57;
 }
 
@@ -50,5 +51,12 @@ background: -webkit-linear-gradient(top,  #8b8b8b 0%,#707070 50%,#707070 50%,#5e
 background: linear-gradient(to bottom,  #8b8b8b 0%,#707070 50%,#707070 50%,#5e5e5e 50%,#5e5e5e 50%,#5e5e5e 50%,#5e5e5e 50%,#5e5e5e 50%,#5e5e5e 50%,#707070 50%,#707070 50%,#5e5e5e 52%,#777777 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8b8b8b', endColorstr='#777777',GradientType=0 ); /* IE6-9 */
 
+}
+
+ul>li:nth-child(1){
+}
+
+ul>li:nth-last-child(1){
+    border:none;
 }
 
