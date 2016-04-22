@@ -266,9 +266,6 @@ body>#top{
 	text-decoration: none;
 	color: #2563AB;
 }
-#footer .content a:hover{
-	text-decoration: underline;
-}
 
 #footer .content ul{
 	list-style: none;
@@ -280,6 +277,9 @@ body>#top{
 	margin: 10px;
 }
 
+#footer .iconfont{
+	font-size: 36px;
+}
 
 
 
