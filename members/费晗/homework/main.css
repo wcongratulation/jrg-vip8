@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors  ()
+ * @date    2016-04-29
+ * @version $Id$
+ */
+ body,html,ul,li,span,h2,h3,h4,h5,h6,p{
+ 	padding: 0;
+ 	margin: 0;
+    font-family: 16px/1.2 "微软雅黑","Helvetica Neue",Arial,sans-serif;
+    color: #fff;
+    background: url(./imgs/bg.png) repeat;
+ }
+ a{
+ 	text-decoration: none;
+ }
+ li{
+ 	list-style-type: none;
+ }
+ .wrap{
+ 	margin: 0 auto;
+ 	width: 1170px;
+ 	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+ 	background: url(./imgs/big_bg.png) center center no-repeat scroll;
+ }
+ #top{
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	right: 0;
+ 	bottom: 0;
+ 	height: 50px;
+ 	line-height: 50px;
+ 	z-index: 10;
+ 	/*background-color: #041428;
+ 	opacity: 0.8;*/
+ }
+  #top .nav{
+ 	margin: 0 auto;
+ 	width: 1170px;
+ 	text-align: center;
+ 	background-color: #041428;
+ 	opacity: 0.8;
+ }
+
+ #top .nav ul:after{
+ 	content: "";
+ 	display: block;
+ 	clear: both;
+ }
+ #top .nav>ul>li{
+ 	float: left;
+ 	font-size: 16px;
+
+ 	padding-left: 30px;
+ 	padding-right: 30px;
+ }
+ #top .nav>ul>li img{
+ 	margin: 0 90px; 
+ }
+ #top .nav>ul>li a{
+ 	color: #fff;
+ }
+ #header{
+ 	position: relative;
+ }
+  #header h2{
+ 	font-size: 26px;
+ 	color: #0285c3;
+ 	padding-top: 90px; 
+ 	padding-bottom: 40px;
+ 	text-align: center;
+ }
+ #header .course .view-left{
+ 	float: left;
+ 	width: 414px;
+ }
+#header .course .view-left .desp{
+	text-align: right;
+}
+#header .course .view-left .desp .view-img img{
+	width: 414px;
+	width: 330px;
+}
+#header .course .view-left .desp p{
+	font-size: 12px;
+	padding: 5px;
+}
+#header .course .view-left .desp p a{
+	color: #fff;
+}
+.btn{
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #333;
+	background-color: #f4c444;
+	border-radius: 5px;
+}
