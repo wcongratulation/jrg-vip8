@@ -20,11 +20,16 @@
  	text-decoration: none;
  }
 ul,li{
- 	list-style-type: none;
+ 	list-style: none;
  }
  .wrapper{
  	margin: 0 auto;
  	width: 1170px;
+ }
+ .clearfix:after{
+ 	content: "";
+ 	display: block;
+ 	clear: both;
  }
 /* #top > .wrapper{
  	-webkit-background-size: cover;
@@ -38,19 +43,16 @@ ul,li{
  	top: 0;
  	left: 0;
  	right: 0;
- 	height: 50px;
- 	line-height: 50px;
+ 	height: 60px;
+ 	line-height: 60px;
  	text-align: center;
  	z-index: 10;
  }
 #top .wrapper{
+	margin-top: 10px;
 	text-align: center;
 }
-#top ul.nav:after{
- 	content: "";
- 	display: block;
- 	clear: both;
- }
+
 #top ul.nav li{
 	display: inline-block;
  	margin-left: 30px;
@@ -69,11 +71,12 @@ ul,li{
  	position: relative;
  }
  #header h2{
- 	font-size: 35px;
+ 	font-size: 60px;
  	font-family: "宋体";
- 	letter-spacing: 3px;
- 	color: #0285c3;
- 	padding-top: 90px; 
+ /*	letter-spacing: 3px;*/
+ 	color: #00a0e9;
+ 	font-weight: normal;
+ 	padding-top: 80px; 
  	padding-bottom: 40px;
  	text-align: center;
  }
@@ -82,26 +85,70 @@ ul,li{
  	width: 414px;
  }
 #header .course .view-left .desp{
+	float: right;
 	text-align: right;
 }
-#header .course .view-left .desp .view-img img{
+/*#header .course .view-left .desp .view-img img{
 	width: 414px;
-	width: 330px;
-}
+	height: 330px;
+}*/
 #header .course .view-left .desp p{
-	font-size: 12px;
+	font-size: 18px;
 	padding: 5px;
+	color: #8ba0a7;
+	margin-bottom: 4px;
 }
 #header .course .view-left .desp p a{
-	color: #fff;
+	font-size: 12px;
+	color: #8ba0a7;
+}
+#header .course .icon{
+  font-size: 18px;
+  color:#000;
+  padding: 0 10px 0 5px;
+  -webkit-transition: font-size 0.25s ease-out 0s;
+  -moz-transition: font-size 0.25s ease-out 0s;
+  transition: font-size 0.25s ease-out 0s;
+
+}
+#header .course .view-left .desp .btn a{
+	color: #333;
 }
 .btn{
-	display: inline-block;
-	width: 120px;
+	display: block;
+	/*width: 180px;*/
 	height: 40px;
 	line-height: 40px;
-	font-size: 16px;
-	color: #333;
+	font-size: 18px;
+	font-family: "宋体";
+	color: #000;
+/*	font-weight: bold;*/
 	background-color: #f4c444;
 	border-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 25px;
+	margin-left: 50px;
+	margin-right: 10px;
+}
+.split{
+	width: 0;
+	height: 16px;
+	border-left: 1px solid #857032;
+	margin: 0 8px 0 4px;
+}
+#header .course .view-right{
+	float: left;
+	width: 656px;
+	background: url(./imgs/evil.png) no-repeat;
+	z-index: 100;
+}
+#header .course .view-right img{
+
+	z-index: -1;
+}
+#header .course .view-right h3{
+    font-size: 30px;
+    font-family: "宋体";
+    text-align: center;
+    font-weight: normal;
 }
