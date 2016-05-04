@@ -14,6 +14,8 @@ body{
 }
 .header{
     box-shadow: 0 0 11px rgba(0,0,0,0.25);
+    position: relative;
+    z-index: 1;
 }
 .header>.wrapper{
     width: 970px;
@@ -34,6 +36,46 @@ body{
     color: #20B295;
 }
 
+.summary {
+    width: 970px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.summary > .picture{
+    float: left;
+    width: 240px;
+    height: 228px;
+    background: #58C1D3;
+    position: relative;
+    text-align: center;
+    padding-top: 32px;
+}
+.summary > .picture > img{
+    height: 175px;
+    position: absolute;
+    bottom: 0;
+    margin-left: -82px;
+}
+.summary > .picture > p{
+    color: white;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+    margin-left: 20px;
+}
+.summary > .intro{
+    margin-left: 240px;
+    padding-top:  55px;
+    padding-left: 50px;
+    line-height: 35px;
+    background: white;
+    color: rgb(129, 129, 129);
+    font-size: 18px;
+}
+
+
+
     </style>
 </head>
 <body>
@@ -50,7 +92,7 @@ body{
         <div class="summary">
             <div class="picture">
                 <p>09月23日</p>
-                <p>北京|前端开发工程师</p>
+                <p>北京 | 前端开发工程师</p>
                 <img src="http://h5.jobdeer.com/img/avatar/3.png" alt="">
             </div>
             <div class="intro">
