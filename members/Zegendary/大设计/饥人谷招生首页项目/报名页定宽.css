@@ -63,6 +63,24 @@ button:hover{opacity: 0.5}
         margin-top: 100px;
     }
 }
+/*ie8 hack*/
+body{
+    background: url("images/招生页背景1366px.png")\9;
+    background-repeat: no-repeat\9;
+    background-color: #041428\9;
+    width: 100%\9;
+    min-width: 1366px\9;
+}
+.wrapper{
+    width: 1040px\9;
+    margin: 0 auto\9;
+}
+.mainmiddle{
+    margin-top: 100px\9;
+}
+.mainfoot{
+    margin-top: 100px\9;
+}
 /*header部分css样式*/
 .header{ width: 100%;margin-top: 40px;text-align: center}
 .headerleft,.headerright,.headerlogo{display: inline-block;}
