@@ -23,39 +23,46 @@ button:hover{opacity: 0.5}
         width: 1040px;
         margin: 0px auto;
     }
-    .mainbuttom .teacherleft{
-        left: 76px;
-        top: 1690px;
+    .mainmiddle{margin-top: 160px;}
+    .mainfoot{
+        margin-top: 157px;
     }
-    .mainbuttom .teacherright{
-        left: 1321px;
-        top: 1690px;
+    .contactline{
+             width: 257px;
+             height: 141px;
+             background: url("images/line_03.png");
+             display: inline-block;
+             position: relative;
+             top: -44px;
+             left: -19px;
+    }
+    .foot{
+        text-align: center;
+        font-family: 黑体;
+        margin-top: 390px;
     }
 
 }
 
 @media all and (max-width:1439px) {
     body{
-        background: url("images/招生页背景.png");
+        background: url("images/招生页背景1366px.png");
         background-repeat: no-repeat;
         background-color: #041428;
-        width: 1366px;
-        background-position: top,center;
+        width: 100%;
+        min-width: 1366px;
     }
     .wrapper{
         width: 1040px;
-        margin: 0 163px;
+        margin: 0 auto;
     }
-    .mainbuttom .teacherleft{
-        left: 76px;
-        top: 1690px;
+    .mainmiddle{
+        margin-top: 100px;
     }
-    .mainbuttom .teacherright{
-        left: 1235px;
-        top: 1690px;
+    .mainfoot{
+        margin-top: 100px;
     }
 }
-
 /*header部分css样式*/
 .header{ width: 100%;margin-top: 40px;text-align: center}
 .headerleft,.headerright,.headerlogo{display: inline-block;}
@@ -231,6 +238,15 @@ ul.bullet li.active {
     margin: 20px;
     font-family: 微软雅黑;
 }
+.contactline{
+    width: 257px;
+    height: 141px;
+    background: url("images/line1366px.png");
+    display: inline-block;
+    position: relative;
+    top: -64px;
+    left: -19px;
+}
 .toptext button{
     background-color: #f3c504;
     font-size: 27px;
@@ -240,18 +256,8 @@ ul.bullet li.active {
     padding: 4px 20px;
     width: 250px;
 }
-.contactline{
-    width: 257px;
-    height: 141px;
-    background: url("images/line_03.png");
-    display: inline-block;
-    position: relative;
-    top: -44px;
-    left: -19px;
-}
 .toptext button span{float: right}
 /*讲师简介css部分*/
-.mainmiddle{margin-top: 160px;}
 .mainmiddletitle{margin-bottom: 68px}
 .mainmiddle .titlechinese{
     text-align: center;
@@ -390,12 +396,16 @@ ul.bullet li.active {
     width: 157px;
     padding: 0 2px;
 }
-img[class*='teacher']{position: absolute}
-
-/*foot上面部分*/
-.mainfoot{
-    margin-top: 157px;
+img[class*='teacher']{position: relative}
+.mainbuttom .teacherleft{
+    left: -100px;
+    top: 169px;
 }
+.mainbuttom .teacherright{
+    left: 1080px;
+    top: -236px;
+}
+/*foot上面部分*/
 .mainfoot .mainfootleft{
     width: 393px;
     height: 182px;
@@ -454,5 +464,6 @@ img[class*='teacher']{position: absolute}
 .foot{
     text-align: center;
     font-family: 黑体;
-    margin-top: 390px;
+    margin-top: 200px;
+    margin-bottom: 20px;
 }
