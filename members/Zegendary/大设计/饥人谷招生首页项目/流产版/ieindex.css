@@ -13,10 +13,9 @@ button span{font-family: iconfont}
 body{
     background: url("images/招生页背景.png");
     background-repeat: no-repeat;
-    background-position: top,center;
-    background-size: cover;
     background-color: #041428;
     min-width: 1000px;
+
 }
 .wrapper{
     width: 80%;
