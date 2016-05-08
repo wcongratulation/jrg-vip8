@@ -7,19 +7,53 @@
     url('//at.alicdn.com/t/font_1461121317_6831183.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 button span{font-family: iconfont}
+button:hover{opacity: 0.5}
 *{
     margin: 0px;padding: 0px;list-style: none;text-decoration: none;
 }
-body{
-    background: url("images/招生页背景.png");
-    background-repeat: no-repeat;
-    background-color: #041428;
-    width: 1440px;
+@media (min-width: 1440px) {
+    body{
+        background: url("images/招生页背景.png");
+        background-repeat: no-repeat;
+        background-color: #041428;
+        width: 1440px;
+    }
+    .wrapper{
+        width: 1040px;
+        margin: 0 200px;
+    }
+    .mainbuttom .teacherleft{
+        left: 76px;
+        top: 1690px;
+    }
+    .mainbuttom .teacherright{
+        left: 1321px;
+        top: 1690px;
+    }
+
 }
-.wrapper{
-    width: 1040px;
-    margin: 0 200px;
+
+@media all and (max-width:1439px) {
+    body{
+        background: url("images/招生页背景.png");
+        background-repeat: no-repeat;
+        background-color: #041428;
+        width: 1366px;
+    }
+    .wrapper{
+        width: 1040px;
+        margin: 0 163px;
+    }
+    .mainbuttom .teacherleft{
+        left: 76px;
+        top: 1690px;
+    }
+    .mainbuttom .teacherright{
+        right: 76px;
+        top: 1690px;
+    }
 }
+
 /*header部分css样式*/
 .header{ width: 100%;margin-top: 40px;text-align: center}
 .headerleft,.headerright,.headerlogo{display: inline-block;}
@@ -355,14 +389,7 @@ ul.bullet li.active {
     padding: 0 2px;
 }
 img[class*='teacher']{position: absolute}
-.mainbuttom .teacherleft{
-    left: 76px;
-    top: 1690px;
-}
-.mainbuttom .teacherright{
-    left: 1321px;
-    top: 1690px;
-}
+
 /*foot上面部分*/
 .mainfoot{
     margin-top: 157px;
