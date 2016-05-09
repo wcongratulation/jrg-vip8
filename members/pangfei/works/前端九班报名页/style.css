@@ -348,6 +348,10 @@ a{
 	background-color: rgba(88,238,248,0.1);
 }
 
+#teacher-introduction .teacherInfo>h4>a{
+	color: #00A0E9;
+}
+
 #teacher-introduction .teacherInfo>p{
 	width: 586px;
 	font-size: 24px;
