@@ -368,7 +368,7 @@ img[class*='teacher']{position: relative}
 }
 
 /*foot上面部分*/
-.mainfoot{margin-top: 100px;}
+.mainfoot{margin-top: 90px;}
 .mainfoot .mainfootleft{
     width: 373px;
     height: 173px;
@@ -404,7 +404,7 @@ img[class*='teacher']{position: relative}
     height: 57px;
 }
 .mainfoot .mainfootright{
-    width: 500px;
+    width: 475px;
     display: inline-block;
     margin-left: 85px;
 }
@@ -427,5 +427,5 @@ img[class*='teacher']{position: relative}
 .foot {
     text-align: center;
     font-family: 黑体;
-    margin-top: 370px;
+    margin-top: 350px;
 }
