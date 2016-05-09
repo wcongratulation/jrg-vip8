@@ -350,6 +350,7 @@ a{
 
 #teacher-introduction .teacherInfo>h4>a{
 	color: #00A0E9;
+	display: block;
 }
 
 #teacher-introduction .teacherInfo>p{
