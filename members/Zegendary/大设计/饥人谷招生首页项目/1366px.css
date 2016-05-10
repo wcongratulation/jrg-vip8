@@ -280,9 +280,8 @@ ul.bullet li.active {
     color: #00a0e9;
     width: 114px;
     height: 38px;
-    background: rgb(58,114,176);    /*不支持rgba的浏览器*/
     background: rgba(58,114,176,.2);  /*支持rgba的浏览器*/
-    filter:alpha(opacity=20);
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType = 0, startColorstr = #2000a0e9, endColorstr = #2000a0e9)\2; /*IE下的背景透明*/
     display: inline-block;
     text-align: center;
     margin: 2px 0px;
@@ -325,9 +324,8 @@ ul.bullet li.active {
     font-family: "微软雅黑 Light";
     color: #ffffff;
     margin-top: 28px;
-    background: rgb(58,114,176);    /*不支持rgba的浏览器*/
     background: rgba(58,114,176,.2);  /*支持rgba的浏览器*/
-    filter:alpha(opacity=20);
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType = 0, startColorstr = #2000a0e9, endColorstr = #2000a0e9)\2;     /*ie下透明*/
 }
 /*中间轮播部分*/
 .mainbuttom .mainbuttomname{
@@ -336,17 +334,17 @@ ul.bullet li.active {
     font-family: 微软雅黑;
     color: #ffffff;
 }
-.teacherwrapper{
+#teacherwrapper{
     width: 1040px;
     height: 305px;
     overflow: hidden;
 }
-.teacherwrapper>#list{
+#teacherwrapper>#list{
     width: 3120px;
     height: 305px;
     position: relative;
 }
-.teacherwrapper div[class*='teacher']{
+#teacherwrapper div[class*='teacher']{
     width: 200px;
     float: left;
     margin-right: 8px;
@@ -354,14 +352,15 @@ ul.bullet li.active {
     overflow: hidden;
     text-align: center;
 }
-.teacherwrapper div[class*='teacher'] span{
+.mainbuttom img{border: none}
+#eacherwrapper div[class*='teacher'] span{
     display: inline;
     margin-top: 22px;
     font-size: 19px;
     font-family: 微软雅黑;
     color: #00a0e9;
 }
-.teacherwrapper div[class*='teacher'] p{
+#teacherwrapper div[class*='teacher'] p{
     margin-top: 17px;
     font-size: 14px;
     font-family: 微软雅黑;
