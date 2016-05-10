@@ -11,62 +11,21 @@ button:hover{opacity: 0.5}
 *{
     margin: 0px;padding: 0px;list-style: none;text-decoration: none;
 }
-@media (min-width: 1440px) {
-    body{
-        background: url("images/招生页背景.png");
-        background-repeat: no-repeat;
-        background-color: #041428;
-        width: 100%;
-        background-position: top,center;
-    }
-    .wrapper{
-        width: 1040px;
-        margin: 0px auto;
-    }
-    .mainmiddle{margin-top: 160px;}
-    .mainfoot{
-        margin-top: 157px;
-    }
-    .contactline{
-             width: 257px;
-             height: 141px;
-             background: url("images/line_03.png");
-             display: inline-block;
-             position: relative;
-             top: -44px;
-             left: -19px;
-    }
-    .foot{
-        text-align: center;
-        font-family: 黑体;
-        margin-top: 390px;
-    }
-
+body{
+    background: url("images/招生页背景1366px.png");
+    background-repeat: no-repeat;
+    background-color: #041428;
+    width: 100%;
+    min-width: 1366px;
 }
-
-@media all and (max-width:1439px) {
-    body{
-        background: url("images/招生页背景1366px.png");
-        background-repeat: no-repeat;
-        background-color: #041428;
-        width: 100%;
-        min-width: 1366px;
-    }
-    .wrapper{
-        width: 1040px;
-        margin: 0 auto;
-    }
-    .mainmiddle{
-        margin-top: 100px;
-    }
-    .mainfoot{
-        margin-top: 100px;
-    }
+.wrapper{
+    width: 1040px;
+    margin: 0 auto;
 }
 /*header部分css样式*/
-.header{ width: 100%;margin-top: 40px;text-align: center}
+.header{ width: 100%;margin-top: 38px;text-align: center}
 .headerleft,.headerright,.headerlogo{display: inline-block;}
-.headerleft,.headerright{width: 320px}
+.headerleft,.headerright{width: 304px}
 .headerleft li{
     display: inline-block;
     float: right;
@@ -78,7 +37,7 @@ button:hover{opacity: 0.5}
     margin-right: 15%;
 }
 .headerleft>ul>li>a{
-    font-size: 16px;
+    font-size: 15px;
     font-family: 黑体;
     font-weight:bold;
 }
@@ -86,21 +45,21 @@ button:hover{opacity: 0.5}
 .headerright a{color: white}
 .header>.headerlogo{  width: 15%;margin: 0 6% }
 .headerright>ul>li>a{
-    font-size: 16px;
+    font-size: 15px;
     font-family: 黑体;
     font-weight:bold;
 }
 .header a:hover{  color: #dddddd;}
 /*maintop部分CSS样式*/
 .maintop>.title{
-    margin: 50px auto 50px auto;
+    margin: 48px auto 48px auto;
     text-align: center;
-    font-size: 60px;
+    font-size: 57px;
     color: #00a0e9;
     font-family: SimSun-ExtB;
 }
 .maintop>.maintopbanner {
-    margin-left: 20px;
+    margin-left: 38px;
     background: rgb(58,114,176);    /*不支持rgba的浏览器*/
     background: rgba(58,114,176,.2);  /*支持rgba的浏览器*/
     filter:alpha(opacity=20);    /*IE8支持*/
@@ -118,8 +77,8 @@ button:hover{opacity: 0.5}
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#37b9a1',endColorstr='#2f9cd0',GradientType=1);
 }
 .maintop p{
-    margin-top: 20px;
-    font-size: 33px;
+    margin-top: 18px;
+    font-size: 29px;
     font-family: 微软雅黑;
     color: #ffffff;
     position: relative;
@@ -129,7 +88,7 @@ button:hover{opacity: 0.5}
     margin: 0 auto;
 }
 .maintop .cutline div{
-    width: 306px;
+    width: 290px;
     border: 1px solid #0777a1;
     display: inline-block;
     position: relative;
@@ -159,16 +118,16 @@ button:hover{opacity: 0.5}
 .carousel{
     margin: 15px;
     position: relative;
-    width: 375px;
-    height: 210px;
+    width: 356px;
+    height: 200px;
     overflow: hidden;
 }
 .carousel .img-ct{
     position: relative;
 }
 .carousel .img-ct img{
-    width: 375px;
-    height: 210px;
+    width: 356px;
+    height: 200px;
 }
 .carousel .img-ct:after{
     content: ' ';
@@ -239,52 +198,55 @@ ul.bullet li.active {
     font-family: 微软雅黑;
 }
 .contactline{
-    width: 257px;
-    height: 141px;
+    width: 244px;
+    height: 138px;
     background: url("images/line1366px.png");
     display: inline-block;
     position: relative;
-    top: -64px;
-    left: -19px;
+    top: -42px;
+    left: -18px;
 }
 .toptext button{
     background-color: #f3c504;
-    font-size: 27px;
-    margin-bottom: 40px;
-    border-radius: 2px;
+    font-size: 26px;
+    margin-bottom: 38px;
+    border-radius: 6px;
     border: hidden;
-    padding: 4px 20px;
-    width: 250px;
+    padding: 4px 19px;
+    width: 238px;
 }
 .toptext button span{float: right}
 /*讲师简介css部分*/
-.mainmiddletitle{margin-bottom: 68px}
+.mainmiddle{margin-top: 65px;}
+.mainmiddletitle{margin-bottom: 65px}
 .mainmiddle .titlechinese{
     text-align: center;
     font-family: 微软雅黑;
-    font-size: 36px;
+    font-size: 34px;
     color: #ffffff;
 }
 .mainmiddle .titleenglish{
     text-align: center;
     font-family: SimHei;
-    font-size: 16px;
+    font-size: 15px;
     color: rgb(0,195,252);
 }
 .mainmiddlephoto{
-    width: 300px;
+    width: 285px;
     display: inline-block;
     text-align: right;
+    position: relative;
+    top: -32px;
 }
 .mainmiddlephoto .imghead{
     position: relative;
-    top:-100px;
+    top:-95px;
     border: 2px solid #2f9dcf;
 }
 .mainmiddlephoto .imgcircle{
     position: relative;
-    top: -84px;
-    left: -80px;
+    top: -80px;
+    left: -76px;
 }
 .mainmiddlephoto .imgufo{
     position: relative;
@@ -293,34 +255,33 @@ ul.bullet li.active {
     z-index: 1;
 }
 .mainmiddle .middleleft{
-    width: 650px;
-    margin-left: 80px;
+    width: 618px;
+    margin-left: 76px;
     display: inline-block;
     vertical-align: top;
 }
 .mainmiddlename{
-    width: 132px;
-    height: 54px;
+    width: 125px;
+    height: 48px;
     display: inline-block;
     position: relative;
     clear: both;
 }
 .mainmiddlename .ruoyu{
-    width: 120px;
-    height: 48px;
+    width: 114px;
+    height: 41px;
     margin:3px 6px;
     border-top: 1px solid #58eef8;
     border-bottom: 1px solid #58eef8;
 }
 .mainmiddlename .ruoyu1{
-    font-size: 30px;
+    font-size: 29px;
     font-family: 微软雅黑;
     color: #00a0e9;
-    width: 120px;
-    height: 44px;
-    background: rgb(58,114,176);    /*不支持rgba的浏览器*/
+    width: 114px;
+    height: 38px;
     background: rgba(58,114,176,.2);  /*支持rgba的浏览器*/
-    filter:alpha(opacity=20);
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType = 0, startColorstr = #2000a0e9, endColorstr = #2000a0e9)\2; /*IE下的背景透明*/
     display: inline-block;
     text-align: center;
     margin: 2px 0px;
@@ -355,40 +316,52 @@ ul.bullet li.active {
     border-bottom: 2px solid #00a0e9;
 }
 .mainmiddleintroduce{
-    width: 586px;
-    height: 166px;
-    padding: 40px;
-    font-size: 24px;
-    line-height: 48px;
+    width: 557px;
+    height: 158px;
+    padding: 38px;
+    font-size: 23px;
+    line-height: 46px;
     font-family: "微软雅黑 Light";
     color: #ffffff;
-    margin-top: 30px;
-    background: rgb(58,114,176);    /*不支持rgba的浏览器*/
+    margin-top: 28px;
     background: rgba(58,114,176,.2);  /*支持rgba的浏览器*/
-    filter:alpha(opacity=20);
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType = 0, startColorstr = #2000a0e9, endColorstr = #2000a0e9)\2;     /*ie下透明*/
 }
 /*中间轮播部分*/
 .mainbuttom .mainbuttomname{
     text-align: center;
-    font-size: 28px;
+    font-size: 27px;
     font-family: 微软雅黑;
     color: #ffffff;
 }
-.teacherwrapper{margin-top: 35px;}
-.teacherwrapper div[class*='teacher']{
+#teacherwrapper{
+    width: 1040px;
+    height: 305px;
+    overflow: hidden;
+}
+#teacherwrapper>#list{
+    width: 3120px;
+    height: 305px;
+    position: relative;
+}
+#teacherwrapper div[class*='teacher']{
     width: 200px;
-    display: inline-block;
+    float: left;
+    margin-right: 8px;
+    position: relative;
+    overflow: hidden;
     text-align: center;
 }
-.teacherwrapper div[class*='teacher'] span{
+.mainbuttom img{border: none}
+#teacherwrapper div[class*='teacher'] span{
     display: inline;
-    margin-top: 23px;
-    font-size: 20px;
+    margin-top: 22px;
+    font-size: 19px;
     font-family: 微软雅黑;
     color: #00a0e9;
 }
-.teacherwrapper div[class*='teacher'] p{
-    margin-top: 18px;
+#teacherwrapper div[class*='teacher'] p{
+    margin-top: 17px;
     font-size: 14px;
     font-family: 微软雅黑;
     color: #ffffff;
@@ -398,18 +371,20 @@ ul.bullet li.active {
 }
 img[class*='teacher']{position: relative}
 .mainbuttom .teacherleft{
-    left: -100px;
-    top: 169px;
+    left: -90px;
+    top: 137px;
 }
 .mainbuttom .teacherright{
-    left: 1080px;
-    top: -236px;
+    left: 1088px;
+    top: -235px;
 }
+
 /*foot上面部分*/
+.mainfoot{margin-top: 90px;}
 .mainfoot .mainfootleft{
-    width: 393px;
-    height: 182px;
-    margin-left: 20px;
+    width: 373px;
+    height: 173px;
+    margin-left: 19px;
     background: -webkit-gradient(linear, 0 0, 100% 100%, from(rgba(45,144,209,0.65)) , to(rgba(33,183,156,0.65)));
     background: -moz-linear-gradient(left, rgba(45,144,209,0.65), rgba(33,183,156,0.65));
     background: -ms-linear-gradient(rgba(45,144,209,0.65) 0,rgba(33,183,156,0.65) 100%);
@@ -423,47 +398,53 @@ img[class*='teacher']{position: relative}
 
 }
 .mainfootleft .footleftseat{
-    font-size: 55px;
+    font-size: 48px;
     color: #ffffff;
 }
 .mainfootleft .footleftmoney{
-    font-size: 40px;
+    font-size: 38px;
     color: #ffffff;
 }
 .mainfoot button{
     background-color: #f3c504;
-    font-size: 27px;
-    margin-bottom: 28px;
-    margin-left: 15px;
-    border-radius: 2px;
+    font-size: 26px;
+    margin-bottom: 27px;
+    margin-left: 14px;
+    border-radius: 6px;
     border: hidden;
-    width: 130px;
-    height: 60px;
+    width: 124px;
+    height: 57px;
 }
 .mainfoot .mainfootright{
-    width: 525px;
+    width: 475px;
     display: inline-block;
-    margin-left: 90px;
+    margin-left: 85px;
 }
 .mainfootright li{
-    height: 50px;
-    font-size: 36px;
+    height: 48px;
+    font-size: 34px;
     font-family: 黑体;
     color: #ffffff;
     margin-top: 5%;
     margin-bottom: 10%;
 }
 .mainfootright li img{
-    margin-right: 15px;
+    margin-right: 14px;
     position: relative;
     top: 10px;
 }
 
 
 /*footer部分*/
-.foot{
+.foot {
     text-align: center;
     font-family: 黑体;
-    margin-top: 200px;
-    margin-bottom: 20px;
+    margin-top: 350px;
+}
+.foot a{
+    margin: 0px 5px;
+    color: #000000;
+}
+.foot a:hover{
+    color: #555555;
 }
