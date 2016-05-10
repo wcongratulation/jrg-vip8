@@ -442,3 +442,10 @@ img[class*='teacher']{position: relative}
     font-family: 黑体;
     margin-top: 350px;
 }
+.foot a{
+    margin: 0px 5px;
+    color: #000000;
+}
+.foot a:hover{
+    color: #555555;
+}

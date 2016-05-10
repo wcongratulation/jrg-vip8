@@ -440,3 +440,10 @@ button:hover{opacity: 0.5}
         font-family: 黑体;
         margin-top: 390px;
     }
+.foot a{
+    margin: 0px 5px;
+    color: #000000;
+}
+.foot a:hover{
+    color: #555555;
+}
