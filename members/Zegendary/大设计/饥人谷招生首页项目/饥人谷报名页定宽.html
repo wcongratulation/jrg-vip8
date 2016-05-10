@@ -7,6 +7,49 @@
     <link rel="stylesheet" href="1440px.css" media="screen and (min-width: 1440px)">
     <link rel="stylesheet" href="1366px.css" media="screen and (max-width: 1439px)">
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            var caotainer = document.getElementsByClassName('teacherwrapper');
+            var list = document.getElementById('list');
+            var prev = document.getElementById('prev');
+            var next = document.getElementById('next');
+            var animated = false;
+            function animate(offset){
+                animated = true;
+                var newleft = parseInt(list.style.left) + offset
+                var time = 200; //位移总时间
+                var interval = 5;//位移间隔时间
+                var speed = offset/(time/interval);//每次位移量
+                function go (){
+                    if( (speed < 0 && parseInt(list.style.left) > newleft) || (speed > 0 && parseInt(list.style.left) < newleft)){
+                        list.style.left = parseInt(list.style.left) + speed + 'px';
+                        setTimeout(go,interval);
+                    }
+                    else {
+                        animated = false;
+                        list.style.left = newleft + 'px';
+                        if(newleft < -2079){
+                            list.style.left =  -1040 + 'px';
+                        }
+                        if(newleft > -1){
+                            list.style.left =  -1040 + 'px';
+                        }
+                    }
+                }
+                go();
+            }
+            next.onclick = function () {
+                if (!animated){
+                    animate(-208);
+                }
+            }
+            prev.onclick = function () {
+                if (!animated){
+                    animate(208)
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="wrapper">
@@ -90,35 +133,87 @@
         </div>
         <div class="mainbuttom">
             <div class="mainbuttomname">后援团介绍</div>
-            <img class="teacherleft" src="images/三角_03.png" alt="">
+            <a href="javascript:;" id="prev"><img class="teacherleft" src="images/三角_03.png" alt=""></a>
             <div class="teacherwrapper">
-                <div class="teacher1">
-                    <img src="images/teacher1_03.png" alt="" width="200px">
-                    <span>苏怡</span>
-                    <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
-                </div>
-                <div class="teacher2">
-                    <img src="images/teacher2_05.png" alt="" width="200px">
-                    <span>苏怡</span>
-                    <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
-                </div>
-                <div class="teacher3">
-                    <img src="images/teacher3_07.png" alt="" width="200px">
-                    <span>苏怡</span>
-                    <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
-                </div>
-                <div class="teacher4">
-                    <img src="images/teacher2_05.png" alt="" width="200px">
-                    <span>苏怡</span>
-                    <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
-                </div>
-                <div class="teacher5">
-                    <img src="images/teacher1_03.png" alt="" width="200px">
-                    <span>苏怡</span>
-                    <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                <div id="list" style="left: -1040px">
+                    <div class="teacher1">
+                        <img src="images/teacher1_03.png" alt="" width="200px">
+                        <span>苏怡</span>
+                        <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                    </div>
+                    <div class="teacher2">
+                        <img src="images/teacher2_05.png" alt="" width="200px">
+                        <span>苏怡</span>
+                        <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                    </div>
+                    <div class="teacher3">
+                        <img src="images/teacher3_07.png" alt="" width="200px">
+                        <span>苏怡</span>
+                        <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                    </div>
+                    <div class="teacher4">
+                        <img src="images/teacher2_05.png" alt="" width="200px">
+                        <span>苏怡</span>
+                        <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                    </div>
+                    <div class="teacher5">
+                        <img src="images/teacher1_03.png" alt="" width="200px">
+                        <span>苏怡</span>
+                        <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                    </div>
+                    <div class="teacher1">
+                        <img src="images/teacher1_03.png" alt="" width="200px">
+                        <span>苏怡</span>
+                        <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                    </div>
+                    <div class="teacher2">
+                        <img src="images/teacher2_05.png" alt="" width="200px">
+                        <span>苏怡</span>
+                        <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                    </div>
+                    <div class="teacher3">
+                        <img src="images/teacher3_07.png" alt="" width="200px">
+                        <span>苏怡</span>
+                        <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                    </div>
+                    <div class="teacher4">
+                        <img src="images/teacher2_05.png" alt="" width="200px">
+                        <span>苏怡</span>
+                        <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                    </div>
+                    <div class="teacher5">
+                        <img src="images/teacher1_03.png" alt="" width="200px">
+                        <span>苏怡</span>
+                        <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                    </div>
+                    <div class="teacher1">
+                        <img src="images/teacher1_03.png" alt="" width="200px">
+                        <span>苏怡</span>
+                        <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                    </div>
+                    <div class="teacher2">
+                        <img src="images/teacher2_05.png" alt="" width="200px">
+                        <span>苏怡</span>
+                        <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                    </div>
+                    <div class="teacher3">
+                        <img src="images/teacher3_07.png" alt="" width="200px">
+                        <span>苏怡</span>
+                        <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                    </div>
+                    <div class="teacher4">
+                        <img src="images/teacher2_05.png" alt="" width="200px">
+                        <span>苏怡</span>
+                        <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                    </div>
+                    <div class="teacher5">
+                        <img src="images/teacher1_03.png" alt="" width="200px">
+                        <span>苏怡</span>
+                        <p>金牌前端讲师，数年前端经验，现任某上市企业技术总监</p>
+                    </div>
                 </div>
             </div>
-            <img class="teacherright" src="images/三角_06.png" alt="">
+            <a href="javascript:;" id="next"><img class="teacherright" src="images/三角_06.png" alt=""></a>
         </div>
         <div class="mainfoot">
             <div class="mainfootleft">

@@ -336,9 +336,22 @@ ul.bullet li.active {
     font-family: 微软雅黑;
     color: #ffffff;
 }
+.teacherwrapper{
+    width: 1040px;
+    height: 305px;
+    overflow: hidden;
+}
+.teacherwrapper>#list{
+    width: 3120px;
+    height: 305px;
+    position: relative;
+}
 .teacherwrapper div[class*='teacher']{
     width: 200px;
-    display: inline-block;
+    float: left;
+    margin-right: 8px;
+    position: relative;
+    overflow: hidden;
     text-align: center;
 }
 .teacherwrapper div[class*='teacher'] span{

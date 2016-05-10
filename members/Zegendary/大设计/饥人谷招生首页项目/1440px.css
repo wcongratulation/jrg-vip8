@@ -330,6 +330,16 @@ button:hover{opacity: 0.5}
         filter:alpha(opacity=20);
     }
     /*中间轮播部分*/
+    .teacherwrapper{
+        width: 1040px;
+        height: 305px;
+        overflow: hidden;
+    }
+    .teacherwrapper>#list{
+        width: 3120px;
+        height: 305px;
+        position: relative;
+    }
     .mainbuttom .mainbuttomname{
         text-align: center;
         font-size: 28px;
@@ -361,7 +371,7 @@ button:hover{opacity: 0.5}
     img[class*='teacher']{position: relative}
     .mainbuttom .teacherleft{
         left: -100px;
-        top: 169px;
+        top: 135px;
     }
     .mainbuttom .teacherright{
         left: 1080px;
