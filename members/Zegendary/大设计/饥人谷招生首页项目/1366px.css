@@ -353,7 +353,7 @@ ul.bullet li.active {
     text-align: center;
 }
 .mainbuttom img{border: none}
-#eacherwrapper div[class*='teacher'] span{
+#teacherwrapper div[class*='teacher'] span{
     display: inline;
     margin-top: 22px;
     font-size: 19px;
