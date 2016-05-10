@@ -280,9 +280,8 @@ button:hover{opacity: 0.5}
         color: #00a0e9;
         width: 120px;
         height: 44px;
-        background: rgb(58,114,176);    /*不支持rgba的浏览器*/
         background: rgba(58,114,176,.2);  /*支持rgba的浏览器*/
-        filter:alpha(opacity=20);
+        filter: progid:DXImageTransform.Microsoft.gradient(gradientType = 0, startColorstr = #2000a0e9, endColorstr = #2000a0e9)\2; /*IE下背景*/
         display: inline-block;
         text-align: center;
         margin: 2px 0px;
@@ -325,17 +324,16 @@ button:hover{opacity: 0.5}
         font-family: "微软雅黑 Light";
         color: #ffffff;
         margin-top: 30px;
-        background: rgb(58,114,176);    /*不支持rgba的浏览器*/
         background: rgba(58,114,176,.2);  /*支持rgba的浏览器*/
-        filter:alpha(opacity=20);
+        filter: progid:DXImageTransform.Microsoft.gradient(gradientType = 0, startColorstr = #2000a0e9, endColorstr = #2000a0e9)\2; /*IE下背景*/
     }
     /*中间轮播部分*/
-    .teacherwrapper{
+    #teacherwrapper{
         width: 1040px;
         height: 305px;
         overflow: hidden;
     }
-    .teacherwrapper>#list{
+    #teacherwrapper>#list{
         width: 3120px;
         height: 305px;
         position: relative;
@@ -346,20 +344,20 @@ button:hover{opacity: 0.5}
         font-family: 微软雅黑;
         color: #ffffff;
     }
-    .teacherwrapper{margin-top: 0px;}
-    .teacherwrapper div[class*='teacher']{
+    #teacherwrapper{margin-top: 0px;}
+    #teacherwrapper div[class*='teacher']{
         width: 200px;
         display: inline-block;
         text-align: center;
     }
-    .teacherwrapper div[class*='teacher'] span{
+    #teacherwrapper div[class*='teacher'] span{
         display: inline;
         margin-top: 23px;
         font-size: 20px;
         font-family: 微软雅黑;
         color: #00a0e9;
     }
-    .teacherwrapper div[class*='teacher'] p{
+    #teacherwrapper div[class*='teacher'] p{
         margin-top: 18px;
         font-size: 14px;
         font-family: 微软雅黑;
