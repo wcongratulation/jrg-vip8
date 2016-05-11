@@ -12,11 +12,14 @@ button:hover{opacity: 0.5}
     margin: 0px;padding: 0px;list-style: none;text-decoration: none;
 }
 body{
-    background: url("images/招生页背景1366px.png");
-    background-repeat: no-repeat;
+    background: url("images/backgroundX.png");
+    background-repeat: repeat;
     background-color: #041428;
     width: 100%;
     min-width: 1366px;
+}
+.stonebackground{
+    background: url("images/stonebackground.png");
 }
 .wrapper{
     width: 1040px;
@@ -51,14 +54,19 @@ body{
 }
 .header a:hover{  color: #dddddd;}
 /*maintop部分CSS样式*/
-.maintop>.title{
+.maintop .title{
     margin: 48px auto 48px auto;
     text-align: center;
     font-size: 57px;
     color: #00a0e9;
     font-family: SimSun-ExtB;
 }
-.maintop>.maintopbanner {
+.maintop .maintopleft{
+    display: inline-block;
+    width: 424px;
+    vertical-align: top;
+}
+.maintop .maintopbanner {
     margin-left: 38px;
     background: rgb(58,114,176);    /*不支持rgba的浏览器*/
     background: rgba(58,114,176,.2);  /*支持rgba的浏览器*/
@@ -178,6 +186,19 @@ ul.bullet li {
 ul.bullet li.active {
     background: #666;
 }
+.maintop .maintopright{
+    display: inline-block;
+    width: 560px;
+}
+.maintop .contactline{
+    width: 556px;
+    height: 515px;
+    background: url("images/line1366px.png");
+    display: inline-block;
+    position: relative;
+    top: 33px;
+    left: -17px;
+}
 .maintop .starttime{
     display: inline-block;
     vertical-align: top;
@@ -196,15 +217,6 @@ ul.bullet li.active {
     font-size: 18px;
     margin: 20px;
     font-family: 微软雅黑;
-}
-.contactline{
-    width: 244px;
-    height: 138px;
-    background: url("images/line1366px.png");
-    display: inline-block;
-    position: relative;
-    top: -42px;
-    left: -18px;
 }
 .toptext button{
     background-color: #f3c504;
@@ -433,13 +445,30 @@ img[class*='teacher']{position: relative}
     position: relative;
     top: 10px;
 }
+.mainfoot .imgemo{
+    position: relative;
+    top: -90px;
+}
 
 
-/*footer部分*/
+/*!*footer部分*!*/
+.footwrapper{
+    width: 100%;
+    background-image: url("images/footbackground.png");
+    min-width: 1366px;
+    height: 785px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    top: 20px;
+
+}
 .foot {
     text-align: center;
     font-family: 黑体;
-    margin-top: 350px;
+    width: 1040px;
+    margin: 0 auto;
+
 }
 .foot a{
     margin: 0px 5px;
