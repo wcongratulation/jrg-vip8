@@ -11,11 +11,12 @@
     <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript">
         window.onload = function(){
-            var caotainer = document.getElementById('teacherwrapper');
+            var container = document.getElementById('teacherwrapper');
             var list = document.getElementById('list');
             var prev = document.getElementById('prev');
             var next = document.getElementById('next');
             var animated = false;
+            var timer;
             function animate(offset){
                 animated = true;
                 var newleft = parseInt(list.style.left) + offset
@@ -40,16 +41,25 @@
                 }
                 go();
             }
+            function play(){
+                timer = setInterval(next.onclick,3000);
+            }
+            function  stop(){
+                clearInterval(timer)
+            }
             next.onclick = function () {
                 if (!animated){
                     animate(-208);
                 }
-            }
+            };
             prev.onclick = function () {
                 if (!animated){
                     animate(208)
                 }
-            }
+            };
+            container.onmousemove = stop;
+            container.onmouseout = play;
+            play();
         }
     </script>
 </head>
