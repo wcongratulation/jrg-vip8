@@ -12,7 +12,7 @@ button:hover{opacity: 0.5}
     margin: 0px;padding: 0px;list-style: none;text-decoration: none;
 }
 body{
-    background: url("images/backgroundX.png");
+    background: url("images/X.png");
     background-repeat: repeat;
     background-color: #041428;
     width: 100%;
