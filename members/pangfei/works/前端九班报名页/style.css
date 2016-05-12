@@ -10,7 +10,6 @@ body{
 	background-color: #041428;
 	/*border: 1px solid red;*/
 	min-width: 1300px;
-	position: relative;
 }
 
 
@@ -60,7 +59,6 @@ a{
 	background-position: center;
 	width: 100%;
 	background-size: cover;
-	position: absolute;
 }
 
 #header .siteNav{
@@ -73,6 +71,10 @@ a{
 
 #header .siteNav a{
 	color: #fff;
+}
+
+#header .siteNav a:hover{
+    opacity: 0.6;
 }
 
 #header .siteNav>li{
@@ -278,6 +280,10 @@ a{
     position: relative;
 }
 
+#class-introduction .course>a:hover{
+	opacity: 0.8;
+}
+
 #class-introduction .course>a img{
     position: absolute;
     left: 204px;
@@ -373,6 +379,10 @@ a{
 	background-color: rgba(88,238,248,0.1);
 }
 
+#teacher-introduction .teacherInfo>h4:hover{
+	opacity: 0.7;
+}
+
 #teacher-introduction .teacherInfo>h4>a{
 	color: #00A0E9;
 }
@@ -439,6 +449,11 @@ a{
      	position: absolute;
      	top: 75px;
  }
+
+ #teacher-introduction .arrow:hover{
+        opacity: 0.6;
+ }
+
  #teacher-introduction #prev{
        left: 30px;
  }
@@ -532,6 +547,10 @@ a{
 	position: relative;
 }
 
+#booking .preordination a:hover{
+	opacity: 0.8;
+}
+
 #booking .preordination a>img{
 	position: absolute;
 	left: 90px;
@@ -582,4 +601,12 @@ a{
 #footer ul li{
  display: inline-block;
  padding: 10px;
+}
+
+#footer>p a{
+	color: #19273A;
+}
+
+#footer>p a:hover{
+	opacity: 0.5;
 }
