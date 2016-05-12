@@ -10,6 +10,7 @@ body{
 	background-color: #041428;
 	/*border: 1px solid red;*/
 	min-width: 1300px;
+	position: relative;
 }
 
 
@@ -59,8 +60,7 @@ a{
 	background-position: center;
 	width: 100%;
 	background-size: cover;
-	position: relative;
-	bottom: 0px;
+	position: absolute;
 }
 
 #header .siteNav{
@@ -570,7 +570,7 @@ a{
 	font-size: 14px;
 	font-family: '微软雅黑';
 	color: #19273A;
-	padding-bottom: 85px;
+	padding-bottom: 100px;
 	text-shadow:0 0 10px #ccc;
 	/*border: 2px solid red;*/
 }
