@@ -7,11 +7,8 @@
  */
 
 body{
-    background-image:url(images/backgroundX.png);
-	background-repeat:repeat;
+	background-color: #041428;
 	/*border: 1px solid red;*/
-	/*background-position: center;*/
-	/*background-size: cover;*/
 	min-width: 1300px;
 }
 
@@ -33,6 +30,11 @@ a{
   content:'';
   display: block;
   clear: both;
+}
+
+#X-bg{
+	background-image: url(images/XXX.png);
+	background-repeat: repeat;
 }
 	
 #page-wrapper{
@@ -57,6 +59,8 @@ a{
 	background-position: center;
 	width: 100%;
 	background-size: cover;
+	position: relative;
+	bottom: 0px;
 }
 
 #header .siteNav{
