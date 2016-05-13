@@ -74,10 +74,6 @@ ul li div input{
 	border: none;
 	background: transparent;
 }
-ul li div input:focus{
-	border:none;
-	outline: none;
-}
 ul .remember{
 	font-size: 14px;
 	font-family: 微软雅黑;
