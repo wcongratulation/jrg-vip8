@@ -16,7 +16,8 @@ body{
 	/*background-repeat:no-repeat;
 	background-color: #041428;*/
 	/*background-repeat: no-repeat;*/
-	/*width: 1366px;*/
+	min-width: 1366px;
+	min-height:2650px;
 	background-position:center;
 }
 
