@@ -74,7 +74,9 @@ ul li div input{
 	border: none;
 	background: #e1dcd8;
 	color: rgb(98,94,91);
-	box-shadow: inset 0px 2px 5px #aaaaaa;
+	box-shadow:
+			0px 1px 1px rgba(255,255,255,0.7),
+			inset 0px 2px 5px #aaaaaa;
 	border-radius: 5px;
 }
 ul li input:focus{
