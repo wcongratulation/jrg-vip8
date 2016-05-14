@@ -47,37 +47,39 @@ form ul{
 	justify-content: space-between;
 }
 ul li div{
-	width: 240px;
+	width: 260px;
 	height: 40px;
-	padding: 0px 10px;
+	background: #e1dcd8;
+	color: rgb(98,94,91);
+	box-shadow: inset 0px 2px 5px #aaaaaa;
+	border-radius: 5px;
+	position: relative;
+}
+ul li .yonghu{
+	font-family: iconfont;
+	position: absolute;
+	top: 12px;
+	left: 10px;
+}
+ul li .mima{
+	font-family: iconfont;
+	position: absolute;
+	top: 12px;
+	left: 10px;
+}
+ul li div input{
+	height: 40px;
+	width: 190px;
+	padding: 0 35px;
+	border: none;
 	background: #e1dcd8;
 	color: rgb(98,94,91);
 	box-shadow: inset 0px 2px 5px #aaaaaa;
 	border-radius: 5px;
 }
-ul li .password{
-	width: 240px;
-	height: 40px;
-	padding: 0px 10px;
-	background: #f5f2ef;
-	color: rgb(98,94,91);
-	box-shadow: inset 0px 2px 5px #aaaaaa;
-	border-radius: 5px;
-}
-ul li span{
-	font-family: iconfont;
-	position: relative;
-	top: 2px;
-}
-ul li div input{
-	margin-left: 5px;
-	height: 40px;
-	width: 200px;
-	border: none;
-	background: transparent;
-}
 ul li input:focus{
 	outline: none;
+	background: #f5f2ef;
 }
 ul .remember{
 	font-size: 14px;
