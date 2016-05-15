@@ -88,13 +88,54 @@ ul .remember{
 	font-family: 微软雅黑;
 	font-weight: bold;
 	color: rgb(98,94,91);
-
+	position: relative;
 }
 ul .remember input[type*="checkbox"]{
 	width: 20px;
 	height: 20px;
-	vertical-align: bottom;
-	margin-right: 5px;
+	vertical-align: super;
+	margin-right: 12px;
+	visibility: hidden;
+}
+.remember label {
+	cursor: pointer;
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	top: 7px;
+	left: 0;
+	background: #eee;
+	border:1px solid #cccccc;
+	border-radius: 4px;
+}
+/*Display the tick inside the checkbox*/
+.remember label:after {
+	opacity: 0.4;
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 5px;
+	background: transparent;
+	top: 6px;
+	left: 4px;
+	border: 3px solid #74884a;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+/*Create the hover event of the tick*/
+.remember label:hover::after {
+	opacity: 0.7;
+}
+ /*Create the checkbox state for the tick*/
+.remember input[type=checkbox]:checked + label:after {
+	opacity: 1;
+	border-color: #74884a;
 }
 ul li a{
 	font-size: 14px;
