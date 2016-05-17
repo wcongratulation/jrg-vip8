@@ -237,3 +237,40 @@ figure figcaption p,h2,span,div {transition: all 0.35s;}
 	transform: scale(1.2,1.2);
 	opacity: 0.5;
 }
+
+
+
+/*旋转卡片*/
+.test6{
+	background: #2E8B57;
+}
+.test6-about {
+	color: black;
+	position: absolute;
+	top: 37%;
+	left:40%;
+	z-index: 1;
+	word-spacing: 35px;
+	font-size: 22px;
+	transform: scale(1,1);
+	opacity: 0;
+}
+.test6:hover .test6-about{
+	transform: scale(1.1,1.1);
+	opacity: 1;
+}
+.test6 .card{
+	background: white;
+	width: 640px;
+	height: 400px;
+	margin-top: 55%;
+}
+.test6:hover .card{
+	transform: rotate(-25deg);
+	transform-origin: 0 0%;
+	opacity: 0.7;
+}
+.test6:hover img{
+	opacity: 0.5;
+	transform: scale(1.2,1.2);
+}
