@@ -16,17 +16,16 @@ body{
 	/*background-repeat:no-repeat;
 	background-color: #041428;*/
 	/*background-repeat: no-repeat;*/
-	/*width: 1366px;*/
 	background-position:center;
-	width: 1366px;
-	/*height: 2925px;*/
+	/*width: 1366px;不要给宽度*/
+	height: 2844px;
 }
 
 #bg{
-	background: url(images/beijingtu.png);
 	width: 1366px;
-	height: 2925px;
-	margin:0 auto;
+    background: url(images/beijingtu.png);
+    background-size: 1357px 2886px;
+    margin: 0 auto;
 }
 
 #header{
@@ -442,14 +441,19 @@ ul .bullet li .active{background:#666;}
 	margin-left: 150px;
     width: 430px;
     height: 200px;
-    opacity: 0.7;
-    background:linear-gradient(to bottom right,rgba(78, 184, 255, 0.65),rgba(0, 255, 196, 0.65));/*颜色linear-gradient(CSS3)线性渐变*/
+    background: hsla(175, 100%, 58%, 0.6);
+    /*opacity: 0.7;*不建议用，影响副元素/
+    /*background:linear-gradient(to bottom right,rgba(78, 184, 255, 0.65),rgba(0, 255, 196, 0.65));/*颜色linear-gradient(CSS3)线性渐变*/
 }
 
 .course-pionts>h1{
-	font-size: 50px;
+	display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 50px;
+    margin-top: 40px;
+    font-size: 50px;
     font-family: "宋体";
-    padding: 55px 0 0 57px;
 }
 
 .course-pionts p{
@@ -457,7 +461,9 @@ ul .bullet li .active{background:#666;}
     display: inline-block;
     font-size: 40px;
     font-family: "宋体";
-    padding: 10px 0 0 57px;
+    padding: 10px 0 0 50px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .joinus{
@@ -529,12 +535,12 @@ ul .bullet li .active{background:#666;}
 /*页尾信息*/
 
 .footer-nav{
-	padding-top: 195px;
+	padding-top: 175px;;
 	margin:0 auto;
 }
 
 .footer-list{
-	width:335px;
+	width:340px;
 	margin:0 auto;
 }
 
