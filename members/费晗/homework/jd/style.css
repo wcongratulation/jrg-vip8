@@ -211,6 +211,11 @@ ul,li{
     background-color: #b61d1d;
     min-width: 12px;
 }
+.logo-search-cart .myShoppingCart .i-right{
+	position: absolute;
+	top: 32px;
+    left: 120px;
+}
 .siteNav-wrapper{
     border-bottom: 2px solid #b61d1d;
 }
@@ -277,7 +282,7 @@ ul,li{
 }
 .list-slides-news-service .productCategoryList >ul>li>i{
 	position: absolute;
-	top: 3px;
+	top: 7px;
 	right:10px;
 	font-size: 12px;
 }
