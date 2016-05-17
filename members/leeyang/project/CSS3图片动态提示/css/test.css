@@ -188,10 +188,22 @@ figure figcaption p,h2,span,div {transition: all 0.35s;}
 .test5 figcaption h2{
 	margin-top: 25%;
 	margin-left: 25%;
+	transform: scale(1.1,1.1);
+	opacity: 0;
+}
+.test5:hover figcaption h2{
+	transform: scale(1,1);
+	opacity: 1;
 }
 .test5 figcaption p{
 	margin-left: 25%;
 	margin-top: 10px;
+	transform: scale(1.1,1.1);
+	opacity: 0;
+}
+.test5:hover figcaption p{
+	transform: scale(1,1);
+	opacity: 1;
 }
 .test5 .j1{
 	border-width: 2px 0px 2px 0px;
@@ -220,4 +232,8 @@ figure figcaption p,h2,span,div {transition: all 0.35s;}
 }
 .test5:hover .j2{
 	height:90%;
+}
+.test5:hover img{
+	transform: scale(1.2,1.2);
+	opacity: 0.5;
 }
