@@ -100,7 +100,7 @@ h4{ color: #00c3fc; font-size: 16px; text-align: center; }
 #scroll{width:1286px;overflow:hidden;float:left;margin-top: 10px;}
 #scroll .owl-wrapper-outer{margin:0 auto;}
 .owl-carousel .owl-wrapper-outer{ width:1286px;}
-#scroll .item{ float:left;text-align:center;}
+#scroll .item{ float:left;text-align:center; width: 257px;}
 #scroll .item h5 a{font-size: 16px;line-height: 23px;padding: 5px 25px;display: block;color: #FFFFFF;}
 #scroll .item h5 a:hover{color: #00a0e9;}
 #scroll .item p{font-size: 14px;color: #fff;margin: 0 20px;line-height: 24px;}
