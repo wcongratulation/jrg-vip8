@@ -53,7 +53,7 @@ body{font: 12px/150% Arial,Verdana,"\5b8b\4f53";color: #666;background: #fff;}
 .nav>ul .all{width:190px;background:#B1191A;color:white;padding:0 10px;font:400 15px/44px "microsoft yahei";}
 .nav>ul .ass{height:44px;padding:0 20px;font:400 15px/44px "microsoft yahei";font-size: 16px;color:#333;}
 .nav>ul .ass:hover>a{color:#C81623;}
-.list-Carousel-NewsService{width:1210px;margin:0 auto;}
+.list-Carousel-NewsService{width:1210px;margin:0 auto;vertical-align: top;}
 .list-Carousel-NewsService .list{,sans-serif;width:210px;line-height:31px;display: inline-block;font-family:"Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53";font-size: 14px;font-weight: 400;background:#C81623;color:white;float:left;}
 .list-Carousel-NewsService .list>ul>li{border-left:1px solid #b61d1d;height:31px;}
 .list-Carousel-NewsService .list>ul .last{border-bottom:1px solid #b61d1d;}
@@ -61,18 +61,19 @@ body{font: 12px/150% Arial,Verdana,"\5b8b\4f53";color: #666;background: #fff;}
 .list-Carousel-NewsService .list>ul>li:hover>a{background:white;color:#B61D1D;}
 .list-Carousel-NewsService .list>ul>li>a .i-right{float:right;}
 .list-Carousel-NewsService .list>ul>li:hover>a .i-right{color:white;}
-
-.list-Carousel-NewsService .Carousel>img{width:730px;height:454px;padding:10px 10px  0 10px;line-height: 454px;display: inline-block;vertical-align: top;}
-
-.list-Carousel-NewsService .NewsService{width:250px;float:right;display:inline-block;top:0;}
+.list-Carousel-NewsService .Carousel{width:730px;height:454px;padding:12px 10px  0 10px;line-height: 454px;display: inline-block;vertical-align: top;}
+.list-Carousel-NewsService .Carousel>img{width:730px;line-height: 454px;display: inline-block;vertical-align: top;}
+.list-Carousel-NewsService .NewsService{width:249px;float:right;display:inline-block;padding:12px 0 0 0;}
 .list-Carousel-NewsService .NewsService .News .one {border:1px solid #E4E4E4;line-height: 32px;display:inline-block;}
 .list-Carousel-NewsService .NewsService .News .one .header{line-height: 32px;width:218px;height:32px;border-bottom:1px solid #E8E8E7;padding:0 15px;display: inline-block;vertical-align: top;}
 .list-Carousel-NewsService .NewsService .News .one .header>h2{float:left;font-size:16px;    font-family: "microsoft yahei";font-weight: 400; }
 .list-Carousel-NewsService .NewsService .News .one .header>a{float:right;}
-.list-Carousel-NewsService .NewsService .News .one .box{line-height:24px;width:233px;height:120px;padding:5px 0 5px 15px;display: inline-block;}
+.list-Carousel-NewsService .NewsService .News .one .box{line-height:24px;width:233px;padding:5px 0 5px 15px;display: inline-block;}
 .list-Carousel-NewsService .NewsService .News .one .box>li{line-height: 24px;display:inline-block;vertical-align: top;height:24px;}
 .list-Carousel-NewsService .NewsService .News .one .box>li>a{line-height: 24px;display:inline-block;}
-.list-Carousel-NewsService .NewsService .Service ul{display: inline-block;border:1px solid #E4E4E4;border-top:none;border-bottom:none}
+.list-Carousel-NewsService .NewsService .Service ul{display: inline-block;border:1px solid #E4E4E4;border-top:none;border-bottom:none;}
 .list-Carousel-NewsService .NewsService .Service ul>li{float:left;width:61px;text-align: center;line-height:28px;border-right:1px solid #E4E4E4;border-bottom:1px solid #E4E4E4;display: inline-block;}
 .list-Carousel-NewsService .NewsService .Service ul>li>a{display: inline-block;line-height:28px;width:61px;padding-top:40px;}
 .list-Carousel-NewsService .NewsService .Service .right{border-right:none;}
+.list-Carousel-NewsService .NewsService .page{height:75px;display: inline-block;vertical-align:top;padding:2px 0 0 0;}
+.list-Carousel-NewsService .NewsService .page>a{height:75px;line-height: 75px;display: inline-block;vertical-align: top;}
