@@ -1,12 +1,12 @@
 *{margin:0;padding:0;}
 ul,ol{list-style: none;}
-a{text-decoration:none;color:inherit;}
+a,p,h1,h2,h3,h4,h5,h6{text-decoration:none;color:inherit;}
 fy-icon{color:inherit;}
 body{font: 12px/150% Arial,Verdana,"\5b8b\4f53";color: #666;background: #fff;}
 .clearfix:after{content:" ";display:block;clear:both;}
 .Topbar-wrapper{height:30px;background:#F1F1F1;line-height: 30px;}
-.Topbar{width:1210px;height:30px;margin:0 auto; cursor: default;}
-.Topbar .location{width:95px;height:30px;float:left;position: relative;display:inline-block;vertical-align: middle;line-height:30px;}
+.Topbar{width:1210px;height:30px;margin:0 auto; cursor: default; }
+.Topbar .location{width:95px;height:30px;float:left;position: relative; display:inline-block;vertical-align: middle;line-height:30px;}
 .Topbar .location .beijing .i-down{position:absolute;top:0;right:4px;display: inline-block;}
 .Topbar .location:hover .beijing .i-down{transform: rotate(180deg);transition: transform 0.1s;  }
 .location:hover:after{content:'';display: block;position: absolute;height:0;top:95%;left:1px;border-top: 6px solid white;border-left: 1px solid transparent;border-right: 1px solid transparent;box-sizing: border-box;width:100%;}
@@ -19,30 +19,60 @@ body{font: 12px/150% Arial,Verdana,"\5b8b\4f53";color: #666;background: #fff;}
 .Topbar .location .locationPicker >ul>li:hover{background: #F4F4F4;color: #C81623;cursor: pointer;}
 .Topbar .location .locationPicker .selected{background:#C81623;color: white;}
 .Topbar .links{float:right;height:30px;line-height:30px;display:inline-block;}
-.Topbar .links .split{width:1px;height:15px;background: #ddd;display: inline-block;vertical-align: middle;margin: 0 1px;}
-.Topbar .links>a{padding:0 8px;}
-.Topbar .links>a:hover{color: #C81623;}
+.Topbar .links>ul{display: inline-block;line-height: 30px;}
+.Topbar .links>ul .split{width:1px;height:15px;background: #ddd;display: inline-block;line-height:30px;vertical-align: middle;margin: 8px 1px;}
+.Topbar .links>ul>li{float:left;line-height: 30px;display:inline-block;}
+.Topbar .links>ul>li>a{padding:0 8px;line-height: 30px;display:inline-block;vertical-align: top;}
+.Topbar .links>ul>li .i-down {top:0;right:0;line-height: 30px;display:inline-block;vertical-align: top;}
+.Topbar .links>ul>li .i-shouji{font-size:14px;line-height: 30px;display:inline-block;vertical-align: top;}
+.Topbar .links>ul>li:hover>a{color: #C81623;}
+.Topbar .links>ul>li:hover .i-down{color:#666;}
 .picture{background:#FB3939;display:inline-block;width:100%;height:80px;text-align: center;position:relative;}
 .picture>img{width:1210px;height:80px;vertical-align:top;}
-.i-guanbi{font-size:18px;width:19px;height:19px;position:absolute;opacity:0.4;top:10px;color:white;right:120px;background:#AF2727;filter:alpha(opacity=40);}
-.i-guanbi:hover{opacity:1.0;filter:alpha(opacity=100);}
-.logo-s-S{width:100%;height:100px;display:inline-block;}
-.logo-search-ShoppingCart{width:1210px;height:100px;margin:0 auto;}
-.logo{width:362px;height:60px;padding:20px 0;float:left;vertical-align:middle;}
-.logo>a{width:270px;height:60px;float:left;background:url("http://book.jirengu.com/jirengu-inc/jrg-vip8/demos/%E4%BA%AC%E4%B8%9C/images/logo-201305.png");}
-.search{width:538px;height:60px;float:left;padding:20px 0 20px 0;}
-.from{display: inline-block;width:538px;height:36px;}
-.from>input{width:446px;height:24px;border:2px solid #B61D1D;padding:4px;margin-bottom:4px;}
-.from>button{width:80px;height:36px;background: #B61D1D;font-size: 18px;color:white;border:none;padding:0 8px 1px 8px;float:right;margin-bottom:4px;}
-.recommends{width:518px;height:15px;padding:3px 6px 0 0;}
-.recommends>a{text-decoration: none;line-height:20px;color:#666666;margin-right:6px;}
-.recommends>a:hover{color:#C81623;}
-.ShoppingCart{width:140px;height:34px;float:right;padding:20px 60px 44px 110px;text-align: center;}
-.shopping{width:100%;height:100%;position:relative;border:1px solid #DFDFDF;background: #F9F9F9;}
-.shopping>.my{height:34px;width:60px;position:absolute;color:#666666;padding:0  40px;left:0;line-height: 34px;}
-.i-gouwuche{position:absolute;color:#CD2A36;top:8px;left:11px;}
-.i-right{position:absolute;color:#999999;top:8px;right:11px;}
-.nav{width:100%;height:44px;}
+.picture .i-guanbi{font-size:18px;width:19px;height:19px;position:absolute;opacity:0.4;top:10px;color:white;right:120px;background:#AF2727;filter:alpha(opacity=40);}
+.picture .i-guanbi:hover{opacity:1.0;filter:alpha(opacity=100);}
+.logo-s-S{width:100%;height:100px;display:inline-block;vertical-align: top;}
+.logo-s-S .logo-search-ShoppingCart{width:1210px;height:100px;margin:0 auto;}
+.logo-s-S .logo-search-ShoppingCart .logo{width:362px;height:60px;padding:20px 0;float:left;vertical-align:middle;}
+.logo-s-S .logo-search-ShoppingCart .logo>a{width:270px;height:60px;float:left;background:url("http://book.jirengu.com/jirengu-inc/jrg-vip8/demos/%E4%BA%AC%E4%B8%9C/images/logo-201305.png");}
+.logo-s-S .logo-search-ShoppingCart .search{width:538px;height:60px;float:left;padding:20px 0 20px 0;}
+.logo-s-S .logo-search-ShoppingCart .search .from{display: inline-block;width:538px;height:36px;}
+.logo-s-S .logo-search-ShoppingCart .search .from>input{width:446px;height:24px;border:2px solid #B61D1D;padding:4px;margin-bottom:4px;}
+.logo-s-S .logo-search-ShoppingCart .search .from>button{width:80px;height:36px;background: #B61D1D;font-size: 18px;color:white;border:none;padding:0 8px 1px 8px;float:right;margin-bottom:4px;}
+.logo-s-S .logo-search-ShoppingCart .search .recommends{width:518px;height:15px;padding:3px 6px 0 0;}
+.logo-s-S .logo-search-ShoppingCart .search .recommends>a{text-decoration: none;line-height:20px;color:#666666;margin-right:6px;}
+.logo-s-S .logo-search-ShoppingCart .search .recommends>a:hover{color:#C81623;}
+.logo-s-S .logo-search-ShoppingCart .ShoppingCart{width:140px;height:34px;float:right;padding:20px 60px 44px 110px;text-align: center;}
+.logo-s-S .logo-search-ShoppingCart .ShoppingCart .shopping{width:100%;height:100%;position:relative;border:1px solid #DFDFDF;background: #F9F9F9;}
+.logo-s-S .logo-search-ShoppingCart .ShoppingCart .shopping .my{height:34px;width:60px;position:absolute;color:#666666;padding:0  40px;left:0;line-height: 34px;}
+.logo-s-S .logo-search-ShoppingCart .ShoppingCart .shopping .i-gouwuche{position:absolute;color:#CD2A36;top:8px;left:11px;}
+.logo-s-S .logo-search-ShoppingCart .ShoppingCart .shopping .i-right{position:absolute;color:#999999;top:8px;right:11px;}
+.nav{width:100%;height:44px;border-bottom: 2px solid #B1191A;display:inline-block;vertical-align: top;}
 .nav>ul{list-style: none;width:1210px;height:44px;margin:0 auto;}
-.nav>ul>li{float:left;line-height:44px;text-align:center;height:44px;}
-.all{width:190px;background:#B1191A;font-size: 18px;color:white;}
+.nav>ul>li{float:left;line-height:44px;height:44px;}
+.nav>ul .all{width:190px;background:#B1191A;color:white;padding:0 10px;font:400 15px/44px "microsoft yahei";}
+.nav>ul .ass{height:44px;padding:0 20px;font:400 15px/44px "microsoft yahei";font-size: 16px;color:#333;}
+.nav>ul .ass:hover>a{color:#C81623;}
+.list-Carousel-NewsService{width:1210px;margin:0 auto;}
+.list-Carousel-NewsService .list{,sans-serif;width:210px;line-height:31px;display: inline-block;font-family:"Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53";font-size: 14px;font-weight: 400;background:#C81623;color:white;float:left;}
+.list-Carousel-NewsService .list>ul>li{border-left:1px solid #b61d1d;height:31px;}
+.list-Carousel-NewsService .list>ul .last{border-bottom:1px solid #b61d1d;}
+.list-Carousel-NewsService .list>ul>li>a{line-height: 31px;display: inline-block;width:190px;position: absolute;padding:0 10px;}
+.list-Carousel-NewsService .list>ul>li:hover>a{background:white;color:#B61D1D;}
+.list-Carousel-NewsService .list>ul>li>a .i-right{float:right;}
+.list-Carousel-NewsService .list>ul>li:hover>a .i-right{color:white;}
+
+.list-Carousel-NewsService .Carousel>img{width:730px;height:454px;padding:10px 10px  0 10px;line-height: 454px;display: inline-block;vertical-align: top;}
+
+.list-Carousel-NewsService .NewsService{width:250px;float:right;display:inline-block;top:0;}
+.list-Carousel-NewsService .NewsService .News .one {border:1px solid #E4E4E4;line-height: 32px;display:inline-block;}
+.list-Carousel-NewsService .NewsService .News .one .header{line-height: 32px;width:218px;height:32px;border-bottom:1px solid #E8E8E7;padding:0 15px;display: inline-block;vertical-align: top;}
+.list-Carousel-NewsService .NewsService .News .one .header>h2{float:left;font-size:16px;    font-family: "microsoft yahei";font-weight: 400; }
+.list-Carousel-NewsService .NewsService .News .one .header>a{float:right;}
+.list-Carousel-NewsService .NewsService .News .one .box{line-height:24px;width:233px;height:120px;padding:5px 0 5px 15px;display: inline-block;}
+.list-Carousel-NewsService .NewsService .News .one .box>li{line-height: 24px;display:inline-block;vertical-align: top;height:24px;}
+.list-Carousel-NewsService .NewsService .News .one .box>li>a{line-height: 24px;display:inline-block;}
+.list-Carousel-NewsService .NewsService .Service ul{display: inline-block;border:1px solid #E4E4E4;border-top:none;border-bottom:none}
+.list-Carousel-NewsService .NewsService .Service ul>li{float:left;width:61px;text-align: center;line-height:28px;border-right:1px solid #E4E4E4;border-bottom:1px solid #E4E4E4;display: inline-block;}
+.list-Carousel-NewsService .NewsService .Service ul>li>a{display: inline-block;line-height:28px;width:61px;padding-top:40px;}
+.list-Carousel-NewsService .NewsService .Service .right{border-right:none;}
