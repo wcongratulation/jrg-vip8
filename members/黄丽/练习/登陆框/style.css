@@ -1,0 +1,6 @@
+*{margin:0;padding:0;}
+html,body{height:100%;background:url("bengjing.png");}
+ul{list-style: none;}
+a{text-decoration:none;}
+.floater{height:50%;float:left;width:1px;position: relative;margin-bottom:-200px;}
+.wrapper{position: relative;clear:left;height:400px;width:40%;max-width:800px;min-width: 400px;margin: 0 auto}
