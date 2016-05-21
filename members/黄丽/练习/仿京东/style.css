@@ -8,8 +8,8 @@ body{font: 12px/150% Arial,Verdana,"\5b8b\4f53";color: #666;background: #fff;}
 .Topbar{width:1210px;height:30px;margin:0 auto; cursor: default; }
 .Topbar .location{width:95px;height:30px;float:left;position: relative; display:inline-block;vertical-align: middle;line-height:30px;}
 .Topbar .location .beijing .i-down{position:absolute;top:0;right:4px;display: inline-block;}
-.Topbar .location:hover .beijing .i-down{transform: rotate(180deg);transition: transform 0.1s;  }
-.location:hover:after{content:'';display: block;position: absolute;height:0;top:95%;left:1px;border-top: 6px solid white;border-left: 1px solid transparent;border-right: 1px solid transparent;box-sizing: border-box;width:100%;}
+.Topbar .location:hover .beijing .i-down{-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg);-webkit-transition:-webkit-transform 0.1s;transition:-webkit-transform 0.1s;transition:transform 0.1s; }
+.location:hover:after{content:'';display: block;position: absolute;height:0;top:90%;left:1px;border-top: 10px solid white;border-left: 1px solid transparent;border-right: 1px solid transparent;-webkit-box-sizing: border-box;box-sizing: border-box;width:100%;z-index:1;}
 .Topbar .location .beijing{padding:0 25px 0 10px;width:60px;height:30px;line-height:30px;display: inline-block;border:1px solid transparent;}
 .Topbar .location:hover .beijing{ background:white;border-left:1px solid #DDDDDD;border-right:1px solid #DDDDDD;}
 .Topbar .location .locationPicker{line-height:24px;top:100%;left:0;position:absolute;display: inline-block;z-index: 1;}
@@ -68,12 +68,15 @@ body{font: 12px/150% Arial,Verdana,"\5b8b\4f53";color: #666;background: #fff;}
 .list-Carousel-NewsService .NewsService .News .one .header{line-height: 32px;width:218px;height:32px;border-bottom:1px solid #E8E8E7;padding:0 15px;display: inline-block;vertical-align: top;}
 .list-Carousel-NewsService .NewsService .News .one .header>h2{float:left;font-size:16px;    font-family: "microsoft yahei";font-weight: 400; }
 .list-Carousel-NewsService .NewsService .News .one .header>a{float:right;}
+.list-Carousel-NewsService .NewsService .News .one .header:hover>a{color:#C81623;}
 .list-Carousel-NewsService .NewsService .News .one .box{line-height:24px;width:233px;padding:5px 0 5px 15px;display: inline-block;}
 .list-Carousel-NewsService .NewsService .News .one .box>li{line-height: 24px;display:inline-block;vertical-align: top;height:24px;}
 .list-Carousel-NewsService .NewsService .News .one .box>li>a{line-height: 24px;display:inline-block;}
+.list-Carousel-NewsService .NewsService .News .one .box>li:hover>a{color:#C81623;}
 .list-Carousel-NewsService .NewsService .Service ul{display: inline-block;border:1px solid #E4E4E4;border-top:none;border-bottom:none;}
 .list-Carousel-NewsService .NewsService .Service ul>li{float:left;width:61px;text-align: center;line-height:28px;border-right:1px solid #E4E4E4;border-bottom:1px solid #E4E4E4;display: inline-block;}
 .list-Carousel-NewsService .NewsService .Service ul>li>a{display: inline-block;line-height:28px;width:61px;padding-top:40px;}
+.list-Carousel-NewsService .NewsService .Service ul>li:hover>a{color:#C81623;}
 .list-Carousel-NewsService .NewsService .Service .right{border-right:none;}
 .list-Carousel-NewsService .NewsService .page{height:75px;display: inline-block;vertical-align:top;padding:2px 0 0 0;}
 .list-Carousel-NewsService .NewsService .page>a{height:75px;line-height: 75px;display: inline-block;vertical-align: top;}
