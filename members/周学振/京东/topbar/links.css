@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font: 12px/1.5 Arial, Verdana, "\5b8b\4f53", serif;
+    -webkit-font-smoothing: antialiased;
+    background: #fff;
+    color: #666;
+}
+
+
+/* Çå³ý¸¡¶¯ */
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.i-arrow {
+    font-size: 10px;
+}
+
+.split {
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 1px;
+}
+
+.links-wrapper {
+    float: right;
+}
+
+.links-wrapper > a:hover {
+    color: #C81623;
+}
