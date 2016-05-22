@@ -53,6 +53,7 @@ body{
     padding:0 10px;
     border-right: 1px solid transparent;
     border-left: 1px solid transparent;
+    cursor: pointer;
 }
 .i-arrow{
     font-size:10px;
