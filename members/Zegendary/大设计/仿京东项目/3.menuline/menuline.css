@@ -1,0 +1,17 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+	-webkit-font-smoothing: antialiased;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+i{font-style: normal;}
+.jd-arrow{display: inline-block;}
+
+/*横向商品目录*/
