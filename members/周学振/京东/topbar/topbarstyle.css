@@ -26,6 +26,10 @@ body{
 }
 .links-wrapper{
     float: right;
+    padding: 0;
+    line-height: 30px;
+    height: 30px;
+    overflow: hidden;
 }
 .links-wrapper > a:hover {
     display: inline-block;
