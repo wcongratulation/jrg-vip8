@@ -31,6 +31,9 @@ body{
     color: #C81623;
 }
 
+.links-wrapper > a{
+    margin:0 2px;
+}
 
 
 
@@ -83,6 +86,7 @@ body{
     background: white;
     border-right: 1px solid #ddd;
     border-left: 1px solid #ddd;
+    cursor: pointer;
 }
 .picker-wrapper>ol>li:hover{
     background: #F4F4F4;
