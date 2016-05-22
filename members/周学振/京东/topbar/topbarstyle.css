@@ -28,6 +28,7 @@ body{
     float: right;
 }
 .links-wrapper > a:hover {
+    display: inline-block;
     background: white;
     color: #C81623;
     border-left: 1px solid #ddd ;
