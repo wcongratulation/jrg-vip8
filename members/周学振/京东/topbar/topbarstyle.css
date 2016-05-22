@@ -28,11 +28,18 @@ body{
     float: right;
 }
 .links-wrapper > a:hover {
+    background: white;
     color: #C81623;
+    border-left: 1px solid #ddd ;
+    border-right: 1px solid #ddd ;
+}
 }
 
 .links-wrapper > a{
+    display: inline-block;
     margin:0 2px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
 }
 
 
