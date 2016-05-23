@@ -1,4 +1,6 @@
-// min.js
+/**
+ * Created by Administrator on 2016/5/23.
+ */
 $('.menu > li').on('mouseenter',function(e){
     var $current = $(e.currentTarget);
     var index = $current.attr('data-index');
