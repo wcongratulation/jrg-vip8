@@ -2,7 +2,7 @@
 ul,ol{list-style: none;}
 a,p,h1,h2,h3,h4,h5,h6{text-decoration:none;color:inherit;}
 fy-icon{color:inherit;}
-body{font: 12px/150% Arial,Verdana,"\5b8b\4f53";color: #666;background: #fff;}
+body{font: 12px/150% Arial,Verdana,"\5b8b\4f53";color: #666;background: #fff;-webkit-font-smoothing: antialiased;}
 .clearfix:after{content:" ";display:block;clear:both;}
 .Topbar-wrapper{height:30px;background:#F1F1F1;line-height: 30px;}
 .Topbar{width:1210px;height:30px;margin:0 auto; cursor: default; }
