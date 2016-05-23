@@ -8,12 +8,12 @@
 body{ background: url(../images/bg.jpg) #041428;}
 @font-face {
   font-family: 'iconfont';
-  src: url('https://at.alicdn.com/t/font_1463923323_5831025.eot'); /* IE9*/
-  src: url('https://at.alicdn.com/t/font_1463923323_5831025.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('https://at.alicdn.com/t/font_1463923323_5831025.woff') format('woff'), /* chrome、firefox */
-  url('https://at.alicdn.com/t/font_1463923323_5831025.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('https://at.alicdn.com/t/font_1463923323_5831025.svg#iconfont') format('svg'); /* iOS 4.1- */
-}                              
+  src: url('https://at.alicdn.com/t/font_1463996039_8937824.eot'); /* IE9*/
+  src: url('https://at.alicdn.com/t/font_1463996039_8937824.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('https://at.alicdn.com/t/font_1463996039_8937824.woff') format('woff'), /* chrome、firefox */
+  url('https://at.alicdn.com/t/font_1463996039_8937824.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('https://at.alicdn.com/t/font_1463996039_8937824.svg#iconfont') format('svg'); /* iOS 4.1- */
+}                                             
 .iconfont{font-family:'iconfont', 微软雅黑, 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Hiragino Sans GB W3', 'WenQuanYi Micro Hei', sans-serif;; font-style: normal; display: inline-block; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
 
 .wrap{ width: 100%; min-width: 1286px;}
@@ -120,8 +120,9 @@ h4{ color: #00c3fc; font-size: 16px; text-align: center; }
 .author-about .fl{color: #ffcc33;font-size: 14px;line-height: 26px;float: left;margin-right: 10px;}
 .author-about .fr{color: #041428;font-size: 14px;border:1px dashed #3e627d;padding: 10px;width: 290px;background: rgba(255,255,255,0.5);float: left;}
 .author-about-wrapper .return{background: rgba(45,143,209,0.7);border-radius:0 50px 50px 0;color:#ffcc33;font-size: 24px;padding: 1px 8px;}
-
-
+.github_icon{ font-size: 28px; }
+.author-about a{ color: #041428; }
+.author-about a:hover{ color: #ffcc33; }
 
 
 
