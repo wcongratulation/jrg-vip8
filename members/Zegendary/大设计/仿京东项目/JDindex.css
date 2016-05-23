@@ -154,6 +154,10 @@ i{font-style: normal;}
 /*头广告*/
 .headad{
 	position: relative;
+	background-color: #ffd600;
+	width: 100%;
+	height: 80px;
+	text-align: center;
 }
 .headad:after{
 	content: '';
@@ -166,9 +170,12 @@ i{font-style: normal;}
 	position: absolute;
 	cursor: pointer;
 }
+.headad a{
+	display: inline-block;
+	width: 1210px;
+}
 .headad .headadpicture{
 	height: 80px;
-    background-color: #ffd600;
     background-image: url(https://img11.360buyimg.com/da/jfs/t2842/233/1418633238/139358/77ccf8c0/573ed396Nc60afd05.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -176,7 +183,7 @@ i{font-style: normal;}
 /*logo搜索栏样式*/
 .logo-search-cart{
 	width: 1210px;
-	margin: 15px auto;
+	margin: 19px auto 15px auto;
 }
 .logo-search-cart .logo,.search,.cart{
 	display: inline-block;
@@ -192,7 +199,7 @@ i{font-style: normal;}
 	height: 24px;
 	line-height: 24px;
 	padding: 4px;
-	border: 2px solid #b61d1d;
+	border: 2px solid #c81623;
 	font-size: 14px;
 	font-family: "microsoft yahei";
 	color: rgb(153,153,153);
@@ -204,7 +211,7 @@ i{font-style: normal;}
 	width: 82px;
 	height: 36px;
 	line-height: 1;
-	background: #b61d1d;
+	background: #c81623;
 	color: #fff;
 	font-size: 16px;
 	font-family: "microsoft yahei";
@@ -332,7 +339,7 @@ i{font-style: normal;}
     padding: 0 20px;
     text-align: center;
     text-decoration: none;
-    font: 400 15px/44px "microsoft yahei";
+    font: 400 16px/44px "microsoft yahei";
     color: #333;
 }
 .menulinewrapper .menuline .other:hover{
@@ -357,19 +364,19 @@ i{font-style: normal;}
 }
 .menulistwrapper .menu{
 	display: inline-block;
-	border-bottom: 1px solid #b61d1d;
+	border-bottom: 1px solid #c81623;
 }
 .menulistwrapper .menu li{
 	display:block;
-	border-left: 1px solid #b61d1d;
+	border-left: 1px solid #c81623;
     height: 31px;
     color: #fff;
-    background: #b61d1d;
+    background: #c81623;
     width: 209px;
     position: relative;
 }
 .menulistwrapper .menu li:after{
-	content: '\e604';
+	content: '\e602';
 	font-family: 'jd-icon';
 	position: absolute;
 	right: 5px;
@@ -378,7 +385,7 @@ i{font-style: normal;}
 }
 .menulistwrapper .menu li:hover{
 	background: #fff;
-	color: #b61d1d;
+	color: #c81623;
 }
 .menulistwrapper .menu li span{
 	font-family: "Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53",sans-serif;
@@ -392,15 +399,54 @@ i{font-style: normal;}
 	position: absolute;
 	top: 0px;
 	left: 210px;
+	z-index: 1000;
 }
 .menulistwrapper .submenu li{
 	background: #fff;
-	border-right: 1px solid #b61d1d;
-	border-bottom: 1px solid #b61d1d;
+	border-right: 1px solid #c81623;
+	border-bottom: 1px solid #c81623;
 	width: 1000px;
 	height: 465px;
 	display: none;
 }
 .menulistwrapper .submenu li.active{
 	display: block;
+}
+
+
+/* 轮播样式Prevents slides from flashing */
+#slides {
+	width: 730px;
+	height: 454px;
+	position: relative;
+	display: inline-block;
+	top: 11px;
+	left: 10px;
+}
+#slides .slidesjs-navigation{
+	position: absolute;
+}
+#slides .slidesjs-pagination{
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	z-index: 100;
+	text-align: center;
+	width: 100%;
+}
+#slides .slidesjs-pagination .slidesjs-pagination-item{
+	display: inline-block;
+	margin: 0 2px;
+    background: #3e3e3e;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+}
+.slidesjs-pagination .slidesjs-pagination-item a{
+	display: inline-block;
+	color: #fff;
+	width: 18px;
+}
+.slidesjs-pagination .slidesjs-pagination-item a.active{
+	background: #b61b1f;
 }
