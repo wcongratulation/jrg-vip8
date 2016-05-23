@@ -26,27 +26,35 @@ body{font: 12px/150% Arial,Verdana,"\5b8b\4f53";color: #666;background: #fff;}
 .Topbar .links>ul>li .i-down {top:0;right:0;line-height: 30px;display:inline-block;vertical-align: top;}
 .Topbar .links>ul>li .i-shouji{font-size:14px;line-height: 30px;display:inline-block;vertical-align: top;}
 .Topbar .links>ul>li:hover>a{color: #C81623;}
-.Topbar .links>ul>li:hover .i-down{color:#666;}
+.Topbar .links>ul>li:hover>a .i-down{color:#666;-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg);-webkit-transition:-webkit-transform 0.1s;transition:-webkit-transform 0.1s;transition:transform 0.1s;}
 .picture{background:#FB3939;display:inline-block;width:100%;height:80px;text-align: center;position:relative;}
 .picture>img{width:1210px;height:80px;vertical-align:top;}
 .picture .i-guanbi{font-size:18px;width:19px;height:19px;position:absolute;opacity:0.4;top:10px;color:white;right:120px;background:#AF2727;filter:alpha(opacity=40);}
 .picture .i-guanbi:hover{opacity:1.0;filter:alpha(opacity=100);}
 .logo-s-S{width:100%;height:100px;display:inline-block;vertical-align: top;}
 .logo-s-S .logo-search-ShoppingCart{width:1210px;height:100px;margin:0 auto;}
-.logo-s-S .logo-search-ShoppingCart .logo{width:362px;height:60px;padding:20px 0;float:left;vertical-align:middle;}
-.logo-s-S .logo-search-ShoppingCart .logo>a{width:270px;height:60px;float:left;background:url("http://book.jirengu.com/jirengu-inc/jrg-vip8/demos/%E4%BA%AC%E4%B8%9C/images/logo-201305.png");}
-.logo-s-S .logo-search-ShoppingCart .search{width:538px;height:60px;float:left;padding:20px 0 20px 0;}
-.logo-s-S .logo-search-ShoppingCart .search .from{display: inline-block;width:538px;height:36px;}
-.logo-s-S .logo-search-ShoppingCart .search .from>input{width:446px;height:24px;border:2px solid #B61D1D;padding:4px;margin-bottom:4px;}
-.logo-s-S .logo-search-ShoppingCart .search .from>button{width:80px;height:36px;background: #B61D1D;font-size: 18px;color:white;border:none;padding:0 8px 1px 8px;float:right;margin-bottom:4px;}
-.logo-s-S .logo-search-ShoppingCart .search .recommends{width:518px;height:15px;padding:3px 6px 0 0;}
-.logo-s-S .logo-search-ShoppingCart .search .recommends>a{text-decoration: none;line-height:20px;color:#666666;margin-right:6px;}
-.logo-s-S .logo-search-ShoppingCart .search .recommends>a:hover{color:#C81623;}
-.logo-s-S .logo-search-ShoppingCart .ShoppingCart{width:140px;height:34px;float:right;padding:20px 60px 44px 110px;text-align: center;}
-.logo-s-S .logo-search-ShoppingCart .ShoppingCart .shopping{width:100%;height:100%;position:relative;border:1px solid #DFDFDF;background: #F9F9F9;}
-.logo-s-S .logo-search-ShoppingCart .ShoppingCart .shopping .my{height:34px;width:60px;position:absolute;color:#666666;padding:0  40px;left:0;line-height: 34px;}
-.logo-s-S .logo-search-ShoppingCart .ShoppingCart .shopping .i-gouwuche{position:absolute;color:#CD2A36;top:8px;left:11px;}
-.logo-s-S .logo-search-ShoppingCart .ShoppingCart .shopping .i-right{position:absolute;color:#999999;top:8px;right:11px;}
+.logo-search-ShoppingCart .logo{width:362px;height:60px;padding:20px 0;float:left;vertical-align:middle;}
+.logo-search-ShoppingCart .logo>a{width:270px;height:60px;float:left;background:url("http://book.jirengu.com/jirengu-inc/jrg-vip8/demos/%E4%BA%AC%E4%B8%9C/images/logo-201305.png");}
+.logo-search-ShoppingCart .search{width:538px;height:60px;float:left;padding:20px 0 20px 0;}
+.logo-search-ShoppingCart .search .from{display: inline-block;width:538px;height:36px;}
+.logo-search-ShoppingCart .search .from>input{width:446px;height:24px;border:2px solid #B61D1D;padding:4px;margin-bottom:4px;}
+.logo-search-ShoppingCart .search .from>button{width:80px;height:36px;background: #B61D1D;font-size: 18px;color:white;border:none;padding:0 8px 1px 8px;float:right;margin-bottom:4px;}
+.logo-search-ShoppingCart .search .recommends{width:518px;height:15px;padding:3px 6px 0 0;}
+.logo-search-ShoppingCart .search .recommends>a{text-decoration: none;line-height:20px;color:#666666;margin-right:6px;}
+.logo-search-ShoppingCart .search .recommends>a:hover{color:#C81623;}
+.logo-search-ShoppingCart .search .recommends .first{color:#C81623;}
+.logo-search-ShoppingCart .ShoppingCart{width:140px;height:36px;float:right;padding:20px 60px 44px 110px;text-align: center;}
+.logo-search-ShoppingCart .ShoppingCart .shopping{width: 138px;height:34px;position:relative;border:1px solid #DFDFDF;background: #F9F9F9;line-height: 34px;}
+.logo-search-ShoppingCart .ShoppingCart .shopping .my{height:34px;width:60px;position:absolute;color:#666666;padding:0  40px;left:0;}
+.logo-search-ShoppingCart .ShoppingCart .shopping .my .drop{display:none;position: absolute;top:100%;right:1px;background:white;width:300px;height:100px;border:1px solid #DFDFDF;}
+.logo-search-ShoppingCart .ShoppingCart .shopping:hover:after{position: absolute;top:92%;right:0;border:5px solid white; width:100%;height:10px;background:white;display: block;content: '';box-sizing: border-box;}
+.logo-search-ShoppingCart .ShoppingCart .shopping:hover .my .drop{display:block;}
+.logo-search-ShoppingCart .ShoppingCart .shopping:hover{color:#C81623;background: white;}
+.logo-search-ShoppingCart .ShoppingCart .shopping:hover .my{color:#C81623;}
+.logo-search-ShoppingCart .ShoppingCart .shopping .i-gouwuche{position:absolute;color:#CD2A36;top:0;left:11px;font-size:18px;}
+.logo-search-ShoppingCart .ShoppingCart .shopping .i-right{position:absolute;color:#999999;top:0;right:11px;}
+.logo-search-ShoppingCart .ShoppingCart .shopping  .bubble{position: absolute;background:#C81623;color:white;-webkit-border-radius:8px 8px 8px 0;-moz-border-radius:8px 8px 8px 0;border-radius:8px 8px 8px 0;width:14px;height:13px;font-size: 6px;top:-5px;right:20px; line-height:13px;}
+
 .nav{width:100%;height:44px;border-bottom: 2px solid #B1191A;display:inline-block;vertical-align: top;}
 .nav>ul{list-style: none;width:1210px;height:44px;margin:0 auto;}
 .nav>ul>li{float:left;line-height:44px;height:44px;}
@@ -54,13 +62,16 @@ body{font: 12px/150% Arial,Verdana,"\5b8b\4f53";color: #666;background: #fff;}
 .nav>ul .ass{height:44px;padding:0 20px;font:400 15px/44px "microsoft yahei";font-size: 16px;color:#333;}
 .nav>ul .ass:hover>a{color:#C81623;}
 .list-Carousel-NewsService{width:1210px;margin:0 auto;vertical-align: top;}
-.list-Carousel-NewsService .list{,sans-serif;width:210px;line-height:31px;display: inline-block;font-family:"Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53";font-size: 14px;font-weight: 400;background:#C81623;color:white;float:left;}
-.list-Carousel-NewsService .list>ul>li{border-left:1px solid #b61d1d;height:31px;}
-.list-Carousel-NewsService .list>ul .last{border-bottom:1px solid #b61d1d;}
-.list-Carousel-NewsService .list>ul>li>a{line-height: 31px;display: inline-block;width:190px;position: absolute;padding:0 10px;}
+.list-Carousel-NewsService .list{,sans-serif;width:210px;line-height:31px;display: inline-block;font-family:"Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53";font-size: 14px;font-weight: 400;background:#C81623;color:white;float:left;position:relative;}
+.list-Carousel-NewsService .list>ul.menu>li{border-left:1px solid #b61d1d;height:31px;width:210px;}
+.list-Carousel-NewsService .list>ul.menu .last{border-bottom:1px solid #b61d1d;}
+.list-Carousel-NewsService .list>ul>li>a{line-height: 31px;display: inline-block;width:190px;padding:0 10px;position: absolute;}
 .list-Carousel-NewsService .list>ul>li:hover>a{background:white;color:#B61D1D;}
 .list-Carousel-NewsService .list>ul>li>a .i-right{float:right;}
-.list-Carousel-NewsService .list>ul>li:hover>a .i-right{color:white;}
+.list-Carousel-NewsService .list>ul.menu>li:hover>a .i-right{color:white;}
+.list-Carousel-NewsService .list>ul.submenu{position:absolute;top:0;left:210px;}
+.list-Carousel-NewsService .list>ul.submenu>li{width:999px;height:500px;border:1px solid red;color:black;display:none;}
+.list-Carousel-NewsService .list>ul.submenu>li.active{display:block;}
 .list-Carousel-NewsService .Carousel{width:730px;height:454px;padding:12px 10px  0 10px;line-height: 454px;display: inline-block;vertical-align: top;}
 .list-Carousel-NewsService .Carousel>img{width:730px;line-height: 454px;display: inline-block;vertical-align: top;}
 .list-Carousel-NewsService .NewsService{width:249px;float:right;display:inline-block;padding:12px 0 0 0;}
