@@ -1,23 +1,13 @@
 @charset "UTF-8";
-/**
- * 
- * @authors  ()
- * @date    2016-04-29
- * @version $Id$
- */
- body,html,ul,li,span,h2,h3,h4,h5,h6,p{
+
+body,html,ul,li,span,h2,h3,h4,h5,h6,p{
  	padding: 0;
  	margin: 0;
  }
- body,html{
+ body{
  	font: 16px/1.2 "微软雅黑","Helvetica Neue",Arial,sans-serif;
     color: #fff;
     background: url(./imgs/bg.png) repeat;
-<<<<<<< HEAD:members/费晗/homework/main.css
-/*    width: 100%;
-    height: 100%;*/
-=======
->>>>>>> f42455273c805330ac3ef089047c6b62fa739f9b:members/费晗/homework/hunger/main.css
  }
  a{
  	text-decoration: none;
@@ -27,7 +17,7 @@ ul,li{
  }
  .wrapper{
  	margin: 0 auto;
- 	width: 1170px;
+ 	width: 1210px;
  }
  .clearfix:after{
  	content: "";
@@ -37,14 +27,8 @@ ul,li{
  .clearfix{
  	*zoom: 1;
  }
-/* #top > .wrapper{
- 	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
- 	background: url(./imgs/big_bg.png) center center no-repeat scroll;
- }*/
- #top{
+  /**---topnav---**/
+ #site-topbar{
  	position: fixed;
  	top: 0;
  	left: 0;
@@ -54,30 +38,32 @@ ul,li{
  	text-align: center;
  	z-index: 10;
  }
-#top .wrapper{
-	margin-top: 10px;
+#site-topbar .wrapper{
+	padding-top: 15px;
+	padding-bottom: 15px;
 	text-align: center;
 }
 
-#top ul.nav li{
+#site-topbar ul.sitenav li{
 	display: inline-block;
  	margin-left: 40px;
  }
- #top ul.nav li:first-of-type{
+ #site-topbar ul.sitenav li:first-of-type{
  	margin-left: 0;
  }
-#top ul.nav li img{
+#site-topbar ul.sitenav li img{
  	margin: 0 70px; 
  	vertical-align: top;
  }
-#top ul.nav li a{
+#site-topbar ul.sitenav li a{
  	color: #fff;
  }
- #header{
+ /**---header---**/
+ #site-header{
  	position: relative;
- 	background: url(./imgs/big_bg.png) center center no-repeat scroll;
+ 	
  }
- #header h2{
+ #site-header h1{
  	font-size: 60px;
  	font-family: "宋体";
  /*	letter-spacing: 3px;*/
@@ -87,29 +73,29 @@ ul,li{
  	padding-bottom: 50px;
  	text-align: center;
  }
- #header .course .view-left{
+ #site-header .course .view-left{
  	float: left;
  	width: 414px;
  }
-#header .course .view-left .desp{
+#site-header .course .view-left .desp{
 	float: right;
 	text-align: right;
 }
-#header .course .view-left .view-img img{
+#site-header .course .view-left .view-img img{
 	width: 414px;
 	height: 330px;
 }
-#header .course .view-left .desp p{
+#site-header .course .view-left .desp p{
 	font-size: 18px;
 	padding: 5px;
 	color: #8ba0a7;
 	margin-bottom: 4px;
 }
-#header .course .view-left .desp p a{
+#site-header .course .view-left .desp p a{
 	font-size: 18px;
 	color: #8ba0a7;
 }
-#header .course .icon{
+#site-header .course .icon{
   font-size: 18px;
   color:#000;
   padding: 0 10px 0 5px;
@@ -118,7 +104,7 @@ ul,li{
   transition: font-size 0.25s ease-out 0s;
 
 }
-#header .course .view-left .desp .btn a{
+#site-header .course .view-left .desp .btn a{
 	color: #333;
 }
 .btn{
@@ -143,13 +129,13 @@ ul,li{
 	border-left: 1px solid #857032;
 	margin: 0 8px 0 4px;
 }
-#header .course .view-right{
+#site-header .course .view-right{
 	float: left;
 	width: 656px;
 	margin-left: -13px;
 }
 
-#header .course .view-right h3{
+#site-header .course .view-right h2{
     font-size: 30px;
     font-family: "宋体";
     text-align: center;
@@ -157,7 +143,7 @@ ul,li{
     padding-bottom: 43px;
     margin-top: -3px;
 }
-#heaser .course .view-right img{
+#site-header .course .view-right img{
 	width: 590px;
 	width: 550px;
 	vertical-align: middle;

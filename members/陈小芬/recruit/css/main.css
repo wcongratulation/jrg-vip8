@@ -109,6 +109,7 @@ h4{ color: #00c3fc; font-size: 16px; text-align: center; }
 
 .author-wrapper{ position: fixed; left:0; top:30%;}
 
+<<<<<<< HEAD
 .author-btn{background: rgba(45,143,209,0.7);border-radius:0 50px 50px 0;color: #ffcc33;font-size: 16px;padding: 0px 13px 4px 3px;position:absolute;width: 78px;transform: translateX(0px);visibility: visible;transition: transform 0.2s;}
 .author-wrapper.active > .author-btn{ transform: translateX(-115px); visibility: hidden; }
 
@@ -120,6 +121,19 @@ h4{ color: #00c3fc; font-size: 16px; text-align: center; }
 .author-about .fl{color: #ffcc33;font-size: 14px;line-height: 26px;float: left;margin-right: 10px;}
 .author-about .fr{color: #041428;font-size: 14px;border:1px dashed #3e627d;padding: 10px;width: 290px;background: rgba(255,255,255,0.5);float: left;}
 .author-about-wrapper .return{background: rgba(45,143,209,0.7);border-radius:0 50px 50px 0;color:#ffcc33;font-size: 24px;padding: 1px 8px;}
+=======
+.author-btn{background: rgba(45,143,209,0.7);border-radius:0 50px 50px 0;color: #ffcc33;font-size: 18px;padding: 0px 13px 4px 3px; position:absolute; width: 99px; transform: translateX(0px); visibility: visible; transition: transform 0.2s;}
+.author-wrapper.active > .author-btn{ transform: translateX(-115px); visibility: hidden; }
+
+.author-btn:before{font-family: 'iconfont'; font-size: 26px; content: "\e605"; margin-right: 3px;}
+
+.author-wrapper.active > .author-about-wrapper{ display: block; transform: translateX(0px); visibility: visible;}
+.author-about-wrapper{visibility: hidden; transition: transform 0.2s; transform: translateX(-620px); position: absolute; width: 620px;}
+.author-about{background: rgba(45,143,209,0.7); padding: 20px; float: left;}
+.author-about .fl{ color: #041428; font-size: 16px; line-height: 26px; float: left; margin-right: 10px; }
+.author-about .fr{ color: #314558; font-size: 15px; border:1px dashed #3e627d; padding: 15px; width: 290px; background: rgba(255,255,255,0.5); float: left;}
+.author-about-wrapper .return{background: rgba(45,143,209,0.7);border-radius:0 50px 50px 0;color:#ffcc33;font-size: 30px;padding: 1px 8px;}
+>>>>>>> 1f1d4b98bc749afe3e67a2dbac6ddd3662843a6d
 
 
 
