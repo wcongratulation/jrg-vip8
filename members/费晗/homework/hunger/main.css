@@ -5,11 +5,15 @@ body,html,ul,li,span,h2,h3,h4,h5,h6,p{
  	margin: 0;
  }
  body{
- 	font-size: 16px;
- 	font-family: "微软雅黑","Helvetica Neue",Arial,sans-serif;
-    color: #fff;
-    background: url(./imgs/bg.png) repeat;
-    -webkit-font-smoothing: antialiased;
+	 font: 400 15px/1.8em "Microsoft YaHei","微软雅黑",sans-serif;
+	 color: #fff;
+	 -webkit-tap-highlight-color: rgba(255,255,255,0);
+	 text-rendering: optimizeLegibility;
+	 height: 100%;
+	 width: 100%;
+	 overflow-x: hidden;
+	 background: url(./imgs/bg.png) repeat;
+	 -webkit-font-smoothing: antialiased;
 }
  a{
  	text-decoration: none;
@@ -86,6 +90,7 @@ ul,li{
     height: 322px;
     background-color: rgba(58,114,176,.25);
     position: relative;
+	 margin-left: 130px;
  }
 #site-header .course>.course-left>.course-border{
     border: 2px solid #309ecc;
@@ -102,18 +107,18 @@ ul,li{
 #site-header .course>.course-left>h2:after{
 	content: '';
 	position: absolute;
-	width: 6px;
-	height: 6px;
+	width: 5px;
+	height: 5px;
 	border-radius: 50%;
 	background: #309ecc;
 }
 #site-header .course>.course-left>h2:before{
-	top: 23%;
-	left: 10%;
+	top: 59px;
+	left: 40px;
 }
 #site-header .course>.course-left>h2:after{
-	top: 23%;
-	right: 10%;
+	top: 59px;
+	right: 40px;
 }
 #site-header .course>.course-left>.courseSlides{
 	text-align: center;
@@ -144,10 +149,12 @@ ul,li{
 	width: 240px;
 	height: 55px;
 	line-height: 55px;
-	font-size: 22px;
+	font-family: 'SimSun';
+	font-size: 24px;
+	font-weight: bold;
 	color: #333;
 	text-align: center;
-	background-color: #f4c444;
+	background-color: #F3C544;
 	border-radius: 4px;
 	margin-top: 10px;
 	margin-bottom: 30px;
@@ -162,37 +169,27 @@ ul,li{
 	width: 20px;
 	text-align: center;
 	font-size: 24px;
+	font-weight: normal;
 }
-#site-header .course>.course-left>.desp>a.course-btn
-.split{
-	width: 1px;
-	height: 20px;
-	background: #333;
-	display: inline-block;
-	vertical-align: middle;
-	margin: 0 1px;
+#site-header .course>.course-left>.desp .split{
+	width: 0px;
+	height: 18px;
+	border-left: 2px solid #333;
+	margin: 0 3px 0 4px;
 }
-#site-header .course>.view-right{
+#site-header .course>.course-right{
 	float: left;
-	width: 656px;
-	margin-left: -13px;
+	width: 590px;
+	margin-left: -10px;
 }
 
-#site-header>.course>.view-right h2{
+#site-header .course>.course-right h3{
     font-size: 30px;
     font-family: "宋体";
     text-align: center;
     font-weight: normal;
-    padding-bottom: 43px;
-    margin-top: -3px;
-}
-#site-header>.course>.view-right img{
-	width: 590px;
-	width: 550px;
-	vertical-align: middle;
-	text-align: center;
-
-
+	padding-top:2px;
+    padding-bottom: 42px;
 }
 
 /*{
