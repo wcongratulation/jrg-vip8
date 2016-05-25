@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 body,html,ul,li,span,h2,h3,h4,h5,h6,p{
  	padding: 0;
  	margin: 0;
@@ -7,7 +5,6 @@ body,html,ul,li,span,h2,h3,h4,h5,h6,p{
  body{
 	 font: 400 15px/1.8em "Microsoft YaHei","微软雅黑",sans-serif;
 	 color: #fff;
-	 -webkit-tap-highlight-color: rgba(255,255,255,0);
 	 text-rendering: optimizeLegibility;
 	 height: 100%;
 	 width: 100%;
@@ -43,7 +40,7 @@ ul,li{
  	top: 0;
  	left: 0;
  	right: 0;
- 	bottom: 0;
+ 	width: 100%;
  	text-align: center;
  	z-index: 10;
  }
@@ -75,36 +72,42 @@ ul,li{
  	position: relative;	
  	background: url(./imgs/head_bg.png) no-repeat;
  }
+ #site-header{
+    padding-top: 60px;
+ }
  #site-header>.wrapper h1{
  	font-size: 60px;
  	font-family: "宋体";
  	color: #00a0e9;
  	font-weight: normal;
- 	padding-top: 80px; 
+ 	padding-top: 40px; 
  	padding-bottom: 40px;
  	text-align: center;
  }
  #site-header .course>.course-left{
  	float: left;
  	width: 414px;
-    height: 322px;
-    background-color: rgba(58,114,176,.25);
     position: relative;
-	 margin-left: 130px;
+	margin-left: 120px;
  }
-#site-header .course>.course-left>.course-border{
+  #site-header .course>.course-left>.banner{
+  	height: 328px;
+    background-color: rgba(58,114,176,0.2);
+  }
+
+#site-header .course>.course-left>.banner>.course-border{
     border: 2px solid #309ecc;
 }
-#site-header .course>.course-left>h2{
+#site-header .course>.course-left>.banner h2{
 	font-size: 32px;
 	text-align: center;
 	font-weight: normal;
 	margin: 0px 45px;
-	padding: 15px 0;
+	padding: 18px 0;
 	border-bottom: 1px solid #309ecc;
 }
-#site-header .course>.course-left>h2:before,
-#site-header .course>.course-left>h2:after{
+#site-header .course>.course-left>.banner>h2:before,
+#site-header .course>.course-left>.banner>h2:after{
 	content: '';
 	position: absolute;
 	width: 5px;
@@ -112,19 +115,19 @@ ul,li{
 	border-radius: 50%;
 	background: #309ecc;
 }
-#site-header .course>.course-left>h2:before{
-	top: 59px;
+#site-header .course>.course-left>.banner>h2:before{
+	top: 65px;
 	left: 40px;
 }
-#site-header .course>.course-left>h2:after{
-	top: 59px;
+#site-header .course>.course-left>.banner>h2:after{
+	top: 65px;
 	right: 40px;
 }
-#site-header .course>.course-left>.courseSlides{
+#site-header .course>.course-left>.banner>.courseSlides{
 	text-align: center;
-	padding: 18px 0;
+	padding: 25px 0;
 }
-#site-header .course>.course-left>.courseSlides>.slider img{
+#site-header .course>.course-left>.banner>.courseSlides>.slider img{
 	width: 375px;
 	height: 209px;
 }
@@ -141,7 +144,7 @@ ul,li{
 #site-header .course>.course-left>.desp>p a{
 	color: #8ba0a7;	
 }
-#site-header .course>.course-left>.desp>p a:hover{
+#site-header .course>.course-left>.desp a:hover{
 	color: #fff;
 }
 #site-header .course>.course-left>.desp>a.course-btn{
@@ -154,12 +157,15 @@ ul,li{
 	font-weight: bold;
 	color: #333;
 	text-align: center;
-	background-color: #F3C544;
+	background-color: #f3c544;
 	border-radius: 4px;
 	margin-top: 10px;
 	margin-bottom: 30px;
 	float: right;
 	position: relative;
+}
+#site-header .course>.course-left>.desp>a.course-btn:hover{
+	background-color: #fec503;
 }
 #site-header .course>.course-left>.desp>a i{
 	position: absolute;
@@ -184,53 +190,66 @@ ul,li{
 }
 
 #site-header .course>.course-right h3{
-    font-size: 30px;
+    font-size: 34px;
     font-family: "宋体";
     text-align: center;
     font-weight: normal;
-	padding-top:2px;
+	padding-top: 8px;
     padding-bottom: 42px;
 }
 
-/*{
-	width: 100%; 
-	height: 100%; 
-	visibility: inherit; 
-	opacity: 1; 
-	background-image: url("http://7xnk1s.com2.z0.glb.qiniucdn.com/jrg-bg6.png");
-	background-color: rgba(0, 0, 0, 0); 
-	background-size: cover; 
-	background-position: 50% 0%; 
-	background-repeat: no-repeat;
-}*/
-#techer-des .wrapper{
+/**techer-introduction**/
+
+#techer-introduction>.wrapper{
 	margin-top: 100px;
 }
-#techer-des h4{
-	font-size: 28px;
+#techer-introduction>.wrapper>h2{
+	font-size: 36px;
 	font-family: "微软雅黑";
 	font-weight: normal;
-	margin-bottom: 10px;
+	margin-bottom: 16px;
 	text-align: center;
 
 }
-#techer-des p{
-	font-size: 16px;
-	font-family: "黑体";
+#techer-introduction>.wrapper>p{
+	font-size: 18px;
+	font-family: "微软雅黑";
 	color: #01ace0;
 	text-align: center;
 	text-transform: uppercase;
+	padding-bottom: 20px;
 
 }
-#techer-des ul li{
-	display: inline-block;
-	*display: inline;
+#techer-introduction>.wrapper>.summary{
+	position: relative;
 }
-#techer-des ul>li:nth-child(1){
-	margin-left: 50px;
+#techer-introduction>.wrapper>.summary>.picture{
+	float: left;
+	width: 248px;
+	margin-left: 130px;
+	border: 1px solid red;
 }
-#techer-des ul li p{
-	width: 450px;
+#techer-introduction>.wrapper>.summary>.introduction{
+   position: absolute;
+   margin-left: 500px;
+   width: 670px;
+}
+#techer-introduction>.wrapper>.summary>.introduction>h3{
+	color: #00A0E9;
+	font-size: 26px;
+	text-align: center;
+	font-weight: normal;
+	margin-bottom: 40px;
+	background: url(../imgs/name_bg.png) no-repeat
+
+}
+#techer-introduction>.wrapper>.summary>.introduction>.abstract{
+	height: 180px;
+	line-height: 1.8;
+	background-color: rgba(58,114,176,0.2);
+	padding: 30px 50px;
+	font-size: 24px;
+	text-align: justify;
 }
 #support h5{
 	font-size: 22px;
