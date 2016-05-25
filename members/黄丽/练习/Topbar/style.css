@@ -23,13 +23,13 @@ body{font: 12px/150% Arial,Verdana,"\5b8b\4f53";color: #666;background: #fff;-we
 .Topbar .links>ul .split{width:1px;height:15px;background: #ddd;display: inline-block;line-height:30px;vertical-align: middle;margin: 8px 1px;border:none;}
 .Topbar .links>ul>li{float:left;line-height:30px;display:inline-block;position:relative;}
 .Topbar .links>ul>li>a{padding:0 8px;line-height:30px;display:inline-block;vertical-align: top;}
-.Topbar .links>ul>li.other>a{padding:0 8px;line-height:30px;display:inline-block;vertical-align: top;}
 .Topbar .links>ul>li.other>span{padding:0 8px;line-height:30px;display:inline-block;vertical-align: top;}
 .Topbar .links>ul>li .i-down {top:0;right:0;line-height: 30px;display:inline-block;vertical-align: top;}
 .Topbar .links>ul>li .i-shouji{font-size:14px;line-height: 30px;display:inline-block;vertical-align: top;}
 .Topbar .links>ul>li:hover>a{color: #C81623;}
 .Topbar .links>ul>li:hover>a .i-down{color:#666;-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg);-webkit-transition:-webkit-transform 0.1s;transition:-webkit-transform 0.1s;transition:transform 0.1s;}
 .Topbar .links>ul>li:hover .my{display: block;}
+.Topbar .links>ul>li:hover>span .i-down{color:#666;-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg);-webkit-transition:-webkit-transform 0.1s;transition:-webkit-transform 0.1s;transition:transform 0.1s;}
 .Topbar .links>ul>li.other{position:relative;line-height:30px;height:30px;border-left:1px solid transparent;border-right:1px solid transparent;}
 .Topbar .links>ul>li.other:hover{background: white;border-left:1px solid #DDDDDD;border-right:1px solid #DDDDDD;}
 .Topbar .links>ul>li.other:hover:after{content:'';display: block;position: absolute;height:0;top:95%;left:0;border-top: 3px solid white;border-left: 1px solid transparent;border-right: 1px solid transparent;box-sizing:border-box;z-index:1;width:100%;}
