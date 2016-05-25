@@ -53,7 +53,7 @@ i{font-style: normal;}
 	transform: rotate(180deg);
 	transition: transform 0.1s;
 	position: relative;
-	top: 8px;
+	top: 6px;
 }
 .location-wrapper:hover:after{
 	content: '';
@@ -127,7 +127,7 @@ i{font-style: normal;}
 	transform: rotate(180deg);
 	transition: transform 0.1s;
 	position: relative;
-	top: 8px;
+	top: 6px;
 }
 .z-phone{
 	display: inline-block;
