@@ -101,3 +101,9 @@ i{font-style: normal;}
 .menulistwrapper .submenu li.active{
 	display: block;
 }
+
+/*补充鼠标离开一级菜单栏样式*/
+.menulistwrapper .menu li.active{
+	background: #fff;
+	color: #b61d1d;
+}
