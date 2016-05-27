@@ -12,6 +12,7 @@ body{
     font:12px/1.5 Arial,Verdana,微软雅黑,"\5b8b\4f53",serif;
   -webkit-font-smoothing: antialiased;
   	padding-top: 10px;
+  	
 }
 
 /*业务导航开始*/
@@ -54,7 +55,12 @@ body{
 
 
 /*商品分类开始*/
-.productCategory{margin-left: 77px;}
+/*添加一个包裹器，解决不用分辨率无法对齐的问题（PS：该方法还有不完善的地方，包裹器的空间会影响到后面轮播div的空间）*/
+.productCategoryWrapper{
+	width: 1210px;
+	margin:0 auto;
+}
+
 
 .productCategory > ul{
 	width: 202px;
