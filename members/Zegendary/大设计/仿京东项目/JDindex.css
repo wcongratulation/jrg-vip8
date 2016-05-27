@@ -456,7 +456,7 @@ i{font-style: normal;}
 	text-align: center;
 	color: #fff;
 }
-#slides .slidesjs-previous{
+#slides .slidesjs-next{
 	right: 0px;
 }
 #slides:hover .slidesjs-navigation{
@@ -661,8 +661,8 @@ i{font-style: normal;}
 	text-align: center;
 	color: #fff;
 }
-.onsalewrapper .onsaleslides .slidesjs-previous{
-	right: 0px;
+.onsalewrapper .onsaleslides .slidesjs-next{
+	right: 1px;
 }
 .onsalewrapper .onsaleslides:hover .slidesjs-navigation{
 	display: block;
