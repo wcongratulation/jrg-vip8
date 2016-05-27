@@ -6,6 +6,7 @@
 	font: 12px/150% Arial,Verdana,"\5b8b\4f53";
 	-webkit-font-smoothing: antialiased;
 }
+body{min-height: 1000px}
 .clearfix:after{
 	content: '';
 	display: block;
@@ -356,6 +357,14 @@ i{font-style: normal;}
 	display: inline-block;
 	color: #fff;
 }
+/*背景*/
+.backgroundad a{
+	height: 613px;
+    width: 100%;
+    position: absolute;
+    display: inline-block;
+    background: url(https://img12.360buyimg.com/uba/jfs/t2800/290/1104768090/73207/5e10acf2/57345e56N6fb9c9b3.jpg) no-repeat center top;
+}
 /*分类列表样式*/
 .menulistwrapper{
 	width: 1210px;
@@ -364,19 +373,20 @@ i{font-style: normal;}
 }
 .menulistwrapper .menu{
 	display: inline-block;
-	border-bottom: 1px solid #c81623;
+	border-bottom: 1px solid #b61d1d;
 }
 .menulistwrapper .menu li{
 	display:block;
-	border-left: 1px solid #c81623;
+	border-left: 1px solid #b61d1d;
     height: 31px;
     color: #fff;
-    background: #c81623;
+    background: #b61d1d;
     width: 209px;
-    position: relative;
 }
-.menulistwrapper .menu li:after{
-	content: '\e602';
+.menulistwrapper .menu p{
+	position: relative;}
+.menulistwrapper .menu p:after{
+	content: '\e604';
 	font-family: 'jd-icon';
 	position: absolute;
 	right: 5px;
@@ -384,8 +394,18 @@ i{font-style: normal;}
 	color: #fff;
 }
 .menulistwrapper .menu li:hover{
+	width: 210px;
 	background: #fff;
-	color: #c81623;
+	color: #b61d1d;
+}
+.menulistwrapper .menu li:hover p{
+	background: #f7f7f7;
+	width: 210px;
+	z-index: 300;
+}
+.menulistwrapper .menu li:hover p:after{
+	content: '';
+	display: none;
 }
 .menulistwrapper .menu li span{
 	font-family: "Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53",sans-serif;
@@ -395,22 +415,21 @@ i{font-style: normal;}
 	margin: 0 10px;
 	cursor: pointer;
 }
-.menulistwrapper .submenu{
+.menulistwrapper .sunmenu{
 	position: absolute;
+	width: 1000px;
+	height: 500px;
 	top: 0px;
 	left: 210px;
-	z-index: 1000;
-}
-.menulistwrapper .submenu li{
-	background: #fff;
-	border-right: 1px solid #c81623;
-	border-bottom: 1px solid #c81623;
-	width: 1000px;
-	height: 465px;
+	background: #f7f7f7;
+	color: black;
+	border: 1px solid #b61d1d;
+	border-top: none;
 	display: none;
 }
-.menulistwrapper .submenu li.active{
+.menulistwrapper .menu li:hover .sunmenu{
 	display: block;
+	z-index: 200;
 }
 
 
@@ -421,10 +440,27 @@ i{font-style: normal;}
 	position: relative;
 	display: inline-block;
 	top: 11px;
-	left: 10px;
+	left: 7px;
 }
-#slides .slidesjs-navigation{
+#slides a.jd-icon{
 	position: absolute;
+	top: 50%;
+    margin-top: -31px;
+    z-index: 1;
+    display: none;
+    width: 28px;
+    height: 62px;
+    line-height: 62px;
+    background: rgba(0,0,0,.2);
+	z-index: 100;
+	text-align: center;
+	color: #fff;
+}
+#slides .slidesjs-next{
+	right: 0px;
+}
+#slides:hover .slidesjs-navigation{
+	display: block;
 }
 #slides .slidesjs-pagination{
 	position: absolute;
@@ -449,4 +485,185 @@ i{font-style: normal;}
 }
 .slidesjs-pagination .slidesjs-pagination-item a.active{
 	background: #b61b1f;
+}
+/*右侧新闻css样式*/
+.menulistwrapper .newswrapper{
+	width: 250px;
+	float: right;
+}
+.menulistwrapper .news{
+	width: 250px;
+	margin-top: 12px;
+	float: right;
+	border: 1px solid #e4e4e4;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.news .newstitle{
+	height: 32px;
+	line-height: 32px;
+	padding: 0 15px;
+	border-bottom: 1px dotted #E8E8E7;
+	box-sizing: border-box;
+}
+.news .newstitle span{
+	font-size: 16px;
+	line-height: 32px;
+	font-family: "microsoft yahei";
+    font-weight: 400;
+    color: rgb(102,102,102);
+}
+.news .newstitle a{
+	color: #666;
+	line-height: 32px;
+	float: right;
+}
+.news .newstitle a:hover{
+	color: #c81623;
+}
+.news .newstitle i{
+	vertical-align: middle;
+}
+.news .newsdetail{
+	padding: 5px 0 4px 15px;
+	border-bottom: 1px solid #E8E8E7;
+	box-sizing: border-box;
+}
+.news .newsdetail li{
+	height: 24px;
+	line-height: 24px;
+}
+.news .newsdetail li:first-child a{
+	font-weight: 700;
+	color: #c81623;
+}
+.news .newsdetail a{
+	color: #666;
+}
+.news .newsdetail a:hover{
+	color: #c81623;
+}
+.news .newsdetail li span{
+	margin-right: 5px;
+	font-weight: bold;
+}
+.newsicon ul{
+    position: relative;
+    width: 260px;
+    height: 209px;
+    overflow: hidden;
+}
+.newsicon li{
+	float: left;
+    display: inline;
+    width: 62px;
+    height: 70px;
+    border-right: 1px solid #E8E8E7;
+    border-bottom: 1px solid #E8E8E7;
+    overflow: hidden;
+    cursor: pointer;
+}
+.newsicon li a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: #666;
+}
+.newsicon li a:hover{
+	color: #c81623;
+}
+.newsicon li a div{
+	margin-top: 13px;
+	margin-left: 18px;
+	width: 25px;
+	height: 25px;
+}
+.newsicon li a span{
+	line-height: 28px;
+    position: relative;
+    top: 4px;
+}
+/*newsicon图标*/
+.newsicon .newsimg1 div{
+    background-image: url("https://img12.360buyimg.com/da/jfs/t1987/293/2817383495/6392/c219eb53/56f4e6b8N940f608c.png");
+}
+.newsicon .newsimg2 div{
+	background: url(https://misc.360buyimg.com/product/home/1.0.0/widget/lifeserv/i/icon_lifeserv.png) no-repeat -25px -25px;
+}
+.newsicon .newsimg3 div{
+	background: url(https://misc.360buyimg.com/product/home/1.0.0/widget/lifeserv/i/icon_lifeserv.png) no-repeat -25px -50px;
+}
+.newsicon .newsimg4 div{
+	background: url(https://misc.360buyimg.com/product/home/1.0.0/widget/lifeserv/i/icon_lifeserv.png) no-repeat -25px -75px;
+}
+.newsicon .newsimg5 div{
+	background: url(https://misc.360buyimg.com/product/home/1.0.0/widget/lifeserv/i/icon_lifeserv.png) no-repeat -25px -100px;
+}
+.newsicon .newsimg6 div{
+	background: url(https://misc.360buyimg.com/product/home/1.0.0/widget/lifeserv/i/icon_lifeserv.png) no-repeat -25px -125px;
+}
+.newsicon .newsimg7 div{
+	background: url(https://misc.360buyimg.com/product/home/1.0.0/widget/lifeserv/i/icon_lifeserv.png) no-repeat -25px -150px;
+}
+.newsicon .newsimg8 div{
+	background: url(https://misc.360buyimg.com/product/home/1.0.0/widget/lifeserv/i/icon_lifeserv.png) no-repeat -25px -175px;
+}
+.newsicon .newsimg9 div{
+	background: url(https://misc.360buyimg.com/product/home/1.0.0/widget/lifeserv/i/icon_lifeserv.png) no-repeat -25px -200px;
+}
+.newsicon .newsimg10 div{
+	background: url(https://misc.360buyimg.com/product/home/1.0.0/widget/lifeserv/i/icon_lifeserv.png) no-repeat -25px -225px;
+}
+.newsicon .newsimg11 div{
+	background: url(https://misc.360buyimg.com/product/home/1.0.0/widget/lifeserv/i/icon_lifeserv.png) no-repeat -25px -250px;
+}
+.newsicon .newsimg12 div{
+	background: url(https://misc.360buyimg.com/product/home/1.0.0/widget/lifeserv/i/icon_lifeserv.png) no-repeat -25px -275px;
+}
+.newswrapper img{
+	margin-top: 5px;
+}
+/*底部广告+轮播样式*/
+.onsalewrapper{
+	width: 1210px;
+	margin: 10px auto 0 auto;
+	height: 164px;
+	position: relative;
+}
+.onsalewrapper>.onsale,.onsaleslides{
+	display: inline-block;
+	float: left;
+}
+.onsalewrapper .onsaleslides{
+	width: 1000px;
+	height: 164px;
+	position: relative;
+}
+.onsalewrapper .onsaleslides div a{
+	float: left;
+}
+.onsalewrapper .onsaleslides img{
+	width: 249px;
+	margin-right: 1px;
+}
+.onsalewrapper .onsaleslides .slidesjs-navigation{
+	position: absolute;
+	top: 50%;
+    margin-top: -31px;
+    z-index: 1;
+    display: none;
+    width: 28px;
+    height: 62px;
+    line-height: 62px;
+    background: rgba(0,0,0,.2);
+	z-index: 100;
+	text-align: center;
+	color: #fff;
+}
+.onsalewrapper .onsaleslides .slidesjs-next{
+	right: 1px;
+}
+.onsalewrapper .onsaleslides:hover .slidesjs-navigation{
+	display: block;
 }
