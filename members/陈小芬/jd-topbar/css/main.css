@@ -7,10 +7,19 @@
  */
  body{ font:12px/150% Arial,Verdana,"\5b8b\4f53"; color:#666;}
  .jdTopbar{ background: #f1f1f1; height: 30px; line-height: 30px; }
- .contain{ width: 1210px; margin: auto; }
- .localion{line-height: 30px;position: relative;}
- .localion>span{padding: 0 10px;display: inline-block;border-left: 1px solid transparent;border-right: 1px solid transparent;z-index: 10;position: relative;}
+ .contain{ width: 1210px; min-width: 1210px; margin: auto; }
+ .localion-wrapper{line-height: 30px;}
+ .localion{position: relative;/* height: 30px; *//* overflow: hidden; */}
+ .localion>span{padding: 0 10px;display: inline-block;border-left: 1px solid transparent;border-right: 1px solid transparent;z-index: 10;position: relative;height: 30px;overflow: hidden;}
  .localion:hover >span{background: #fff;border-left:1px solid #ddd;border-right:1px solid #ddd;}
+  .localion:hover >span >i{
+    display: inline-block;
+  }
+ .localion:hover >span >i{
+    transform: rotate(180deg);
+    transition: transform 0.1s;
+ }
+
  ul.localion-picker {
     display: none;
     width: 301px;
@@ -30,8 +39,10 @@
     background: #C81623;
     color: #fff;
 }
-
-
+.links {}
+.links a{color: #666;float: left;padding: 0 10px;}
+.links a:hover , .links a.active{ color: #C81623;}
+.links span{float: left;height: 12px;margin-top: 9px;border-right:1px solid #ddd;}
 
 
 
