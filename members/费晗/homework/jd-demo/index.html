@@ -5,94 +5,112 @@
   <script src="http://7xuf0e.com1.z0.glb.clouddn.com/plugs%2Fjquery.slides.min.js"></script>
 <meta name="description" content="news-service" />
   <meta charset="utf-8">
-  <title>JS Bin</title>
+  <title>仿jd作品</title>
   <link rel="stylesheet" href="http://at.alicdn.com/t/font_1464014291_0360897.css">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <div class="siteTopbar-wrapper">
-  <div class="siteTopbar clearfix">
+ <div class="siteTobar-wrapper">
+  <div class="siteTopbar wrapper clearfix">
     <div class="location-wrapper">
-      <span class="location">送至：北京<span class ="jd-iconfont i-arrow"></span></span>
+      <span class="location">
+        送至：北京
+        <span class ="jd-iconfont i-arrow"></span></span>
       <div class="locationPicker">
-        <ul class="clearfix">
-          <li><a  class="active" href="#">北京</a></li>
-          <li><a href="#">上海</a></li>
-          <li><a href="#">天津</a></li>
-          <li><a href="#">重庆</a></li>
-          <li><a href="#">黑龙江</a></li>
-          <li><a href="#">河北</a></li>
-          <li><a href="#">山西</a></li>
-          <li><a href="#">河南</a></li>
-          <li><a href="#">辽宁</a></li>
-          <li><a href="#">吉林</a></li>
-          <li><a href="#">内蒙古</a></li>
-          <li><a href="#">江苏</a></li>
-          <li><a href="#">山东</a></li>
-          <li><a href="#">安徽</a></li>
-          <li><a href="#">浙江</a></li>
-          <li><a href="#">福建</a></li>
-          <li><a href="#">湖北</a></li>
-          <li><a href="#">湖南</a></li>
-          <li><a href="#">广东</a></li>
-          <li><a href="#">广西</a></li>
-          <li><a href="#">江西</a></li>
-          <li><a href="#">四川</a></li>
-          <li><a href="#">海南</a></li>
-          <li><a href="#">贵州</a></li>
-          <li><a href="#">云南</a></li>
-          <li><a href="#">西藏</a></li>
-          <li><a href="#">陕西</a></li>
-          <li><a href="#">甘肃</a></li>
-          <li><a href="#">青海</a></li>
-          <li><a href="#">宁夏</a></li>
-          <li><a href="#">新疆</a></li>
-          <li><a href="#">台湾</a></li>
-          <li><a href="#">香港</a></li>
-          <li><a href="#">澳门</a></li>
-          <li><a href="#">钓鱼岛</a></li>
-          <li><a href="#">海外</a></li>
-        </ul>
+          <ul class="city clearfix">
+              <li><a  class="active" href="#">北京</a></li>
+              <li><a href="#">上海</a></li>
+              <li><a href="#">天津</a></li>
+              <li><a href="#">重庆</a></li>
+              <li><a href="#">黑龙江</a></li>
+              <li><a href="#">河北</a></li>
+              <li><a href="#">山西</a></li>
+              <li><a href="#">河南</a></li>
+              <li><a href="#">辽宁</a></li>
+              <li><a href="#">吉林</a></li>
+              <li><a href="#">内蒙古</a></li>
+              <li><a href="#">江苏</a></li>
+              <li><a href="#">山东</a></li>
+              <li><a href="#">安徽</a></li>
+              <li><a href="#">浙江</a></li>
+              <li><a href="#">福建</a></li>
+              <li><a href="#">湖北</a></li>
+              <li><a href="#">湖南</a></li>
+              <li><a href="#">广东</a></li>
+              <li><a href="#">广西</a></li>
+              <li><a href="#">江西</a></li>
+              <li><a href="#">四川</a></li>
+              <li><a href="#">海南</a></li>
+              <li><a href="#">贵州</a></li>
+              <li><a href="#">云南</a></li>
+              <li><a href="#">西藏</a></li>
+              <li><a href="#">陕西</a></li>
+              <li><a href="#">甘肃</a></li>
+              <li><a href="#">青海</a></li>
+              <li><a href="#">宁夏</a></li>
+              <li><a href="#">新疆</a></li>
+              <li><a href="#">台湾</a></li>
+              <li><a href="#">香港</a></li>
+              <li><a href="#">澳门</a></li>
+              <li><a href="#">钓鱼岛</a></li>
+              <li><a href="#">海外</a></li>
+            </ul>
       </div>
-    </div><!-- location -->
-    
-    <div class="siteLinks">
-        <a href="#">你好，请登录</a>
-        <a href="#" style=color:#C81623>免费注册</a>  
-        <span class="split"></span>
-
-        <a href="#">我的订单</a>
-        <span class="split"></span>
-
-        <a href="#">我的京东<span class ="jd-iconfont i-arrow"></span></a>
-        <span class="split"></span>
-
-        <a href="#">免费注册</a>
-        <span class="split"></span>
-
-        <a href="#">京东会员</a>
-        <span class="split"></span>
-
-        <a href="#">企业采购</a>
-        <span class="split"></span>
-
-        <a href="#"><span class ="jd-iconfont i-shouji"></span>手机京东<span class ="jd-iconfont i-arrow"></span></a>
-        <span class="split"></span>
-
-        <a href="#">客户服务<span class ="jd-iconfont i-arrow"></span></a>
-        <span class="split"></span>
-
-        <a href="#">网站导航<span class ="jd-iconfont i-arrow"></span></a>
-   </div>
-
+    </div><!--  location -->
+    <div class="siteTopbar-links">
+      <ul class="clearfix">
+            <li><a href="">你好，请登录</a><a class="link-register" href="">免费注册</a></li>
+            <li class="split"></li>
+            <li><a href="">我的订单</a></li>
+            <li class="split"></li>
+            <li class="dropdown">
+                  <a href="">我的京东
+                  <span class="jd-iconfont i-arrow"></span>
+                  </a>
+            </li>
+            <li class="split"></li>
+            <li><a href="">京东会员</a></li>
+            <li class="split"></li>
+            <li><a href="">企业采购</a></li>
+            <li class="split"></li>
+            <li class="dropdown">
+                  <a href="">
+                    <span class="jd-iconfont i-shouji"></span>
+                    手机京东
+                    <span class="jd-iconfont i-arrow"></span>
+                  </a>
+            </li>
+            <li class="split"></li>
+            <li class="dropdown">
+                  <a href="">
+                    关注京东
+                    <span class="jd-iconfont i-arrow">
+                  </a>
+            </li>
+            <li class="split"></li>
+            <li class="dropdown">
+                  <a href="">
+                    客户服务
+                    <span class="jd-iconfont i-arrow">
+                  </a>
+            </li>
+            <li class="split"></li>
+            <li class="dropdown">
+              <a href="">网站导航
+                  <span class="jd-iconfont i-arrow">
+              </a>
+           </li>
+            <li class="split"></li>
+      </ul>
+    </div>
   </div>
-</div>
-<nav class="site-logo-search-cart clearfix">
+</div><!--  siteTopbar-links -->
+<nav class="site-logo-search-cart  wrapper clearfix">
   <div class="logo">
     <img src="http://misc.360buyimg.com/lib/img/e/logo-201305.png" alt="JD">
   </div>
   <div class="search">
-    <p class="siteSearch"><input type="text" placeholder=""><button>搜索</button></p>
+    <p class="siteSearch"><input type="text" placeholder="六一快乐"><button>搜索</button></p>
   <p class="recommendWords">
     <a class="hot" href="#">初夏必备</a>
     <a href="#">领免息券</a>
@@ -109,24 +127,25 @@
     <button class="siteCartButton">
       <i class="prefix jd-iconfont i-car"></i>我的购物车<i class="jd-iconfont"></i><i class="count">2</i><i class=" addon jd-iconfont i-right"></i>
     </button>
-    <div class="collect">
-      <div class="space"></div>
-      <ul class="clearfix">
-        <p class="collectTitle">最新加入的商品</p>
-        <li>商品1</li>
-        <li>商品2</li>
-        <li>商品3</li>
-        <li>商品4</li>
-        <li>商品5</li>
-        <li>商品6</li>
-
-      </ul>
-    </div>
+    <div class="cartCollect">
+        <ul class="clearfix">
+          </li><p class="collectTitle">最新加入的商品</p></li>
+          <li>商品1</li>
+          <li>商品2</li>
+          <li>商品3</li>
+          <li>商品4</li>
+          <li>商品5</li>
+          <li>商品6</li>
+        </ul>
+        <div class="cartCount clearfix">
+            <span class="count">共<strong>6</strong>件商品</span>
+            <a class="goshopcar" href="#">去购物车</a>
+        </div>
   </div>
   
 </nav>
 <div class="categorys-wrapper">
-  <nav class="categorys clearfix">
+  <nav class="categorys wrapper clearfix">
     <div class="allCategory">全部商品分类</div >
     <div class="categoryList">
       <a href="#">服装城</a>
@@ -141,25 +160,24 @@
     </div>
   </nav>
 </div>
-<div class="list-slides-news-service clearfix">
-  <div class="list-slides-news-service-wrapper clearfix">
+<div class="list-slides-news-service-wrapper  wrapper clearfix">
       <div class="productCategoryList clearfix">
         <ul class="menu">
-            <li data-index=0><span class="categoryName">家用电器</span></li>
-            <li data-index=1><span class="categoryName">手机、数码、京东通信</span></li>
-            <li data-index=2><span class="categoryName">电脑、办公</span></li>
-            <li data-index=3><span class="categoryName">家居、家具、家装、厨具</span></li>
-            <li data-index=4><span class="categoryName">男装、女装、童装、内衣</span></li>
-            <li data-index=5><span class="categoryName">个护化妆、清洁用品、宠物</span></li>
-            <li data-index=6><span class="categoryName">鞋靴、箱包、珠宝、奢侈品</span></li>
-            <li data-index=7><span class="categoryName">运动户外、钟表</span></li>
-            <li data-index=8><span class="categoryName">汽车、汽车用品</span></li>
-            <li data-index=9><span class="categoryName">母婴、玩具乐器</span></li>
-            <li data-index=10><span class="categoryName">食品、酒类、生鲜、特产</span></li>
-            <li data-index=11><span class="categoryName">医药保健</span></li>
-            <li data-index=12><span class="categoryName">图书、音像、电子书</span></li>
-            <li data-index=13><span class="categoryName">彩票、旅行、充值、票务</span></li>
-            <li data-index=14><span class="categoryName">理财、众筹、白条、保险</span></li>
+            <li data-index=0 class="items"><span class="categoryName">家用电器</span></li>
+            <li data-index=1 class="items"><span class="categoryName">手机、数码、京东通信</span></li>
+            <li data-index=2 class="items"><span class="categoryName">电脑、办公</span></li>
+            <li data-index=3 class="items" class="items"><span class="categoryName">家居、家具、家装、厨具</span></li>
+            <li data-index=4 class="items"><span class="categoryName">男装、女装、童装、内衣</span></li>
+            <li data-index=5 class="items"><span class="categoryName">个护化妆、清洁用品、宠物</span></li>
+            <li data-index=6 class="items"><span class="categoryName">鞋靴、箱包、珠宝、奢侈品</span></li>
+            <li data-index=7 class="items"><span class="categoryName">运动户外、钟表</span></li>
+            <li data-index=8 class="items"><span class="categoryName">汽车、汽车用品</span></li>
+            <li data-index=9 class="items"><span class="categoryName">母婴、玩具乐器</span></li>
+            <li data-index=10 class="items"><span class="categoryName">食品、酒类、生鲜、特产</span></li>
+            <li data-index=11 class="items"><span class="categoryName">医药保健</span></li>
+            <li data-index=12 class="items"><span class="categoryName">图书、音像、电子书</span></li>
+            <li data-index=13 class="items"><span class="categoryName">彩票、旅行、充值、票务</span></li>
+            <li data-index=14 class="items"><span class="categoryName">理财、众筹、白条、保险</span></li>
         </ul>
 
         <ul class="submenu">
@@ -226,9 +244,8 @@
            <a href="#"><img src="http://img30.360buyimg.com/da/jfs/t2893/306/930256312/26242/4d571b6a/572c3596N04810685.jpg" alt=""></a>
          </section>
      </aside>
-    </div>
 </div> 
-<div class="todayRecommend">
+<div class="todayRecommend wrapper">
     <div class="todays clearfix">
       <a href="#"><img src="http://img10.360buyimg.com/uba/jfs/t2635/131/1142607732/14489/32885d1f/57346955N2e884f24.jpg" alt=""></a>
     </div>
