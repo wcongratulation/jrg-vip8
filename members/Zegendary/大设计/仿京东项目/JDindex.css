@@ -375,7 +375,7 @@ i{font-style: normal;}
 	display: inline-block;
 	border-bottom: 1px solid #b61d1d;
 }
-.menulistwrapper .menu li{
+.menulistwrapper .menu>li{
 	display:block;
 	border-left: 1px solid #b61d1d;
     height: 31px;
@@ -393,21 +393,21 @@ i{font-style: normal;}
 	top: 7px;
 	color: #fff;
 }
-.menulistwrapper .menu li:hover{
+.menulistwrapper .menu>li:hover{
 	width: 210px;
 	background: #fff;
 	color: #b61d1d;
 }
-.menulistwrapper .menu li:hover p{
+.menulistwrapper .menu>li:hover p{
 	background: #f7f7f7;
 	width: 210px;
 	z-index: 300;
 }
-.menulistwrapper .menu li:hover p:after{
+.menulistwrapper .menu>li:hover p:after{
 	content: '';
 	display: none;
 }
-.menulistwrapper .menu li span{
+.menulistwrapper .menu>li p span{
 	font-family: "Microsoft YaHei",tahoma,arial,"Hiragino Sans GB","\5b8b\4f53",sans-serif;
 	font-size: 14px;
 	font-weight: 400;
@@ -415,10 +415,11 @@ i{font-style: normal;}
 	margin: 0 10px;
 	cursor: pointer;
 }
-.menulistwrapper .sunmenu{
+.menulistwrapper .submenu{
 	position: absolute;
-	width: 1000px;
-	height: 500px;
+	width: 960px;
+	height: 460px;
+	padding: 20px;
 	top: 0px;
 	left: 210px;
 	background: #f7f7f7;
@@ -427,12 +428,95 @@ i{font-style: normal;}
 	border-top: none;
 	display: none;
 }
-.menulistwrapper .menu li:hover .sunmenu{
+.menulistwrapper .menu>li:hover .submenu{
 	display: block;
 	z-index: 200;
 }
-
-
+.menulistwrapper .submenueg .submenuleft,.submenuright{
+	display: inline-block;
+} 
+.menulistwrapper .submenueg .submenuleft{
+	width: 700px;
+	margin-right: 84px;
+	vertical-align: top;
+	height: 460px;
+}
+.menulistwrapper .submenueg .submenuright{
+	width: 169px;
+	height: 460px;
+}
+.submenueg .submenuleft>.lefttitle{
+	height: 24px;
+	line-height: 24px;
+}
+.submenueg .submenuleft>.lefttitle a{
+	display: inline-block;
+	float: left;
+	margin-right: 10px;
+	color: #fff;
+}
+.submenueg .submenuleft>.lefttitle a span{
+	background: #7c7171;
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+	padding: 1px 0px 0px 8px;
+	font-family: 'microsoft yahei'
+}
+.submenueg .submenuleft>.lefttitle a span:after{
+	content: '\e604';
+	font-family: 'jd-icon';
+	display: inline-block;
+	background: rgba(0,0,0,0.2);
+	width: 24px;
+	height: 22px;
+	text-align: center;
+	margin-left: 8px;	
+}
+.submenueg .submenuleft>.lefttitle a span:hover{
+	background-color: #c81623;
+}
+.submenu-item-list{
+	margin-top: 5px;
+}
+.submenu-item-list .submenu-item>a{
+	display: inline-block;
+	line-height: 15px;
+	width: 66px;
+    text-align: right;
+    color: rgb(102,102,102);
+    font-weight: bold;
+    padding: 5px 5px 5px 0;
+    vertical-align: top;
+}
+.submenu-item-list .submenu-item>a:hover{
+	color: #c81623;
+}
+.submenu-item-list .submenu-item>a:after{
+	content: '\e604';
+	font-family: 'jd-icon';
+	display: inline-block;
+	margin-left: 5px;
+}
+.submenu-item-list .submenu-item .submenu-item-content{
+	display: inline-block;
+	width: 620px;
+	border-bottom: 1px solid #eee;
+}
+.submenu-item-list .submenu-item .submenu-item-content li{
+	display: inline-block;
+}
+.submenu-item-list .submenu-item .submenu-item-content a{
+	color: #666;
+    padding: 0 7px;
+    margin: 8px 0;
+    display: inline-block;
+    border-left: 1px solid rgb(221,221,221);
+    line-height: 16px;
+}
+.submenu-item-list .submenu-item .submenu-item-content a:hover{
+	color: #c81623;
+}
 /* 轮播样式Prevents slides from flashing */
 #slides {
 	width: 730px;
@@ -456,6 +540,7 @@ i{font-style: normal;}
 	text-align: center;
 	color: #fff;
 }
+#slides .slidesjs-play,.slidesjs-stop{display: none;}
 #slides .slidesjs-next{
 	right: 0px;
 }
