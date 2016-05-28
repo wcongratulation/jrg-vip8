@@ -142,9 +142,14 @@ header .topbar{
 .links > ul > li > a > span{
     display: inline-block;
 }
+.icon-xiangxia{
+    position: relative;
+    left: 4px;
+}
 .topbar .links > ul > li:hover .icon-xiangxia{
     transform: rotate(180deg);
     transition: transform 0.1s;
+    color: #7F7F7F;
 }
 
 
