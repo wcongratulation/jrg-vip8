@@ -131,6 +131,9 @@ header .topbar{
     border-left: 1px solid transparent;
     border-right: 1px solid transparent;
 }
+.links > ul > li .default{
+    color: #C81623;
+}
 .links > ul > li > a:hover{
     color: #C81623;
 }
