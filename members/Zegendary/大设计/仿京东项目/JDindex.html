@@ -77,6 +77,7 @@
 	</div>
 	<div class="headad">
 		<a href=""><div class="headadpicture"></div></a>
+		<div class="closebutton"></div>
 	</div>
 	<div class="logo-search-cart">
 		<div class="logo">
@@ -371,7 +372,6 @@
 		    <a class="slidesjs-previous slidesjs-navigation jd-icon z-arrow-slide-l" href="#" title="Previous"></a>
 			<a class="slidesjs-next slidesjs-navigation jd-icon z-arrow-slide-r" href="#" title="Next"></a>
 		</div>
-		
 		<div class="newswrapper">
 			<div class="news">
 				<div class="newstitle">
@@ -388,11 +388,11 @@
 					</ul>
 				</div>
 				<div class="newsicon">
-					<ul>
-						<li class="newsimg1"><a href=""><div></div><span>话费</span></a></li>
-						<li class="newsimg2"><a href=""><div></div><span>机票</span></a></li>
-						<li class="newsimg3"><a href=""><div></div><span>电影票</span></a></li>
-						<li class="newsimg4"><a href=""><div></div><span>游戏</span></a></li>
+					<ul class="newsiconlist">
+						<li class="newsimg1 hasframe" data-index=0><a href=""><div></div><span>话费</span></a></li>
+						<li class="newsimg2 hasframe" data-index=1><a href=""><div></div><span>机票</span></a></li>
+						<li class="newsimg3 hasframe" data-index=2><a href=""><div></div><span>电影票</span></a></li>
+						<li class="newsimg4 hasframe" data-index=3><a href=""><div></div><span>游戏</span></a></li>
 						<li class="newsimg5"><a href=""><div></div><span>彩票</span></a></li>
 						<li class="newsimg6"><a href=""><div></div><span>团购</span></a></li>
 						<li class="newsimg7"><a href=""><div></div><span>酒店</span></a></li>
@@ -401,6 +401,34 @@
 						<li class="newsimg10"><a href=""><div></div><span>理财</span></a></li>
 						<li class="newsimg11"><a href=""><div></div><span>礼品卡</span></a></li>
 						<li class="newsimg12"><a href=""><div></div><span>白条</span></a></li>
+
+					</ul>
+					<ul class="iframe-recharge clearfix">
+						<li>
+							<a href="" class="iframe-button"><span>话费</span></a>
+							<div class="iframe-content">
+								<iframe width="250" height="185" frameborder="0" scrolling="no" src="http://chongzhi.jd.com/jd-index-ifame.htm"></iframe>
+							</div>
+						</li>
+						<li>
+							<a href="" class="iframe-button"><span>机票</span></a>
+							<div class="iframe-content">
+								<iframe width="250" height="185" frameborder="0" scrolling="no" src="http://jipiao.jd.com/htm/iframeTrip.html"></iframe>
+							</div>						
+						</li>
+						<li>
+							<a href="" class="iframe-button"><span>电影票</span></a>
+							<div class="iframe-content">
+								<iframe width="250" height="185" frameborder="0" scrolling="no" src="http://movie.jd.com/jdmovie.html"></iframe>
+							</div>							
+						</li>
+						<li>
+							<a href="" class="iframe-button"><span>游戏</span></a>
+							<div class="iframe-content">
+								<iframe width="250" height="185" frameborder="0" scrolling="no" src="http://card.jd.com/html/card-jdIndex2015.html"></iframe>
+							</div>							
+						</li>
+						<div class="closeframe" style="z-index:10">x</div>
 					</ul>
 				</div>
 			</div>
@@ -441,17 +469,29 @@
 		</div>
 	</div>
 	<script>
+		// 广告栏js
+		$('.headad>.closebutton').on('click',function(){
+			$('.headad').addClass('fadead')
+			var hidden = function(){
+				setTimeout(function(){
+				$('.headad').addClass('hiddenad')
+			},500);}
+			hidden()
+		})
 		// 菜单栏js
 		// $('.menu > li').on('mouseenter',function(e){
 		// 	var $current = $(e.currentTarget)
 		// 	var index = $current.attr('data-index')
 		// 	var indexNumber = +index
 		// 	$('.submenu').children('li.active').removeClass('active')
-		// 	$('.submenu').children('li').eq(indexNumber).addClass('active')
+			// $('.submenu').children('li').eq(indexNumber).addClass('active')
 		// })
 		// $('.menulistwrapper').on('mouseleave',function(){
 		// 	$('.submenu').children('li.active').removeClass('active')
 		// })
+
+
+
 		// 大图自动轮播js
 		$(function(){
 	      $("#slides").slidesjs({
@@ -493,6 +533,25 @@
 		    }
 	      });
 	    });
+	    //newsicon js
+		$('.hasframe').on('mouseenter',function(e){
+			var $current = $(e.currentTarget)
+			var index = $current.attr('data-index')
+			var indexNumber = +index  
+			$('.iframe-content.active').removeClass('active')
+			$('.iframe-content').eq(indexNumber).addClass('active')
+			$('.iframe-recharge').animate({top: '0px'},1000,function(){})
+		})  
+		$('.closeframe').on('click',function(e){
+			  $('.iframe-recharge').stop(true,true).animate({top: '209px'},1000,function(){})
+		})
+		$('.iframe-button').on('mouseenter',function(e){
+			$('.iframe-content.active').removeClass('active')
+			
+		    $(this).next('.iframe-content').addClass('active')
+		    console.log(this)
+		})
+	
 	    //小图手动轮播js
 	    $(function(){
 	      $(".onsaleslides").slidesjs({
