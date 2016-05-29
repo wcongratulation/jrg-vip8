@@ -558,7 +558,8 @@
 			var index = $current.attr('data-index')
 			var indexNumber = +index  
 			$('.iframe-content.active,.iframe-button.active').removeClass('active')
-			$('.iframe-button,.iframe-content').eq(indexNumber).addClass('active')
+			$('.iframe-button').eq(indexNumber).addClass('active')
+			$('.iframe-content').eq(indexNumber).addClass('active')
 			$('.iframe-recharge').animate({top: '0px'},500,function(){})
 		}
 	    //小图手动轮播js
