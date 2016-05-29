@@ -71,22 +71,37 @@
 		</div>
 		<script>
 			$('.hasframe').on('mouseenter',function(e){
-				var $current = $(e.currentTarget)
-				var index = $current.attr('data-index')
-				var indexNumber = +index  
-				$('.iframe-content.active').removeClass('active')
-				$('.iframe-content').eq(indexNumber).addClass('active')
-				$('.iframe-recharge').animate({top: '0px'},1000,function(){})
-			})  
-			$('.closeframe').on('click',function(e){
-				  $('.iframe-recharge').stop(true,true).animate({top: '209px'},1000,function(){})
+			var $current = $(e.currentTarget)
+			var index = $current.attr('data-index')
+			var indexNumber = +index  
+			$('.iframe-content.active').removeClass('active')
+			$('.iframe-content').eq(indexNumber).addClass('active')
+			$('.iframe-recharge').animate({top: '0px'},500,function(){})
+		})  
+		$('.closeframe').on('click',function(e){
+			$('.hasframe').off('mouseenter');
+			$('.iframe-recharge').stop(true,true).animate({top: '209px'},500,function(){
+			 	setTimeout(function(){
+					$('.hasframe').on('mouseenter',function(e){
+						var $current = $(e.currentTarget)
+						var index = $current.attr('data-index')
+						var indexNumber = +index  
+						$('.iframe-content.active').removeClass('active')
+						$('.iframe-content').eq(indexNumber).addClass('active')
+						$('.iframe-recharge').animate({top: '0px'},500,function(){})
+					})  
+				},0);
 			})
-			$('.iframe-button').on('mouseenter',function(e){
-				$('.iframe-content.active').removeClass('active')
-				
-			    $(this).next('.iframe-content').addClass('active')
-			    console.log(this)
-			})
+		})
+		$('.iframe-button').on('mouseenter',function(e){
+			$('.iframe-content.active,.iframe-button.active').removeClass('active')
+			$(this).addClass('active')			
+		    $(this).next('.iframe-content').addClass('active')
+		    console.log(this)
+		})
 		</script>
 </body>
 </html>
+
+
+

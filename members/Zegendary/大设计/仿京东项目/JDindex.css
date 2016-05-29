@@ -765,10 +765,10 @@ i{font-style: normal;}
     border-bottom: 1px solid #E8E8E7;
 
 }
-.iframe-recharge>li .iframe-button:hover{
+.iframe-recharge>li .iframe-button.active{
 	border-top: 2px solid #c81623;
 }
-.iframe-recharge>li .iframe-button:hover:after{
+.iframe-recharge>li .iframe-button.active:after{
 	content: '';
 	display: block;
 	position: relative;
