@@ -535,24 +535,14 @@
 	    });
 	    //newsicon js
 		$('.hasframe').on('mouseenter',function(e){
-			var $current = $(e.currentTarget)
-			var index = $current.attr('data-index')
-			var indexNumber = +index  
-			$('.iframe-content.active').removeClass('active')
-			$('.iframe-content').eq(indexNumber).addClass('active')
-			$('.iframe-recharge').animate({top: '0px'},500,function(){})
+			popout(e);
 		})  
 		$('.closeframe').on('click',function(e){
 			$('.hasframe').off('mouseenter');
 			$('.iframe-recharge').stop(true,true).animate({top: '209px'},500,function(){
 			 	setTimeout(function(){
 					$('.hasframe').on('mouseenter',function(e){
-						var $current = $(e.currentTarget)
-						var index = $current.attr('data-index')
-						var indexNumber = +index  
-						$('.iframe-content.active').removeClass('active')
-						$('.iframe-content').eq(indexNumber).addClass('active')
-						$('.iframe-recharge').animate({top: '0px'},500,function(){})
+						popout(e)
 					})  
 				},0);
 			})
@@ -563,7 +553,14 @@
 		    $(this).next('.iframe-content').addClass('active')
 		    console.log(this)
 		})
-	
+		function popout(e){
+			var $current = $(e.currentTarget)
+			var index = $current.attr('data-index')
+			var indexNumber = +index  
+			$('.iframe-content.active,.iframe-button.active').removeClass('active')
+			$('.iframe-button,.iframe-content').eq(indexNumber).addClass('active')
+			$('.iframe-recharge').animate({top: '0px'},500,function(){})
+		}
 	    //小图手动轮播js
 	    $(function(){
 	      $(".onsaleslides").slidesjs({
