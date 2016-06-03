@@ -65,9 +65,12 @@
 			var indexNumber = +index
 			$('.submenu').children('li.active').removeClass('active')
 			$('.submenu').children('li').eq(indexNumber).addClass('active')
+			$('.menu').children('li.active').removeClass('active')
+			$('.menu').children('li').eq(indexNumber).addClass('active')
 		})
 		$('.menulistwrapper').on('mouseleave',function(){
-			$('.submenu').children('li.active').removeClass('active')
+			$('.submenu').children('li.active').removeClass('active');
+			$('.menu').children('li.active').removeClass('active');
 		})
 	</script>
 </body>
