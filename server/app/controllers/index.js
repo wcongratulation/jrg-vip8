@@ -28,8 +28,14 @@ module.exports = {
     },
 
     post: function *(next) {
-        var name = this.request.body.name
-        var phone = this.request.body.phone
+        var username = this.request.body.username
+        var password = this.request.body.password
+
+        if(password === '123'){
+            yield this.render('post.hbs')
+        }else{
+            yield this.render('error.hbs')
+        }
         // 提交到数据库...
         // mysql ...
 
@@ -38,13 +44,13 @@ module.exports = {
         //    phone: phone
         //});
 
-        this.body = {
-            errorCode: 0,
-            data: {
-                name: name,
-                phone: phone
-            }
-        }
+        //this.body = {
+            //errorCode: 0,
+            //data: {
+                //name: name,
+                //phone: phone
+            //}
+        //}
         yield next;
     },
     post2: function *(next) {
