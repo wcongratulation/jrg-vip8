@@ -127,10 +127,6 @@ ul,li{
 	text-align: center;
 	padding: 25px 0;
 }
-#site-header .course>.course-left>.banner>.courseSlides>.slider img{
-	width: 375px;
-	height: 209px;
-}
 #site-header .course>.course-left>.desp{
 	margin-right: 20px;
 	text-align: right;
