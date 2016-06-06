@@ -127,10 +127,6 @@ ul,li{
 	text-align: center;
 	padding: 25px 0;
 }
-#site-header .course>.course-left>.banner>.courseSlides>.slider img{
-	width: 375px;
-	height: 209px;
-}
 #site-header .course>.course-left>.desp{
 	margin-right: 20px;
 	text-align: right;
@@ -235,45 +231,104 @@ ul,li{
    width: 670px;
 }
 #techer-introduction>.wrapper>.summary>.introduction>h3{
-	color: #00A0E9;
 	font-size: 26px;
-	text-align: center;
 	font-weight: normal;
-	margin-bottom: 40px;
-	background: url(../imgs/name_bg.png) no-repeat
-
+	background: rgba(58,114,176,0.4);
+	width: 126px;	
 }
+#techer-introduction>.wrapper>.summary>.introduction>h3>a{
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	padding: 10px 30px;
+	color: #00a0e9;
+	margin: 0px 6px;
+	border-top: 1px solid #58eef8;
+	border-bottom: 1px solid #58eef8;
+}
+#techer-introduction>.wrapper>.summary>.introduction>.bor-top,
+#techer-introduction>.wrapper>.summary>.introduction>.bor-right,
+#techer-introduction>.wrapper>.summary>.introduction>.bor-bottom,
+#techer-introduction>.wrapper>.summary>.introduction>.bor-left{
+	position: absolute;
+	height: 8px;
+	width: 8px;
+	
+}
+#techer-introduction>.wrapper>.summary>.introduction>.bor-top{
+    top: -4px;
+    left: -6px;
+    border-left: 2px solid #00a0e9;
+	border-top: 2px solid #00a0e9;	
+}
+#techer-introduction>.wrapper>.summary>.introduction>.bor-right{
+    top: -4px;
+    left: 122px;	
+    border-right: 2px solid #00a0e9;
+	border-top: 2px solid #00a0e9;
+}
+#techer-introduction>.wrapper>.summary>.introduction>.bor-bottom{
+    top: 43px;
+    left: 122px;
+    border-right: 2px solid #00a0e9;
+	border-bottom: 2px solid #00a0e9;	
+}
+#techer-introduction>.wrapper>.summary>.introduction>.bor-left{
+    top: 43px;
+    left: -6px;
+    border-left: 2px solid #00a0e9;
+	border-bottom: 2px solid #00a0e9;	
+}
+
 #techer-introduction>.wrapper>.summary>.introduction>.abstract{
 	height: 180px;
 	line-height: 1.8;
 	background-color: rgba(58,114,176,0.2);
 	padding: 30px 50px;
+	margin-top: 20px;
 	font-size: 24px;
 	text-align: justify;
 }
 #support h5{
-	font-size: 22px;
+	font-size: 28px;
 	font-family: "微软雅黑";
 	font-weight: normal;
 	margin-top: 100px;
 	margin-bottom: 10px;
 	text-align: center;
 }
-#support ul{
-  
+#support>.wrapper{
+	position: relative;
 }
-#support ul li{
-	display: inline-block;
-	*display: inline;
-	width: 200px;
-	margin-left: 5px;
+#support .student-wrapper{
+	width: 1100px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	margin-top: 55px;
 }
-
-#support ul>li>a>img{
-	margin-left: -60px;
-	width: 50px;
+#support .student-wrapper>ul>li{
+	float: left;
+	width: 215px;
+	margin-left: 4px;
 }
-#support ul li>img{
-	width: 95%;
-	height: 95%;
+#support .student-wrapper>ul>li>img{
+	width: 90%;
+}
+#support .left,
+#support .right{
+	float: left;
+	position: absolute;
+	top: 148px;
+}
+#support .left{
+	left: 3px;
+}
+	
+#support .right{
+	right: 3px;
+}
+#support .student-wrapper>ul>li>.dec{
+	margin-top: 20px;
+	padding: 0 18px;
 }
