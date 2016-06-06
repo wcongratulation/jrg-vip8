@@ -1,86 +1,129 @@
-function Slide(node, options) {
+function Slider(node, options) {
     // 配置默认参数   
     var defaultConf = {
-        container: $('#slider'),
-        timer: null,
-        number: 0,
-        autoPlay: true
+        container: node,
+        index: 0,
+        autoPlay: true,
+        interval: 1500,
+        direction: 'next'
     };
 
     // 判断用户是否传入参数并进行参数合并
     this.conf = $.extend(defaultConf, options || {});
+    this.currentIndex = this.conf.index;
+    this.timer = null;
 
-    this.elem = {};
     this.init();
-    this.go();
+    this.bindEvents();
 }
 
-Slide.prototype.init = function () {
-    var self = this,
-        $container = this.conf.container,
-        imgItem = $container.children(),
-        imgSize = imgItem.size(),
-        imgWidth = imgItem.width();
+Slider.prototype.autoTask = function() {
+    var _slider = this;
+    clearInterval(this.timer);
+    this.timer = setInterval(function() {
+        if (_slider.conf.direction === 'next') {
+            _slider.go(_slider.currentIndex + 1);
+        } else {
+            _slider.go(_slider.currentIndex - 1);
+        }
+    }, _slider.conf.interval);
+};
 
-    // 给图片添加一个父容器包裹层   
-    imgItem.wrapAll('<div class="slider-main"></div>');
-    var $wrap = imgItem.parent('.slider-main'),
+Slider.prototype.init = function() {
+    var $container = this.conf.container,
+        imgItem = this.imgItem = $container.children(),
+        imgSize = imgItem.size(),
+        imgWidth = this.imgWidth = imgItem.width(),
+        _slider = this;
+
+    // 给图片添加一个父容器包裹层，并且执行链式调用
+    imgItem.wrapAll('<div class="slider-main"></div>')
+        .addClass('slider-panel');
+
+    var $wrap = this.$wrap = imgItem.parent('.slider-main'),
         // 创建指示器的父容器包裹层
         $sliderNav = $('<ul class="slider-nav"></ul>');
 
     $wrap.width(imgSize * imgWidth)
-        // 创建可视区容器 
-        .wrapAll('<div class="viewPoint"></div>');
+    // 创建可视区容器 
+    .wrapAll('<div class="viewPoint"></div>');
 
     // 通过遍历图片个数创建对应的指示器
-    imgItem.each(function (index) {
-        $(this).addClass('slider-panel')
-            .attr('data-index', index);
-        $sliderNav.append($('<li class="slider-item" data-index="' + index + '">' + index + '</li>'));
+    imgItem.each(function(index) {
+        $sliderNav.append($('<li class="slider-item">' + index + '</li>'));
     });
 
     // 创建左箭头和右箭头
-    var $prev = $('<a class="prev arrow"><</a>'),
-        $next = $('<a class="next arrow">></a>'),
-        $viewPoint = $wrap.parent('.viewPoint');
+    var $prev = this.$prev = $('<a class="prev arrow"><</a>'),
+        $next = this.$next = $('<a class="next arrow">></a>'),
+        $viewPoint = $('.viewPoint');
 
     $viewPoint.append($prev)
         .append($next)
         .append($sliderNav);
     $('.slider-item:first').addClass('slider-selected');
 
-    // 给左箭头绑定点击事件   
-    $prev.on('click', function (e) {
-        self.prev();
-    });
+    // 自动播放   
+    if (this.conf.autoPlay) {
+        this.autoTask();
+        // 当用户触及可视区停止自动轮播     
+        $viewPoint.on('mouseenter', function(e) {
+            $(this).find('a').fadeIn();
+            clearInterval(_slider.timer);
+            _slider.timer = null;
+        }).on('mouseleave', function(e) {
+            _slider.autoTask();
+            $(this).find('a').fadeOut();
+        });
+    }
 
-    // 给右箭头绑定点击事件   
-    $next.on('click', function (e) {
-        self.next();
-    });
-
-    this.elem.imgWrapper = $wrap;
-    this.elem.imgWidth = imgWidth;
 };
 
-Slide.prototype.go = function (current) {
-    var self = this,
-        $wrap = this.elem.imgWrapper,
-        imgWidth = this.elem.imgWidth;
+Slider.prototype.go = function(index) {
+    var _slide = this,
+        $wrap = this.$wrap,
+        imgItem = this.imgItem,
+        imgWidth = this.imgWidth;
 
+    // 防止超出第一张图片和最后一张图片 
+    if (index < 0) {
+        index = imgItem.length - 1;
+    } else if (index > 5) {
+        index = 0;
+    }
+
+    // 绑定动画   
     $wrap.stop(true, true).animate({
-        left: current * -imgWidth
-    }, function () {
-        self.conf.number = current;
+        left: index * -imgWidth
+    }, function() {
+        _slide.currentIndex = index;
+    });
+
+    // 指示器状态的切换   
+    $('.slider-item').each(function() {
+        if ($(this).index() === index) {
+            $(this).addClass('slider-selected')
+                .siblings('.slider-selected')
+                .removeClass('slider-selected');
+        }
     });
 };
 
-Slide.prototype.prev = function () {
-    this.go();
+Slider.prototype.bindEvents = function() {
+    var _slide = this;
+    // 给左箭头绑定点击事件 
+    this.$prev.on('click', function(e) {
+        _slide.go(_slide.currentIndex - 1);
+    });
+    // 给右箭头绑定点击事件 
+    this.$next.on('click', function(e) {
+        _slide.go(_slide.currentIndex + 1);
+    });
+    // 通过事件代理给指示器绑定点击事件
+    var child = $('.slider-nav').children().get(0).nodeName.toLowerCase();
+    $('.slider-nav').on('click', child, function(e) {
+        _slide.go($(this).index());
+    });
 };
 
-Slide.prototype.next = function () {
-    this.go(this.conf.number + 1);
-};
-
-var s1 = new Slide();
+var s1 = new Slider($('#slider'));
