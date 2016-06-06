@@ -9,8 +9,8 @@ function Slider(node, options) {
     };
 
     // 判断用户是否传入参数并进行参数合并
-    this.conf = $.extend(defaultConf, options || {});
-    this.currentIndex = this.conf.index;
+    this.config = $.extend({}, defaultConf, options || {});
+    this.currentIndex = this.config.index;
     this.timer = null;
 
     this.init();
@@ -21,16 +21,16 @@ Slider.prototype.autoTask = function() {
     var _slider = this;
     clearInterval(this.timer);
     this.timer = setInterval(function() {
-        if (_slider.conf.direction === 'next') {
+        if (_slider.config.direction === 'next') {
             _slider.go(_slider.currentIndex + 1);
         } else {
             _slider.go(_slider.currentIndex - 1);
         }
-    }, _slider.conf.interval);
+    }, _slider.config.interval);
 };
 
 Slider.prototype.init = function() {
-    var $container = this.conf.container,
+    var $container = this.config.container,
         imgItem = this.imgItem = $container.children(),
         imgSize = imgItem.size(),
         imgWidth = this.imgWidth = imgItem.width(),
@@ -50,7 +50,7 @@ Slider.prototype.init = function() {
 
     // 通过遍历图片个数创建对应的指示器
     imgItem.each(function(index) {
-        $sliderNav.append($('<li class="slider-item">' + index + '</li>'));
+        $sliderNav.append($('<li class="slider-item">' + (index + 1) + '</li>'));
     });
 
     // 创建左箭头和右箭头
@@ -64,7 +64,7 @@ Slider.prototype.init = function() {
     $('.slider-item:first').addClass('slider-selected');
 
     // 自动播放   
-    if (this.conf.autoPlay) {
+    if (this.config.autoPlay) {
         this.autoTask();
         // 当用户触及可视区停止自动轮播     
         $viewPoint.on('mouseenter', function(e) {
@@ -72,8 +72,8 @@ Slider.prototype.init = function() {
             clearInterval(_slider.timer);
             _slider.timer = null;
         }).on('mouseleave', function(e) {
-            _slider.autoTask();
             $(this).find('a').fadeOut();
+            _slider.autoTask();
         });
     }
 
@@ -92,7 +92,7 @@ Slider.prototype.go = function(index) {
         index = 0;
     }
 
-    // 绑定动画   
+    // 运行动画   
     $wrap.stop(true, true).animate({
         left: index * -imgWidth
     }, function() {
