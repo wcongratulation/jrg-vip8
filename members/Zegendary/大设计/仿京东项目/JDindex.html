@@ -478,7 +478,7 @@
 			<div class="items"><span>咨询JIMI</span><div class="jd-icon z-kefu"></div></div>
 		</div>
 		<div class="toolbar-bottom">
-			<div class="items"><span>顶部</span><div class="jd-icon z-gototop"></div></div>
+			<div class="items gototop"><span>顶部</span><div class="jd-icon z-gototop"></div></div>
 			<div class="items"><span>留言</span><div class="jd-icon z-fankui"></div></div>
 		</div>
 	</div>
@@ -594,6 +594,10 @@
 		    }
 	      });
 	    });
+	    //回到顶部js
+	    $('.gototop').click(function(){
+	    	$('body').animate({scrollTop:0});
+	    }) 
 	</script>
 </body>
 </html>
