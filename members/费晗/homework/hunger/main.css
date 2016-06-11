@@ -2,6 +2,9 @@ body,html,ul,li,span,h2,h3,h4,h5,h6,p{
  	padding: 0;
  	margin: 0;
  }
+ h2,h3,h4,h5,h6{
+ 	font-weight: normal;
+ }
  body{
 	 font: 400 15px/1.8em "Microsoft YaHei","微软雅黑",sans-serif;
 	 color: #fff;
@@ -30,7 +33,7 @@ ul,li{
  	border: 0;
  	vertical-align: middle;
  }
-  .wrapper{
+ .wrapper{
  	margin: 0 auto;
  	width: 1210px;
  }
@@ -67,10 +70,13 @@ ul,li{
  #site-topbar>.wrapper>ul.sitenav>li>a:hover{
  	color: #ccc;
  }
+
+ .big_bg{
+ 	background: url(./imgs/big_bg.png) no-repeat top center;
+ }
  /**---header---**/
  #site-header>.wrapper{
  	position: relative;	
- 	background: url(./imgs/head_bg.png) no-repeat;
  }
  #site-header{
     padding-top: 60px;
@@ -123,9 +129,10 @@ ul,li{
 	top: 65px;
 	right: 40px;
 }
-#site-header .course>.course-left>.banner>.courseSlides{
+#site-header .course>.course-left>.banner .courseSlides{
 	text-align: center;
-	padding: 25px 0;
+	padding: 25px 19px;
+	
 }
 #site-header .course>.course-left>.desp{
 	margin-right: 20px;
@@ -218,77 +225,43 @@ ul,li{
 }
 #techer-introduction>.wrapper>.summary{
 	position: relative;
+	margin-top: 20px;
 }
 #techer-introduction>.wrapper>.summary>.picture{
 	float: left;
 	width: 248px;
-	margin-left: 130px;
-	border: 1px solid red;
+	margin-left: 160px;
 }
 #techer-introduction>.wrapper>.summary>.introduction{
    position: absolute;
    margin-left: 500px;
    width: 670px;
+   margin-top: 30px;	
 }
 #techer-introduction>.wrapper>.summary>.introduction>h3{
 	font-size: 26px;
 	font-weight: normal;
-	background: rgba(58,114,176,0.4);
-	width: 126px;	
 }
 #techer-introduction>.wrapper>.summary>.introduction>h3>a{
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
-	padding: 10px 30px;
+	background: url(./imgs/name_bg.png) no-repeat;
+	width: 136px;
+	height: 56px;
+	line-height: 56px;
 	color: #00a0e9;
-	margin: 0px 6px;
-	border-top: 1px solid #58eef8;
-	border-bottom: 1px solid #58eef8;
 }
-#techer-introduction>.wrapper>.summary>.introduction>.bor-top,
-#techer-introduction>.wrapper>.summary>.introduction>.bor-right,
-#techer-introduction>.wrapper>.summary>.introduction>.bor-bottom,
-#techer-introduction>.wrapper>.summary>.introduction>.bor-left{
-	position: absolute;
-	height: 8px;
-	width: 8px;
-	
-}
-#techer-introduction>.wrapper>.summary>.introduction>.bor-top{
-    top: -4px;
-    left: -6px;
-    border-left: 2px solid #00a0e9;
-	border-top: 2px solid #00a0e9;	
-}
-#techer-introduction>.wrapper>.summary>.introduction>.bor-right{
-    top: -4px;
-    left: 122px;	
-    border-right: 2px solid #00a0e9;
-	border-top: 2px solid #00a0e9;
-}
-#techer-introduction>.wrapper>.summary>.introduction>.bor-bottom{
-    top: 43px;
-    left: 122px;
-    border-right: 2px solid #00a0e9;
-	border-bottom: 2px solid #00a0e9;	
-}
-#techer-introduction>.wrapper>.summary>.introduction>.bor-left{
-    top: 43px;
-    left: -6px;
-    border-left: 2px solid #00a0e9;
-	border-bottom: 2px solid #00a0e9;	
-}
-
 #techer-introduction>.wrapper>.summary>.introduction>.abstract{
 	height: 180px;
 	line-height: 1.8;
 	background-color: rgba(58,114,176,0.2);
 	padding: 30px 50px;
-	margin-top: 20px;
+	margin-top: 28px;
 	font-size: 24px;
 	text-align: justify;
 }
+  /**---suppor---**/
 #support h5{
 	font-size: 28px;
 	font-family: "微软雅黑";
@@ -331,4 +304,104 @@ ul,li{
 #support .student-wrapper>ul>li>.dec{
 	margin-top: 20px;
 	padding: 0 18px;
+}
+#support .student-wrapper>ul>li>.dec>.athor{
+	color: #00A0E9;
+	font-size: 18px;
+}
+#support .student-wrapper>ul>li>.dec>p{
+	font-size: 14px;
+	padding-top: 10px;
+	line-height: 1.5;
+}
+/* sign-up */
+#sign-up{
+	background: url(./imgs/footer_bg.png) no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	min-height: 852px;
+	position: relative;
+	top: 140px;
+}
+#sign-up .information>.order-left{
+	float: left;
+	margin-left: 70px;
+}
+#sign-up .information .detail{
+	background: rgba(45,143,209,1);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(45,143,209,1)), color-stop(100%, rgba(33,183,156,0.5)));
+    background: -webkit-linear-gradient(-45deg, rgba(45,143,209,1) 0%, rgba(33,183,156,0.5) 100%);
+    background: -webkit-linear-gradient(315deg, rgba(45,143,209,1) 0%, rgba(33,183,156,0.5) 100%);
+    background: linear-gradient(135deg, rgba(45,143,209,1) 0%, rgba(33,183,156,0.5) 100%);
+    width: 400px;
+    height: 180px;
+    color: #fff;
+}
+#sign-up .information .detail>h6{
+	font-family: "宋体"; 
+	font-size: 52px;
+	padding: 40px 0 40px 30px;
+}
+#sign-up .information .detail>span{
+	font-family: "宋体"; 
+	font-size: 38px;
+	padding: 0 40px 0 30px;
+}
+#sign-up .information .detail>a.btn{
+	display: inline-block;
+	vertical-align: middle;
+	background-color: #f3c544;
+	height: 55px;
+	line-height: 55px;
+	text-align: center;
+	padding: 0 5px;
+	width: 115px;
+	font-size: 24px;
+	color: #171c20;
+	font-family: "微软雅黑";
+	border-radius: 6px;
+}
+#sign-up .information .detail>a.btn:hover{
+	background-color: #FFD45B;
+}
+#sign-up .information .detail>a>i{
+	position: relative;
+    top: -1px;
+    right: -14px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+#sign-up .information .order-left>img{
+	position: relative;
+	top: 103px;
+}
+#sign-up .information>.order-right{
+	float: right;
+	margin-right: 70px;
+}
+#sign-up .information>.order-right>p{
+	font-size: 36px;
+	color: #fff;
+	padding: 0 0 15px 0;
+}
+#sign-up .information>.order-right>p>img{
+	position: relative;
+	right: 15px;
+}
+#footer{
+	position: relative;
+	top: 215px;
+	text-align: center;
+	color: #19273a;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}
+#footer a{
+	color: #19273a;
+	padding: 0 15px;
 }

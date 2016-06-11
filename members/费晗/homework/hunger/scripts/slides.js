@@ -55,7 +55,11 @@ Slides.prototype.prepareHtml = function(){
       top:'50%',
       border:'none',
       height:'30px',
-      'margin-top':'-15px'
+      'margin-top':'-15px',
+      'background': 'rgba(0,0,0,.2)',
+      'padding-left': '4px',
+      'padding-right': '4px',
+      'color': 'white'
     })
     $next.css({
       position:'absolute',
@@ -63,7 +67,11 @@ Slides.prototype.prepareHtml = function(){
       top:'50%',
       border:'none',
       height:'30px',
-      'margin-top':'-15px'
+      'margin-top':'-15px',
+      'background': 'rgba(0,0,0,.2)',
+      'padding-left': '4px',
+      'padding-right': '4px',
+      'color': 'white'
     })
   }
   
@@ -131,3 +139,18 @@ Slides.prototype.go = function(index){
       }
   
 }
+
+//自动播放部分
+Slides.prototype.autoPlay = function(){
+    var self = this
+  this.timer = setInterval(function(){
+    self.next()
+  },2000)
+}
+$.fn.slides = function(options){
+    this.each(function(){
+    var element = this
+    var slides = new Slides($(element),options)  
+  })
+}
+
