@@ -1,0 +1,193 @@
+@charset "UTF-8";
+body {
+	color: #797979;
+    font-size: 14px;
+    line-height: 180%;
+    font-family: "微软雅黑","Open Sans",Helvetica,Arial,sans-serif;
+    background: #f7f6f8;
+}
+
+.wrap {
+	width: 970px;
+	margin: 0 auto;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.claerfix {
+	*zoom: 1;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.style {
+	color: #4CC1AA;
+}
+
+#siteHeader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background-color: #fff;
+	box-shadow: 0 4px 10px rgba(0,0,0,.1);
+	z-index: 100;
+	-webkit-transition: height .2s;
+       -moz-transition: height .2s;
+    	    transition: height .2s;
+}
+
+#siteHeader .bar {
+	margin-top: 40px;
+	line-height: 200%;
+}
+
+#siteHeader .bar img {
+	width: 30px;
+	vertical-align: middle;
+}
+
+#siteHeader .bar > h1 {
+	margin-left: 10px;
+	font-size: 28px;
+}
+
+#siteHeader .bar > h1 > a {
+	color: #bcbcbc;
+}
+
+.container {
+	margin-top: 100px;
+}
+
+#main {
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+#main-title {
+	display: table;
+	width: 100%;
+} 
+
+#main-title > .picture {
+	display: table-cell;
+	position: relative;
+	width: 240px;
+	height: 222px;
+	background-color: #97d3f3;
+}
+
+#main-title > .picture > .jobinfo {
+	font-size: 18px;
+    color: #fff;
+    text-align: left;
+    padding: 30px 20px 0;
+    white-space: nowrap;
+}
+
+#main-title > .picture > .avatar {
+	position: absolute;
+	bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#main-title > .picture img {
+	width: 164px;
+    height: 175px;
+}
+
+#main-title > .intro {
+	display: table-cell;
+	height: 160px;
+	padding: 50px;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+#main-title > .intro > p {
+	font-size: 18px;
+	line-height: 180%;
+}
+
+#main-content {
+	display: table;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#main-content .left {
+	display: table-cell;
+	width: 270px;
+}
+
+#main-content .right {
+	display: table-cell;
+	padding-left: 15px;
+}
+
+#main-content, .main-content .job-wish, #main-content .contact {
+	margin-top: 15px;
+}
+
+#main-content .my-info, #main-content .job-wish, #main-content .contact, #main-content .question {
+	background: #fff;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+#main-content h2 {
+	color: #4cc1aa;
+}
+
+#main-content .left dl {
+	margin: 15px 0;
+}
+
+#main-content .left dd {
+	border-bottom: 1px dashed #e4e4e4;
+	padding: 10px 0;
+	font-size: 16px;
+}
+
+#main-content .question .t {
+	margin-top: 10px;
+    font-size: 18px;
+    color: #4CC1AA;
+}
+
+#main-content .question h2 {
+	margin-bottom: 20px;
+}
+
+#main-content .question .t:before {
+	content: "Q";
+    line-height: 100%;
+    padding: 5px 6px;
+    font-size: 14px;
+    display: inline-block;
+    background: #4CC1AA;
+    color: #fff;
+    position: relative;
+    top: -3px;
+    border-radius: 5px;
+}
+
+#main-content .question .c, #main-content .contact .c {
+	color: #949494;
+    font-size: 16px;
+    padding: 10px 0;
+    padding-left: 5px;
+}

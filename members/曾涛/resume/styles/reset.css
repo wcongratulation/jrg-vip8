@@ -1,0 +1,23 @@
+@charset "UTF-8";
+body, h1, h2, h3, h4, h5, h6, p, dl, dt, dd {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: none;
+	vertical-align: middle;
+}
+
+a {
+	text-decoration: none;
+	color: #797979;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
