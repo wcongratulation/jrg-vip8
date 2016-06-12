@@ -43,8 +43,13 @@ a {
 	margin-bottom: 24px;
 }
 
+#main .text,
+#main .pwd {
+	position: relative;
+}
+
 #header .change-color,
-#main .text > input[type="text"],
+#main .text > input,
 #main .login > input[type="button"],
 #main .remember > .description,
 #main .forget > a {
@@ -64,9 +69,7 @@ a {
 #main .pwd > input[type="password"] {
 	width: 100%;
 	padding: 12px;
-	padding-left: 44px;
-	background: no-repeat 12px;
-	background-size: 20px;
+	padding-left: 37px;
 	box-sizing: border-box;
 	box-shadow: 0 1px 1px #fff, inset 0 1px 3px #aaaaaa;
 }
@@ -105,17 +108,26 @@ body {
 	box-shadow: 0 2px 5px 1px #a9a39e;
 }
 
-#main .text > input[type="text"] {
+#main .text > input {
 	border: 1px solid #cbbcb7;
-	background-image: url(user.png);
 	background-color: #e1dcd8;
 	color: #988e87;
 }
 
+#main .text > input:focus {
+    background-color: #f5f2ef;
+}
+
 #main .pwd > input[type="password"] {
 	border: 1px solid #bbb5b1;
-	background-image: url(password.png);
 	background-color: #f5f2ef;
+}
+
+#main .i-user::before,
+#main .i-mima::before {
+	position: absolute;
+	top: 10px;
+	left: 12px;
 }
 
 #main #checkbox {
