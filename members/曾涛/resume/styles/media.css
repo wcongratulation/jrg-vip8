@@ -1,39 +1,15 @@
 @charset "UTF-8";
-@media (min-width: 768px) {
-	#main {
-		width: 750px;
-	}
-}
-
 @media (min-width: 1200px) {
 	#main {
    		width: 1170px;
 	}
 }
 
-@media (min-width: 992px) {
-	#main {
-    	width: 970px;
-	}
-}
-
-@media (max-width: 760px) {
+@media (max-width: 900px) {
 	#main {
 		padding: 0;
 	}
 
-	#main-title > .picture {
-		display: block;
-		width: 100%;
-	}
-
-	#main-title > .intro {
-		display: block;
-		margin: 15px 15px 0;
-    	height: auto;
-    	padding: 20px;
-	}
-	
 	#main-content {
 		display: block;
     	padding: 0 15px 15px;
@@ -47,6 +23,10 @@
 	#main-content > .right {
 		display: block;
 		padding-left: 0;
+	}
+
+	#main-content .school {
+		float: right;
 	}
 }
 
