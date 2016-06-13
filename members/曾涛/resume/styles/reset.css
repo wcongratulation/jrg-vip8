@@ -1,23 +1,38 @@
 @charset "UTF-8";
-body, h1, h2, h3, h4, h5, h6, p, dl, dt, dd {
-	margin: 0;
-	padding: 0;
-}
 
+body, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ul, li {
+	margin: 0;
+	padding: 0
+}
 img {
 	border: none;
-	vertical-align: middle;
+	vertical-align: middle
 }
-
 a {
 	text-decoration: none;
-	color: #797979;
+	color: #000;
 }
-
-a:hover {
-	text-decoration: underline;
+ul {
+	list-style: none
 }
-
 h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
+	font-weight: normal
+}
+.fl {
+	float: left
+}
+.fr {
+	float: right
+}
+.claerfix {
+	*zoom: 1
+}
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both
+}
+.wrapper {
+	max-width: 970px;
+	margin: 0 auto
 }
