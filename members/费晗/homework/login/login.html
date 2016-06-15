@@ -5,6 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>登录页面</title>
 <link href="" rel="stylesheet">
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_1466005263_4110875.css">
 </head>
 <style type="text/css">
     *{
@@ -34,7 +35,7 @@
         text-align: center;
 	}
 	.login-form{
-        width: 300px;
+        width: 310px;
         background-color: #e5e1dd;
         border-radius: 5px;
 		margin-top: 30px;
@@ -44,6 +45,23 @@
 		text-align: center;
 		margin-right: 150px;
 		margin-left: 150px;
+	}
+	.login-bar{
+		position: relative;
+		margin-bottom: 20px;
+	}
+	.login-bar .user,
+	.login-bar .password{
+		width: 210px;
+		height: 35px;
+		line-height: 30px;
+		padding-left: 30px;
+		font-size: 14px;
+	}
+	.login-bar .pics{
+		position: absolute;
+		top: 9px;
+        left: 20px;
 	}
 	h2{
 		text-align: center;
@@ -91,24 +109,35 @@
     	text-align: center;
     	font-size: 12px;
     	padding: 10px 2px;
+    	
     }
     .links>li.line{
     	color: #9d948d;
     	font-size: 13px;
     	font-weight: normal;
     }
+
 </style>
 <body>
   <div class="site-login">
     <div class="wrapper">
     	<h2>login to <span>love.ly</span></h2>
     	<form action="" method="post" class="login-form">
-	    	<ul>
-	    		<li><input class="user-icon" name="user" type="text" placeholder="IconDeposit"/> <br/></li>
-	    		<li><input class="password-icon" name="pwd" type="text" placeholder="*********"/>  <br/></li>
-	    		<li><input name="remember" type="checkbox" checked />Remember Me</li>
+	    	<ul class="form">
+	    		<li class="login-bar">
+		    		<span class="iconfont icon-yonghuming pics"></span>
+		    		<input class="user" name="user" type="text" placeholder="IconDeposit"/> <br/>
+	    		</li>
+	    		<li class="login-bar">
+		    		<span class="iconfont icon-mima pics"></span>
+		    		<input class="password" name="pwd" type="text" placeholder="*********"/>  <br/>
+	    		</li>
+	    		<li class="login-bar">
+		    		<input name="remember" type="checkbox" checked />Remember Me</li>
 	    		<li><p>Forgot username or passord?</p></li>
-	    		<li><button type="button" name="" value="Login" class="css3btn">Login</button></li>
+	    		<li class="login-bar">
+		    		<button type="button" name="" value="Login" class="css3btn">Login</button>
+	    		</li>
 
 	    	</ul>
     	</form>
