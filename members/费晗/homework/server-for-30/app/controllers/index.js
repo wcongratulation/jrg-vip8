@@ -1,6 +1,6 @@
 module.exports = {
     index: function *(next) {
-        yield this.render('index.hbs');
+        yield this.render('index2.hbs');
         yield next;
     },
     adc: function *(next) {
@@ -27,14 +27,16 @@ module.exports = {
         //this.body = '<script>' + callback + '(' + userDataString + ')' + '</script>'
     },
     post: function *(next) {
-    var username = this.request.body.username
-    var password = this.request.body.password
+    var phone = this.request.body.phone
+    var password = this.request.body.pwd
+    var regex = /^1\d{10}$/
+    var valid =regex.test(phone)
+    // if (valid) {
+    //      yield this.render('index2.hbs',{message:'提交成功'})
+    //  }else{
+    //      yield this.render('index2.hbs',{message:'提交失败，号码格式不对'})
+    //  }
 
-    if(password === '111'){
-        yield this.render('post.hbs')
-    }else{
-        yield this.render('error.hbs')
-    }
         // 提交到数据库...
         // mysql ...
 
@@ -42,7 +44,16 @@ module.exports = {
         //    name: name,
         //    phone: phone
         //});
-
+        if (valid) {
+            this.body = {
+                errorCode: 0  //框架
+            }
+        }else{
+            this.body = {
+                errorCode: 1,
+                message: 'xxx error'
+            }
+        }
         //this.body = {
             //errorCode: 0,
             //data: {

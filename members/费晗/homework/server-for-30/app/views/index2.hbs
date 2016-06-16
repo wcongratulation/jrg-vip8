@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="background:grey;">
+<div>
+表单校验
+<hr>
+</div>
+<span style="color: red">{{message}}</span>
+<form action="/" method="post">
+	<label>
+		手机：<input type="text" name="phone" />
+	</label>
+	<label>
+		密码：<input type="password" name="pwd" />
+	</label>
+	<input type="submit" value="提交" />
+</form>
+
+<script src="http://7xrxd2.com1.z0.glb.clouddn.com/jquery/jquery-1.12.3.min.js"></script>
+	<script>
+//js验证
+		// $('form').on('submit',function(e){
+		// 	e.preventDefault()
+
+		// 	var form = e.currentTarget
+		// 	var phone =form.phone.value
+		// 	var password = form.pwd.value
+
+		// 	var regex = /^1\d{10}$/
+		// 	var valid = regex.test(phone)
+
+		// 	if (valid) {
+		// 		$.post('/',{phone:phone,password:password},function(response){
+		// 		console.log(response)
+		// 		form.phone.style.border = 'none'
+		// 	})  //不需要刷新页面
+		// 	}else{
+				
+		// 		form.phone.style.border = '1px solid red'
+		// 	}
+			
+		// })
+//jQ验证
+		$('form').on('submit',function(e){
+				e.preventDefault()
+
+				var form = e.currentTarget
+				var $form = $(form)
+				var phone = $.trim($form.find('[name=phone]').val())
+				var password = $form.find('[name=password]').val()
+				var regex = /^1\d{10}$/
+				var valid = regex.test(phone)
+
+				// if (valid) {
+				// 	$form.find('[name=phone]').css({'border': 'none'})
+				// 	//$.get('/xxx?',function...
+				// 	$.post('/',{phone:phone,password:password},function(response){
+				// 		if (response.errorCode === 0) {
+				// 			alert('success')
+				// 		}else{
+				// 			alert(response.message || '服务器忙，请稍后再试')
+				// 		}
+				//     })  
+				// }else{
+				// 	$form.find('[name=phone]').css({'border': '1px solid red'})
+				// }
+				if (valid) {
+					$.ajax({
+						url: '/sfasfdafdas', //请求一个不存在的路径
+						type: 'post',
+						data: {
+							phone: phone,
+							password: password
+						}.then(function(response){
+							//success
+								if (response.errorCode === 0) {
+									alert('success')
+								}else{
+									alert(response.message || '服务器忙，请稍后再试')
+							    }
+						    },function(xhr){
+						    	//error
+						    	xhr.status  //处理404，服务器挂掉
+						    }
+						}) //then(s1,e1).then(s2,22)
+						// success: function(response){
+						// 	if (response.errorCode === 0) {
+						// 		alert('success')
+						// 	}else{
+						// 		alert(response.message || '服务器忙，请稍后再试')
+						//     }
+					 //    },
+					 //    error: function(xhr){
+					 //    	xhr.status
+					 //    }  //处理404，服务器挂掉
+					})
+				}else{
+				 	$form.find('[name=phone]').css({'border': '1px solid red'})
+				}
+				
+				
+		})
+
+
+	</script>
+
+
+</body>
+</html>

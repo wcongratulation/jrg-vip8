@@ -7,7 +7,6 @@ module.exports = function(app) {
 	router
 		.get('/', indexCtrl.index)
         .post('/', indexCtrl.post)
-        .get('/adc', indexCtrl.adc)
-        .get('/adc', indexCtrl.post)
+
 	app.use(router.middleware());
 };
