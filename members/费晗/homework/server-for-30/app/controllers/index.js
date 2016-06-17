@@ -28,7 +28,7 @@ module.exports = {
     },
     post: function *(next) {
     var phone = this.request.body.phone
-    var password = this.request.body.pwd
+    var password = this.request.body.password
     var regex = /^1\d{10}$/
     var valid =regex.test(phone)
     // if (valid) {
@@ -51,7 +51,7 @@ module.exports = {
         }else{
             this.body = {
                 errorCode: 1,
-                message: 'xxx error'
+                // message: 'xxx error'
             }
         }
         //this.body = {

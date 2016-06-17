@@ -15,7 +15,25 @@
 		手机：<input type="text" name="phone" />
 	</label>
 	<label>
-		密码：<input type="password" name="pwd" />
+		密码：<input type="password" name="password" />
+	</label>
+	<label>
+		手机：<input type="text" name="phone" />
+	</label>
+	<label>
+		密码：<input type="password" name="password" />
+	</label>
+	<label>
+		手机：<input type="text" name="phone" />
+	</label>
+	<label>
+		密码：<input type="password" name="password" />
+	</label>
+	<label>
+		手机：<input type="text" name="phone" />
+	</label>
+	<label>
+		密码：<input type="password" name="password" />
 	</label>
 	<input type="submit" value="提交" />
 </form>
@@ -28,7 +46,7 @@
 
 		// 	var form = e.currentTarget
 		// 	var phone =form.phone.value
-		// 	var password = form.pwd.value
+		// 	var password = form.password.value
 
 		// 	var regex = /^1\d{10}$/
 		// 	var valid = regex.test(phone)
@@ -50,10 +68,43 @@
 
 				var form = e.currentTarget
 				var $form = $(form)
-				var phone = $.trim($form.find('[name=phone]').val())
-				var password = $form.find('[name=password]').val()
-				var regex = /^1\d{10}$/
-				var valid = regex.test(phone)
+				// var phone = $.trim($form.find('[name=phone]').val())
+				// var password = $form.find('[name=password]').val()
+				// var regex = /^1\d{10}$/
+				// var valid = regex.test(phone)
+
+				//拿到所有的name的值
+				var data = {}
+				$form.find('input[name]').each(function(index,dom){
+					var name = $(dom).attr('name')
+					var value = name.val()
+					data[name] = value
+				})
+				var rules = {
+					phone: function(value){
+						return /^1\d{10}$/.test(value)
+					}
+					email: function(value){
+						return /^.+@{2,}$/.test(value)
+					}
+				}
+				//映射关系
+				var map = {
+					phone: 'phone',
+					phone2: 'phone2'
+					email: 'email'
+					email2: 'email2'
+				}
+				var allValid = true
+				for(var key in data){
+					var value = data[key]
+					var validtorName = map[key]
+					var validtor = rules[validtorName]
+					var valid = validtor(value) 
+					if (valid === false) {
+						allValid = false
+					}
+				}
 
 				// if (valid) {
 				// 	$form.find('[name=phone]').css({'border': 'none'})
@@ -68,6 +119,7 @@
 				// }else{
 				// 	$form.find('[name=phone]').css({'border': '1px solid red'})
 				// }
+				//jQ ajax
 				if (valid) {
 					$.ajax({
 						url: '/sfasfdafdas', //请求一个不存在的路径
@@ -87,7 +139,7 @@
 						    	xhr.status  //处理404，服务器挂掉
 						    }
 						}) //then(s1,e1).then(s2,22)
-						// success: function(response){
+						/* success: function(response){
 						// 	if (response.errorCode === 0) {
 						// 		alert('success')
 						// 	}else{
@@ -97,7 +149,7 @@
 					 //    error: function(xhr){
 					 //    	xhr.status
 					 //    }  //处理404，服务器挂掉
-					})
+					// })*/
 				}else{
 				 	$form.find('[name=phone]').css({'border': '1px solid red'})
 				}
