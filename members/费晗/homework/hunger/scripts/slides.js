@@ -5,6 +5,7 @@
     this.init()
 }
 
+//初始化
 Slides.prototype.init = function(){  
   this.prepareHtml()
   this.bindEvents()
@@ -41,39 +42,53 @@ Slides.prototype.prepareHtml = function(){
   var $viewpoint = this.$viewpoint = $list.parent()
   $viewpoint.css({
     width: width,
-        height : height,
+    height : height,
     overflow: 'hidden',
-        position: 'relative',
+    position: 'relative'
+  })
+  $art.css({
+    width: width,
+    height : height,
+    overflow: 'hidden',
+    position: 'relative'
   })
     if(options.nav){
-    var $prev = this.$prev = $('<button class="slides-prev"><</button>')
+    var $prev = this.$prev = $('<a href="#" class="prev arrow"><</a>')
     $prev.appendTo($viewpoint);
-    var $next = this.$next = $('<button class="slides-next">></button>').appendTo($viewpoint);
-    $prev.css({
-      position:'absolute',
-      left:'0',
-      top:'50%',
-      border:'none',
-      height:'30px',
-      'margin-top':'-15px',
-      'background': 'rgba(0,0,0,.2)',
-      'padding-left': '4px',
-      'padding-right': '4px',
-      'color': 'white'
-    })
-    $next.css({
-      position:'absolute',
-      right:'0',
-      top:'50%',
-      border:'none',
-      height:'30px',
-      'margin-top':'-15px',
-      'background': 'rgba(0,0,0,.2)',
-      'padding-left': '4px',
-      'padding-right': '4px',
-      'color': 'white'
-    })
+    var $next = this.$next = $('<a href="#" class="next arrow">></a>').appendTo($viewpoint);
+    // $prev.css({
+    //   position:'absolute',
+    //   left:'0',
+    //   top:'50%',
+    //   border:'none',
+    //   height:'30px',
+    //   'margin-top':'-15px',
+    //   'background': 'rgba(0,0,0,.2)',
+    //   'padding-left': '4px',
+    //   'padding-right': '4px',
+    //   'color': 'white'
+    // })
+    // $next.css({
+    //   position:'absolute',
+    //   right:'0',
+    //   top:'50%',
+    //   border:'none',
+    //   height:'30px',
+    //   'margin-top':'-15px',
+    //   'background': 'rgba(0,0,0,.2)',
+    //   'padding-left': '4px',
+    //   'padding-right': '4px',
+    //   'color': 'white'
+    // })
+
   }
+
+
+  var $sliderNav = this.$sliderNav = $('<ul class=slider-nav></ul>')
+  $pics.each(function(){
+    $sliderNav.append($('<li class="slider-item">'+'</li>'));
+  })
+  $viewpoint.append($sliderNav);
   
   var hover = this.hover = false;
 }
@@ -94,6 +109,11 @@ Slides.prototype.bindEvents = function(){
         self.autoPlay()
         self.hover = false
       }
+    })
+     this.$viewpoint.on('mouseenter', function() {
+      $('.arrow').fadeIn()
+    }).on('mouseleave', function() {
+      $('.arrow').fadeOut()
     })
 }
 //动作函数go
@@ -137,6 +157,13 @@ Slides.prototype.go = function(index){
           self.current = 1
         })
       }
+      $('.slider-item').each(function(){
+        // console.log(index)
+        // console.log(this)
+      if($(this).index()===self.current-1){
+        $(this).addClass('active').siblings('.active').removeClass('active')
+      }
+    });
   
 }
 
