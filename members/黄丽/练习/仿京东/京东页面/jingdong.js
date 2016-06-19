@@ -1,20 +1,6 @@
 /**
  * Created by Administrator on 2016/5/23.
  */
-$('.menu > li').on('mouseenter',function(e){
-    var $current = $(e.currentTarget);
-    var index = $current.attr('data-index');
-    var indexNumber = +index;
-    $('.submenu').children('li.active').removeClass('active');
-    $('.submenu').children('li').eq(indexNumber).addClass('active');
-    $('.menu').children('li.hover').removeClass('hover');
-})
-$('.menu>li').on('mouseleave', function(e){
-    var $current = $(e.currentTarget);
-    var index = $current.attr('data-index');
-    var indexNumber = +index;
-    $('.submenu').children('li.active').removeClass('active');
-});
 $(function(){
     $(".Carousel").slidesjs({
         width:730,
