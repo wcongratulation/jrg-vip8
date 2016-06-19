@@ -113,6 +113,9 @@ header .topbar{
 }
 .topbar .links > ul > li{
     float: left;
+    margin: 0 1px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
 }
 .links .split{
     width: 1px;
@@ -124,16 +127,32 @@ header .topbar{
 }
 .links > ul > li > a{
     padding: 0 8px;
+    display: inline-block;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+.links > ul > li .default{
+    color: #C81623;
 }
 .links > ul > li > a:hover{
     color: #C81623;
 }
+.links > ul > li > .between:hover{
+    background: white;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}
 .links > ul > li > a > span{
     display: inline-block;
+}
+.icon-xiangxia{
+    position: relative;
+    left: 4px;
 }
 .topbar .links > ul > li:hover .icon-xiangxia{
     transform: rotate(180deg);
     transition: transform 0.1s;
+    color: #7F7F7F;
 }
 
 
