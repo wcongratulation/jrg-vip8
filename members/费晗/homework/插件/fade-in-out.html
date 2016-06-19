@@ -6,7 +6,7 @@
 <title>淡入淡出无限轮播</title>
 <script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
 <style type="text/css">
-	body,ul,li,img{
+	body,ul,li,img,h2{
 		margin: 0;
 		padding: 0;
 	}
@@ -24,9 +24,21 @@
 		display: block;
 		clear: both;
 	}
+
+	.header{
+		box-shadow: 0 5px 5px #eee;
+	}
+	h2{
+		font-size: 22px;
+		color: #9e9999;
+		font-family: "微软雅黑";
+		text-align: center;
+		padding: 40px;
+		margin-bottom: 50px;
+	}
 	.art{
 		position: relative;
-		margin: 10px auto;
+		margin: 0 auto;
 		width: 480px;
 		height: 360px;
 		overflow: hidden;
@@ -54,9 +66,16 @@
 		color: #fff;
 		background-color: #4e443c;
 		border-radius: 50%;
-		opacity: 0.8;
+		opacity: 0.3;
 		box-shadow: 0 0 2px #999;
 		display: none;
+	}
+	.art .arrow:hover{
+		opacity: 0.8;
+	}
+
+	.art:hover>.arrow{
+		display: block;
 	}
 	.pre{
 		left: 10px;
@@ -79,24 +98,29 @@
 		height: 5px;
 		border-radius: 2px;
 		background-color: #fff;
+		opacity: 0.8;
 		cursor: pointer;
 	}
 	ul.bullet>li.active{
-		background-color: #666;
+		background-color: #747474;
 	}
 </style>
 
 </head>
 <body>
-    <div class="art clearfix">
+
+	<div class="header">
+		<h2>—— 淡入淡出轮播 ——</h2>
+	</div>
+    <div class="art">
     	<ul class="viewpoint">
     		<li data-id=0><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/26.jpg"></a></li>
 			<li data-id=1><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/25.jpg"></a></li>
 			<li data-id=2><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/24.jpg"></a></li>
 			<li data-id=3><a href="#"><img src="http://cdn.jirengu.com/book.jirengu.com/img/23.jpg"></a></li>
     	</ul>
-    	<a class="pre arrow" href="#"><</a>
-    	<a class="next arrow" href="#">></a>
+    	<a class="pre arrow" href="javascript:void(0)"><</a>
+    	<a class="next arrow" href="javascript:void(0)">></a>
     	<ul class="bullet">
     		<li class="active"></li>
     		<li></li>
@@ -108,7 +132,8 @@
 
     <script type="text/javascript">
     		
-	   var 	$viewpoint = $('.viewpoint'),
+	   var 	$art = $('.art')
+			$viewpoint = $('.viewpoint'),
 	    	$pics = $viewpoint.children(),
 	    	$pre = $('.pre'),
 	    	$next = $('.next'),
@@ -118,7 +143,7 @@
 	    	//.length 和 .size() 的效果一样
 
 		//绑定事件
-	    var curIdx = 0;
+	    var curIdx = 0; //当前显示的pics
 	    var isAnimate = false;
 	    $pre.on('click',function(idx){
 	    	playPre();
@@ -128,16 +153,19 @@
 	    });
 	    $bullet.find('li').on('click',function(){
 	    	var idx = $(this).index();
+	    	console.log(idx)
 	    	play(idx);
 	    });
 
 	    play(0);
 	    autoPlay();
 
-	    $viewpoint.on('mouseenter',function(){
-	    	$('.arrow').fadeIn()
+	    $art.on('mouseenter',function(){
+	    	stopAuto()
+	    	// $('.arrow').fadeIn()
 	    }).on('mouseleave',function(){
-	    	$('.arrow').fadeOut()
+	    	// $('.arrow').fadeOut()
+	    	autoPlay()
 	    })
 		//绑定事件
 	    function playPre(){
