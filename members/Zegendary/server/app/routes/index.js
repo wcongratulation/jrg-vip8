@@ -6,6 +6,7 @@ module.exports = function(app) {
 
 	router
 		.get('/', indexCtrl.index)
+		.get('/form',indexCtrl.a)
         .post('/', indexCtrl.post)
 
 	app.use(router.middleware());
