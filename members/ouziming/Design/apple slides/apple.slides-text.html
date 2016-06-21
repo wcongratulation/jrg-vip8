@@ -155,25 +155,6 @@
 		    </ul>
 		</div>
     </div>
-
-
-    <div class="warpped"><!--窗口-->
-	    <ul class="apple-slide"><!--画板-->
-	    	<li class="photo data-1"><img src="image/macbook.jpg"></li>
-	    	<li class="photo data-2"><img src="image/iphone.jpg"></li>
-	    	<li class="photo data-3"><img src="image/imac.jpg"></li>
-	    	<li class="photo data-4"><img src="image/info.jpg"></li>
-	    </ul>
-	    <div class="menu-warpped">
-			<ul class="menu">
-		    	<li class="but on"><a href="javascript:;"><img src="image/thumb_macbook.png"></a></li><!--第一个加on的必要性-->
-		    	<li class="but"><a href="javascript:;"><img src="image/thumb_iphone.png"></a></li>
-		    	<li class="but"><a href="javascript:;"><img src="image/thumb_imac.png"></a></li>
-		    	<li class="but"><a href="javascript:;"><img src="image/thumb_about.png"></a></li>
-		    </ul>
-		</div>
-    </div>
-
     <div class='footer'>
     	<p>This is a tutorialzine demo. View the <a href="">original tutorial</a> to read and download the source files.<br></p>
     	<p>The gallery features artwork from <a href="">rambocre, pickupjojo</a> and <a href="">codenamebender</a></p>
@@ -183,18 +164,18 @@
     	//构造者
     	$.fn.slides = function(){
     		var current
-    		var $warpped = this
+    		var $photo = $('.photo')
+    		var $button = $('.but')
+    		var $ct = $('.apple-slide')
+    		//console.log($button)
 
-    		$warpped.each(function(){//遍历每一个按钮
+    		$button.each(function(){//遍历每一个按钮
     			//console.log($(this))
-    			var $warppeds = $(this)
-    			var $buttons = $warppeds.find('.but')
-    			console.log($buttons)
-    			var $ct = $warppeds.find('.apple-slide')
-    			$buttons.on('click',function(){//在每一个按钮中加click事件
-    				//console.log($(this))
+    			$(this).on('click',function(){//在每一个按钮中加click事件
+    				// console.log($(this))
     				var current = $(this).index()//获取点击的索引值
     				$(this).addClass('on').siblings('.on').removeClass('on')
+    				console.log(current)
 					$ct.animate({'left':current*(-920)})
     			})
     		})
@@ -202,7 +183,7 @@
 
 
     	//使用者
-    	$('.warpped').slides()
+    	$('.apple-slide').slides()
     </script>
 </body>
 </html>
