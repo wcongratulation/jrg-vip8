@@ -114,7 +114,7 @@
 		$arts.each(function(){
 			//console.log(this)----DON(list)
 			var $art = $(this)
-			var current = -1//把current默认为-1为了按钮第一个高亮，current第一次打出0
+			var current = 0//把current默认为-1为了按钮第一个高亮，current第一次打出0
 
 			//给图片添加一个父容器包裹层，设置样式并且执行链式调用
 			$photos = $art.children().wrapAll('<div class="list"></div>')// $art.children()的list作为了墙板
@@ -171,6 +171,7 @@
 			var go = function(index){
 				if (index>$photos.length-1) {
 					index = 0
+					$list.css({left:0})
 					}
 				if (index<0) {
 					index = $photos.length-1
@@ -180,45 +181,45 @@
 				}
 
 				var left = index*('-700')
-				$list.css({
+				$list.animate({
 					left:left
 				})
 					current = index
 					console.log(current)
 				if(!hover){
-					autoplay()
+					autoPlay()
 				}
 				showBullet()	
 			}
 
-			var movenext = function(){
+			var moveNext = function(){
 				go(current+1)
 			}
 			$next.on('click',function(){
-					movenext()
+					moveNext()
 			})
 
-			var moveprow = function(){
+			var moveProw = function(){
 				go(current-1)
 			}
 			$prew.on('click',function(){
-				moveprow()
+				moveProw()
 			})
 
 
 			//自动播放功能,js不存在if块作用域
 			var timer;
-			function autoplay(){
+			function autoPlay(){
 				timer = setInterval(function(){
-					movenext()
+					moveNext()
 				},3000)
 			}
 
 			if(options.auto === true){
-				autoplay()
+				autoPlay()
 			}
 
-			if(options.stopauto === true){
+			if(options.stopAuto === true){
 				function stop(){
 					clearInterval(timer)
 				}
@@ -234,7 +235,7 @@
 			})
 
 			$arts.on('mouseleave',function(){
-				autoplay()
+				autoPlay()
 				hover = false
 				$next.removeClass('onhover').addClass('unhover')
 				$prew.removeClass('onhover').addClass('unhover')
@@ -242,7 +243,7 @@
 
 
 			//按钮切换图片
-			var $bullet = $('<a href="#" class="bullet">1</a><a href="#" class="bullet">2</a><a href="#" class="bullet">3</a><a href="#" class="bullet">4</a><a href="#" class="bullet">5</a><a href="#" class="bullet">6</a>').appendTo($arts)
+			var $bullet = $('<a href="#" class="bullet active">1</a><a href="#" class="bullet">2</a><a href="#" class="bullet">3</a><a href="#" class="bullet">4</a><a href="#" class="bullet">5</a><a href="#" class="bullet">6</a>').appendTo($arts)
 			$bullet.wrapAll('<div class="setbullet"></div>')
 			//console.log($bullet)
 			
@@ -267,7 +268,7 @@
 			width:700,
 			height:450,
 			auto:true,
-			//stopauto:true
+			//stopAuto:true
 		})
 </script>
 </body>
