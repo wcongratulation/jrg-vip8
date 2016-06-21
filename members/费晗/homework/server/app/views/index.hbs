@@ -7,27 +7,26 @@
 <body style="background:grey;">
 <div>
     <form action="/" method=post>
-        <input type="text" name=username>
-        <input type="password" name="password">
+        <label>电话：<input type="text" name=username></label>
+        <label>密码：<input type="password" name="password"></label>
         <input type="submit" value="提交">
     </form>
 </div>
 
-<script src="http://7xrxd2.com1.z0.glb.clouddn.com/jquery/jquery-1.12.3.min.js"></script>
-<script>
-$('form').on('submit',function(e){
-    e.preventDefault()
-    var form = this   
-    var $form = $(this)
-    var data= $form.serialize()
-    $.post('/', data, function(response){
-        var object = JSON.parse(response)
-        console.log(object)
-    }, 'json')
-})
+<script src="http://style.c.aliimg.com/fdevlib/js/gallery/jquery/jquery-latest.js"></script>
+    <script>
 
-</script>
+        $('form').on('submit',function(e){
+            e.preventDefault()
+            var $form = $(this)
+            var data = $form.serialize()
+            $.post('/',data,function(responce){
+                console.log(responce)
+                alert('success')
+            })
+        })
 
+    </script>
 
 </body>
 </html>

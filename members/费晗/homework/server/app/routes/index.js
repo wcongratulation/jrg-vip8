@@ -8,6 +8,6 @@ module.exports = function(app) {
 		.get('/', indexCtrl.index)
         .post('/', indexCtrl.post)
         .get('/adc', indexCtrl.adc)
-        .get('/adc', indexCtrl.post)
+        .post('/', indexCtrl.adc)
 	app.use(router.middleware());
 };
