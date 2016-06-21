@@ -31,6 +31,7 @@ module.exports = {
     var password = this.request.body.password
     var regex = /^1\d{10}$/
     var valid =regex.test(phone)
+    //在页面中显示错误
     // if (valid) {
     //      yield this.render('index2.hbs',{message:'提交成功'})
     //  }else{

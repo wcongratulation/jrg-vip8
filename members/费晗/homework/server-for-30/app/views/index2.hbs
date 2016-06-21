@@ -43,9 +43,12 @@
 //js验证
 		// $('form').on('submit',function(e){
 		// 	e.preventDefault()
-
+		// var form = this
 		// 	var form = e.currentTarget
+		//两种方式拿到form
 		// 	var phone =form.phone.value
+		//  console。log(form.name)
+		//  form.name属性的值，就可以拿到当前的input了；如果表单里面没有写name属性，可以加个id或class
 		// 	var password = form.password.value
 
 		// 	var regex = /^1\d{10}$/
@@ -54,6 +57,9 @@
 		// 	if (valid) {
 		// 		$.post('/',{phone:phone,password:password},function(response){
 		// 		console.log(response)
+		//		console.log(typeof response)
+		// 如果是以网页的形式请求url，返回的就是一个html；
+		// 如果是以JS的方式请求url，以字符串的形式返回给JS
 		// 		form.phone.style.border = 'none'
 		// 	})  //不需要刷新页面
 		// 	}else{
