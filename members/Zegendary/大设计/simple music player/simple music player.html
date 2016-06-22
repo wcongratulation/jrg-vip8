@@ -96,8 +96,11 @@
 			myAudio.currentTime = myAudio.duration * percentage/100;
 		});
 		function present(){
-			var length = myAudio.currentTime/myAudio.duration*100;	
-			$('.progressbar').width(length+'%');			
+			var length = myAudio.currentTime/myAudio.duration*100;
+			$('.progressbar').width(length+'%');
+			if(myAudio.currentTime == myAudio.duration){
+			next()
+		}			
 		}
 		//icon
 		$('.m-star').on('click',function(){
