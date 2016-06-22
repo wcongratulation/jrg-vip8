@@ -20,7 +20,10 @@
 		overflow: hidden;
 		margin:0 auto;
 		border:2px solid #928084;
-		box-shadow: 2px 2px 15px #f9dfdf;
+		/*box-shadow: 2px 2px 15px #f9dfdf;*/
+		-moz-box-shadow:0 0 3px #AAAAAA;
+		-webkit-box-shadow:0 0 3px #AAAAAA;
+		box-shadow:0 0 3px #AAAAAA;
 	}
 	img{
 		width: 700px;
@@ -60,7 +63,7 @@
 	    left: 670px;
 	    top: 190px;
 	}
-	.art .prew{
+	.art .prev{
 		position: absolute;
 	    left: 0px;
 	    top: 190px
@@ -110,11 +113,11 @@
 	//插件定义
 	$.fn.slides = function(options){
 		//console.log(this)---jq(list)
-		var $arts = this;
+		var $arts = this;//这里this是一个对象包含两个同名的元素
 		$arts.each(function(){
 			//console.log(this)----DON(list)
-			var $art = $(this)
-			var current = 0//把current默认为-1为了按钮第一个高亮，current第一次打出0
+			var $art = $(this)//this是遍历后的各自两个不同的对象，然后就可在各自对象里查找、操作
+			var current = 0//把current默认为-1为了按钮第一个高亮，current第一次打出0，但后面发现效果不好
 
 			//给图片添加一个父容器包裹层，设置样式并且执行链式调用
 			$photos = $art.children().wrapAll('<div class="list"></div>')// $art.children()的list作为了墙板
@@ -135,9 +138,9 @@
 				position:"relative"
 			})
 
-			var $prew = $('<a class="prew arrow"><</a>').appendTo($art)
+			var $prev = $('<a class="prev arrow"><</a>').appendTo($art)
 			var $next = $('<a class="next arrow">></a>').appendTo($art)
-			console.log($prew)
+			console.log($prev)
 
 			/*prew,next函数,封装move函数
 			var movenext = function(){
@@ -181,7 +184,7 @@
 				}
 
 				var left = index*('-700')
-				$list.animate({
+				$list.stop(true,true).animate({
 					left:left
 				})
 					current = index
@@ -192,6 +195,7 @@
 				showBullet()	
 			}
 
+			//命名上注意驼峰规则——先小后大
 			var moveNext = function(){
 				go(current+1)
 			}
@@ -199,11 +203,11 @@
 					moveNext()
 			})
 
-			var moveProw = function(){
+			var movePrev = function(){
 				go(current-1)
 			}
-			$prew.on('click',function(){
-				moveProw()
+			$prev.on('click',function(){
+				movePrev()
 			})
 
 
@@ -231,14 +235,14 @@
 				window.clearInterval(timer);
 				hover = true
 				$next.addClass('onhover').removeClass('unhover')
-				$prew.addClass('onhover').removeClass('unhover')
+				$prev.addClass('onhover').removeClass('unhover')
 			})
 
 			$arts.on('mouseleave',function(){
 				autoPlay()
 				hover = false
 				$next.removeClass('onhover').addClass('unhover')
-				$prew.removeClass('onhover').addClass('unhover')
+				$prev.removeClass('onhover').addClass('unhover')
 			})
 
 
