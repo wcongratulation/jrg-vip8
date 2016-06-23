@@ -79,6 +79,10 @@ span{
 }
 .content .music-icon{
 	float: right;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 .content .music-icon span{
 	margin-left: 5px;
@@ -111,6 +115,10 @@ span.loved{color: #fe8698}
 	width: 180px;
 	height: 40px;
 	padding: 10px 20px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 .controls .play-control,.music-control{
 	display: inline-block;
