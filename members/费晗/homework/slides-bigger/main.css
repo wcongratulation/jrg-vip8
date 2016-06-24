@@ -59,10 +59,11 @@ img{
 .art{
 	height: 400px;
     width: 3680px;
-/*	overflow: hidden;*/
+	overflow: hidden;
 	position: relative;
+	left: 0;
 }
-.art-slide{
+.slide{
 	float: left;
 }
 .slides-menu{
