@@ -36,6 +36,7 @@
     	<p>The gallery features artwork from <a href="#">rambocre</a>, <a href="">pickupjojo</a> and <a href="">codenamebender</a></p>
     </div>
     <script type="text/javascript">
+    
 		$('li.menu-items').on('click',function(e){
 			console.log($(this))
 			var $current = $(e.currentTarget)
@@ -47,6 +48,7 @@
 			var left = index*920;
 			$('.art').stop(true,true).animate({marginLeft: -left},300)
 		})
+
     </script>
 </body>
 </html>
