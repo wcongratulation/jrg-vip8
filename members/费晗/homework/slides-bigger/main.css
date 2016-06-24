@@ -11,7 +11,7 @@ body,html,p,ul,li,h1{
 }
 body{
 color: #444444;
-font-size: 13px;
+font-size: 12px;
 background: #f2f2f2;
 font-family: Arial, Helvetica, sans-serif;
 }
@@ -37,7 +37,7 @@ img{
 .site-header h1{
  	font-size: 42px;
  	font-weight: normal;
- 	font-family: "Myriad Pro",Arial,Helvetica,sans-serif;
+ 	font-family: "Myriad Pro";
  	padding: 35px 35px 0 35px;
  }
 .site-header p{
@@ -90,7 +90,7 @@ ul li{
 	height: 35px;
 	padding-top: 10px;
 	background: url(imgs/divider.png) no-repeat right;
-	border: 1px solid red;
+/*	border: 1px solid red;*/
 }
 li.active{
 	background: url(imgs/active_bg.png);
