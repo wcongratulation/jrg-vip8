@@ -120,14 +120,14 @@
 			$viewpoint.stop(true,true).animate({'left': 0-imgWidth},function(){
 				$viewpoint.append($viewpoint.children().first());
 				$viewpoint.css('left',0);
-			})
+			},500)
 		}
 		function playPrev(){
 			$viewpoint.prepend($viewpoint.children().last());
 			$viewpoint.css('left',0-imgWidth);
 			$viewpoint.stop(true,true).animate({'left': 0});
 		}
-	});
+	},500);
 		
 
 	</script>

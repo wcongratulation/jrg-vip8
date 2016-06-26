@@ -6,7 +6,7 @@
 <meta name="description" content="news-service" />
   <meta charset="utf-8">
   <title>仿jd作品</title>
-  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1464014291_0360897.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1466931425_58775.css">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -198,7 +198,6 @@
             <li>这里是菜单15</li>
         </ul>
       </div>
-
       <div class="artSlides clearfix">
          <img src="http://img12.360buyimg.com/da/jfs/t2857/256/1452752818/101291/afca65c1/573ee1ebN06312488.jpg" alt="" width="730" height="454">
          <img src="http://img20.360buyimg.com/da/jfs/t2854/97/1132509358/155045/6244031f/5735959eN11f82ea5.jpg" alt="" width="730" height="454">
@@ -206,8 +205,10 @@
          <img src="http://img10.360buyimg.com/da/jfs/t2584/110/1391193267/93128/24d6eeb8/573e6a48N9b32769c.jpg" alt="" width="730" height="454">
          <img src="http://img20.360buyimg.com/da/jfs/t2665/177/1455254342/56503/5b5a6f40/573ee1a4N13947f29.jpg" alt="" width="730" height="454">
          <img src="http://img12.360buyimg.com/da/jfs/t2704/157/1435833264/136894/59293934/573ea901Ndb3ca841.jpg" alt="" width="730" height="454">
-
+         <a class="slidesjs-previous slidesjs-navigation jd-iconfont i-btn-left" href="#"></a>
+    <a class="slidesjs-next slidesjs-navigation jd-iconfont i-btn-right" href="#"></a>
     </div>
+    
      <aside>
          <section class="news clearfix">
            <div class="newTilte clearfix">
@@ -250,13 +251,22 @@
       <a href="#"><img src="http://img10.360buyimg.com/uba/jfs/t2635/131/1142607732/14489/32885d1f/57346955N2e884f24.jpg" alt=""></a>
     </div>
     <div class="recommend-slider">
-      <ul class="slider clearfix">
-        <li><img src="http://img11.360buyimg.com/vclist/jfs/t2767/60/1459259941/19420/38177162/573ebfd5N1413768a.jpg.webp" alt=""></li>
-        <li><img src="http://img11.360buyimg.com/vclist/jfs/t2827/259/1473162789/10858/de4b731/573ebb41N7dacf67d.jpg.webp" alt=""></li>
-        <li><img src="http://img10.360buyimg.com/da/jfs/t2347/117/2376697236/32174/63bae8de/56fdd89eN9085e00d.png.webp" alt=""></li>
-        <li><img src="http://img30.360buyimg.com/da/jfs/t2821/49/1236438830/19570/4cd25f6b/5739447cNe6a9c133.jpg.webp" alt=""></li>
-      </ul>
+        <div>
+          <a href=""><img src="http://img12.360buyimg.com/da/jfs/t769/106/1035911116/19452/a6fa4a81/5510d809N70c3eb71.jpg" alt=""></a>
+        <a href=""><img src="http://img13.360buyimg.com/vclist/jfs/t2803/190/2490782639/14518/59c26acd/5763c9b7N29d4bf48.jpg" alt=""></a>
+        <a href=""><img src="http://img12.360buyimg.com/da/jfs/t1165/148/256068185/11839/6b3f7b04/5510e394N7d91092f.jpg" alt=""></a>
+          <a href=""><img src="http://img13.360buyimg.com/da/jfs/t2782/15/2520293628/31503/da9fc7d8/5767a07fN3342bdc4.jpg" alt=""></a>
+        </div>
+        <div>
+          <a href=""><img src="http://img11.360buyimg.com/da/jfs/t2704/315/2607228847/27060/d12732ac/576ca569N66841cb7.jpg" alt=""></a>
+          <a href=""><img src="http://img10.360buyimg.com/vclist/jfs/t2938/349/802305921/19306/7481ee53/5768efb7N13532f05.jpg" alt=""></a>
+          <a href=""><img src="http://img12.360buyimg.com/vclist/jfs/t2728/272/2385591419/11070/a3500c0a/57634f77N99399564.jpg" alt=""></a>
+          <a href=""><img src="http://img10.360buyimg.com/da/jfs/t2347/117/2376697236/32174/63bae8de/56fdd89eN9085e00d.png" alt=""></a>
+        </div>
+        <a class="slidesjs-previous slidesjs-navigation jd-iconfont i-btn-left" href="#"></a>
+        <a class="slidesjs-next slidesjs-navigation jd-iconfont i-btn-right" href="#"></a>
     </div>
+
 </div>
 
 <script>
@@ -280,7 +290,7 @@ $('.submenu').children('li.active').removeClass('active');
   
   
 })
-
+  /*artSlides*/
    $(function(){
       $(".artSlides").slidesjs({
         width: 730,
@@ -302,9 +312,27 @@ $('.submenu').children('li.active').removeClass('active');
         // [boolean] pause a playing slideshow on hover
       restartDelay: 2500
         // [number] restart delay on inactive slideshow
-    }
-      });
+      }
     });
+  });
+  /*recommend-slider*/
+  $(function(){
+    $(".recommend-slider").slidesjs({
+        width: 1000,
+        height: 164,
+        pagination: false,
+        navigation: {
+            active: false,
+            // [boolean] Generates next and previous buttons.
+            // You can set to false and use your own buttons.
+            // User defined buttons must have the following:
+            // previous button: class="slidesjs-previous slidesjs-navigation"
+            // next button: class="slidesjs-next slidesjs-navigation"
+            effect: "slide"
+            // [string] Can be either "slide" or "fade".
+        }
+    });
+  });
 </script>
 </body>
 </html>
