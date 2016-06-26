@@ -35,10 +35,10 @@
                 $.post('/remove', {
                     name: name
                 }).then(function (response) {
-                    if (response.errorCode) {
-                        alert('删除失败,错误码：' + response.errorCode)
-                    } else {
+                    if (response.errorCode === 0) {
                         $item.remove()
+                    } else {
+                        alert('删除失败,错误码：' + response.errorCode)
                     }
                 }, function (xhr) {
                     alert('服务器繁忙，请稍后再试。')

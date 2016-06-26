@@ -3,8 +3,10 @@ var p = require('path')
 
 module.exports = {
     read: function *(next) {
+        // 读取 static/uploaded 目录下的所有文件
         var files = fs.readdirSync(p.join(__dirname, '../../static/uploaded'))
 
+        // 将文件信息转换为 [{name:xxx, path:xxx}] 的数组
         var data = files.map(function (file) {
             return {
                 name: p.basename(file),
@@ -21,6 +23,7 @@ module.exports = {
     doCreate: function *(next) {
         var file = this.request.body.files
         try {
+            // 保存文件到 static/uploaded
             rename(file.file.path, file.file.name)
         } catch (expection) {
             console.log(expection)
@@ -56,6 +59,8 @@ module.exports = {
     remove: function *(next) {
         var name = this.request.body.name
         try {
+            // 从 static/uploaded 目录里删除名字为 name 
+            // 的文件
             fs.unlink(p.join(__dirname, '../../static/uploaded', name))
         } catch (expection) {
             console.log(expection)
