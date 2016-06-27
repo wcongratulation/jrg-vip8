@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <!-- 1.a.com -->
     <script >
         document.domain = 'a.com'
     </script>
@@ -11,37 +12,9 @@
 <div>
     I am a.com
     <button id=button>点我查看 data.com 的数据</button>
+    <hr>
+    <iframe id='f' src="http://a.com/index2" frameborder="0"></iframe>
 </div>
-
-<script src="http://7xrxd2.com1.z0.glb.clouddn.com/jquery/jquery-1.12.3.min.js"></script>
-<script >
-// getData 接收一个函数
-// 当script 加载完了，就会调用这个函数，并把得到的 data 作为第一个参数传给这个函数
-function getData(url, afterLoad){
-    var script = document.createElement('script')
-    var name = 'temp'+ parseInt(Math.random() * 100000000)
-    script.src = url + '?callback=' + name
-    window[name] = function(data){
-        afterLoad(data)
-    }
-    document.body.appendChild(script)
-}
-
-button.addEventListener('click', function(){
-    //getData('http://data.com/ddd', function(data){
-        //console.log(data)
-    //})
-    $.ajax({
-        url: 'http://data.com/ddd',
-        type: 'get'
-        //dataType: 'jsonp'
-    }).then(function(data){
-        console.log(data)
-    })
-})
-
-
-</script>
 
 
 </body>
