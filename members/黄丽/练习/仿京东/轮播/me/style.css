@@ -36,10 +36,10 @@ ul{list-style: none;}
     top:50%;
     right:0;
 }
-.viewpoint:hover>.prev{
+.viewpoint:hover .prev{
     display: block;
 }
-.viewpoint:hover>.next{
+.viewpoint:hover .next{
     display: block;
 }
 .Numb{

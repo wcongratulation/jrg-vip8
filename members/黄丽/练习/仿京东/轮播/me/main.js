@@ -3,11 +3,12 @@
  */
 $.fn.slide = function(options){
         var $arts = this;
-        var $art=$(this).eq(0);
+    $arts.each(function () {
+        var $art=$(this);
         var current = 0;
         var $pics = $art.children().wrapAll('<div class="list"></div>').css({
-        float:'left'
-    });
+            float:'left'
+        });
         var $list = $art.children().wrapAll('<div class="viewpoint"></div>').css({
             overflow:'hidden',
             width:$pics.length*options.width,
@@ -18,12 +19,12 @@ $.fn.slide = function(options){
             width:options.width,
             overflow:'hidden'
         });
-    var hover = false;
-    var $prev = $('<button class="prev"><</button>').appendTo($viewpoint);
-    var $next = $('<button class="next">></button>').appendTo($viewpoint);
-    var $numb= $('<li class="numb active">1</li><li class="numb">2</li><li class="numb">3</li><li class="numb">4</li><li class="numb">5</li>').appendTo($arts).wrapAll('<ul class="Numb"></ul>');
+        var hover = false;
+        var $prev = $('<button class="prev"><</button>').appendTo($viewpoint);
+        var $next = $('<button class="next">></button>').appendTo($viewpoint);
+        var $numb= $('<li class="numb active">1</li><li class="numb">2</li><li class="numb">3</li><li class="numb">4</li><li class="numb">5</li>').appendTo($art).wrapAll('<ul class="Numb"></ul>');
 
-    var go = function(index){
+        var go = function(index){
             if(index<0){
                 index = $pics.length-1;
             }else if(index>$pics.length-1){
@@ -32,35 +33,34 @@ $.fn.slide = function(options){
             if(timer){
                 window.clearInterval(timer);
             }
-            var left = index *(-730);
+            var left = index *(-options.width);
             $list.stop(true,true).animate({left:left},function(){
                 current = index;
                 if(!hover){
                     autoPlay();
                 }
             });
-    };
+        };
 
-    var prev = function(){
-        go(current-1);
-        numbPlay();
-    };
-    var next = function(){
-        go(current+1);
-        numbPlay();
-    };
-    var $Numb = $('.Numb');
-    $Numb.find('li').on('click',function(){
-        var $this = $(this);
-        var ind = $this.index();
-        go(ind);
-        numbPlay();
-    });
-    var numbPlay = function(){
-        $Numb.children().eq(current).addClass('active').siblings('.active').removeClass('active');
-    };
+        var prev = function(){
+            go(current-1);
+            numbPlay();
+        };
+        var next = function(){
+            go(current+1);
+            numbPlay();
+        };
 
-    $prev.on('click',function(){
+        $numb.on('click',function(){
+            var ind = $(this).index();
+            go(ind);
+            numbPlay();
+        });
+        var numbPlay = function(){
+            $numb.eq(current).addClass('active').siblings('.active').removeClass('active');
+        };
+
+        $prev.on('click',function(){
             prev();
         });
         $next.on('click',function(){
@@ -75,7 +75,7 @@ $.fn.slide = function(options){
             numbPlay();
         };
 
-        $pics.on('mouseenter',function(){
+        $viewpoint.on('mouseenter',function(){
             window.clearInterval(timer);
             hover = true;
         }).on('mouseleave',function(){
@@ -85,7 +85,7 @@ $.fn.slide = function(options){
         if(options.auto){
             autoPlay();
         }
-
+    })
 };
 
 $('.arts').slide({
