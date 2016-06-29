@@ -39,22 +39,20 @@ $.fn.slide = function(options){
                 if(!hover){
                     autoPlay();
                 }
+                numbPlay();
             });
         };
 
         var prev = function(){
             go(current-1);
-            numbPlay();
         };
         var next = function(){
             go(current+1);
-            numbPlay();
         };
 
         $numb.on('click',function(){
             var ind = $(this).index();
             go(ind);
-            numbPlay();
         });
         var numbPlay = function(){
             $numb.eq(current).addClass('active').siblings('.active').removeClass('active');
@@ -67,14 +65,6 @@ $.fn.slide = function(options){
             next();
         });
 
-        var timer;
-        var autoPlay = function(){
-            timer = setInterval(function(){
-                go(current+1);
-            },2000);
-            numbPlay();
-        };
-
         $viewpoint.on('mouseenter',function(){
             window.clearInterval(timer);
             hover = true;
@@ -82,6 +72,13 @@ $.fn.slide = function(options){
             hover = false;
             autoPlay();
         });
+        var timer;
+        var autoPlay = function(){
+            timer = setInterval(function(){
+                go(current+1);
+            },2000);
+            numbPlay();
+        };
         if(options.auto){
             autoPlay();
         }

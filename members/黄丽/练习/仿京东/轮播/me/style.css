@@ -36,17 +36,21 @@ ul{list-style: none;}
     top:50%;
     right:0;
 }
-.viewpoint:hover .prev{
+.arts:hover .prev{
     display: block;
+    z-index:2;
 }
-.viewpoint:hover .next{
+.arts:hover .next{
     display: block;
+    z-index:2;
 }
+
 .Numb{
     position:absolute;
     bottom:10px;
     width:730px;
     text-align:center;
+
 }
 .Numb>li.numb{
     width:18px;
@@ -60,5 +64,6 @@ ul{list-style: none;}
     color: #fff;
     overflow: hidden;
     cursor: pointer;
+    z-index:1;
 }
 .Numb> li.active{background: red;}
