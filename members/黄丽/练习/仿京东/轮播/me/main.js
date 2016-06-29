@@ -1,6 +1,4 @@
-/**
- * Created by 非也 on 2016/6/28.
- */
+
 $.fn.slide = function(options){
         var $arts = this;
     $arts.each(function () {
