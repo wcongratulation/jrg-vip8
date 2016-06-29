@@ -1,149 +1,162 @@
 function Slides($element,options){
-	this.options = options;
-	this.$element = $element;
-	this.clock = null;
-	this.init();
-}
+	this.options = options
+	this.$element = $element
+	this.timer = null 
+    this.init()
 
+}
 Slides.prototype.init = function(){
-	this.preparetHtml();
-	this.bindEvents();
-	if (this.options.auto) {
-		this.autoPlay()
-	}  
+	this.prepareHtml()
+	this.bindEvents()
+	if(this.options.auto){
+      this.autoPlay()
+    }
+    console.log('s')
 }
-
-Slides.prototype.preparetHtml = function(){
-	var $art = this.$element,
-		options = this.options,
-		curIdx = this.curId = 0,
-		isAnimate = this.isAnimate = false,
-		$items = this.$items = $art.children().wrapAll('<div class=slider-main></div>'),
-	    $sliderMain = this.$sliderMain  = $art.children().wrapAll('<div class=viewPoint></div>'),
-	    $viewPoint = this.$viewPoint = $sliderMain.parent(),
-	    $prev = this.$prev = $('<a class="prev arrow" href=#><</a>'),  
-	    $next = this.$next  = $('<a class="next arrow" href=#>></a>'),
-	    $bullet = this.$bullet = $('<ul class=bullet></ul>');
-	$items.each(function(index){
-	  $bullet.append($('<li></li>'));
-	})
-	$viewPoint.append($prev).append($next).append($bullet)
-	$('li:first').addClass('active');
-	  
-	var itemsWidth = this.itemsWidth = options.width,
-	    itemsHeight = this.itemsHeight = options.height,
-	    itemsCount = this.itemsCount = $sliderMain.children().size();
-	    $viewPoint.css({
-	      position: 'relative',
-	      width: itemsWidth,
-	      height: itemsHeight,
-	      overflow: 'hidden'
-	    });
-	    
-	    $sliderMain.css({
-	    position: 'absolute',
-	    left: '0'
-	  });
-
-	$sliderMain.prepend($items.last().clone());
-	$sliderMain.append($items.first().clone());
-	var itemsRealCount = this.itemsRealCount = $sliderMain.children().length;
-
-	$sliderMain.css({
-	    left: 0 - itemsWidth,
-	    width: itemsRealCount*itemsWidth
-	});
+Slides.prototype.prepareHtml = function(){
+  var $arts = this.$element
+  var options = this.options
+  var $pics = this.$pics = $arts.children().wrapAll('<div class=list></div>')
+  var $list = this.$list = $arts.children()
+  $list.wrapAll('<div class=viewpoint></div>')
+  var $viewpoint = this.$viewpoint = $list.parent()
+  if (options.nav) {
+  	  var $prev = this.$prev = $('<button class=next><</button>')
+	  var $next = this.$next = $('<button class=next>></button>')
+	  $prev.appendTo($arts)
+	  $next.appendTo($arts)
+	  $prev.css({
+      position:'absolute',
+      left:'0',
+      top:'50%',
+      border:'none',
+      height:'30px',
+      'margin-top':'-15px'
+    })
+    $next.css({
+      position:'absolute',
+      right:'0',
+      top:'50%',
+      border:'none',
+      height:'30px',
+      'margin-top':'-15px'
+    })
+  }
+ } 
+  var width = this.width = options.width
+  var height = this.height = options.height
+  var current = this.current = 1
+  var hover = this.hover = false
+  var number = this.number = $pics.length+2
+  $arts.css({
+    width: width,
+    height: height
+  })
+  $viewpoint.css({
+    width: width,
+    height: height,
+    overflow: 'hidden',
+    position: 'relative'
+  })
+  $list.css({
+    width: width*number,
+    height: height,
+    position: 'relative',
+    left: -width
+  })
+  $pics.css({
+  	float: 'left',
+  	width: width,
+    height: height
+ })
+  
+  var $first = this.$first = $pics.first()
+  var $last = this.$last = $pics.last()
+  $first.clone().appendTo($list)
+  $last.clone().prependTo($list)
 }
-
+//绑定事件
 Slides.prototype.bindEvents = function(){
-	//绑定事件
-	var self = this,
-		curIdx = this.curIdx;
-	this.$art.on('mouseover',function(){	
-	    self.stopPlay();
-	}).on('mouseleave',function(){
-	    self.autoPlay();
-	})
-	this.$prev.on('click',function(e){
-	    e.preventDefault()
-	    self.playPrev();
-	})
-	this.$next.on('click',function(e){
-	    e.preventDefault()
-	    self.playNext();
-	})
-	this.$bullet.find('li').on('click',function(){
-	    var idx = $(this).index();
-	    if (idx>curIdx) {
-	        self.playNext(idx-curIdx);
-	    }else if(idx<curIdx){
-	        self.playPrev(curIdx-idx);
-	    }
-	});
-}
-
-Slides.prototype.next = function(idx){
-	var idx = idx || 1,
-	isAnimate = this.isAnimate,
-	sliderMain = this.sliderMain,
-	curIdx = this.curIdx,
-	itemsWidth = this.itemsWidth,
-	itemsCount = this.itemsCount,
-	self = this;
-
-    if (!isAnimate) {
-        isAnimate = true;
-        $sliderMain.stop(true,true).animate({left: '-='+(itemsWidth*idx)},function(){
-            curIdx = (curIdx + idx)%itemsCount;
-            if (curIdx ===0 ) { //检测是否移动到了队尾克隆元素上
-                $sliderMain.css({left: 0-itemsWidth});  //把当前位置切换到初始位置
-            }
-            isAnimate = false;
-            self.setBullet()
-        });
-    }
-}
-
-Slides.prototype.prev = function(idx){
-	var idx = idx || 1,
-	isAnimate = this.isAnimate,
-	sliderMain = this.sliderMain,
-	curIdx = this.curIdx,
-	itemsWidth = this.itemsWidth,
-	itemsCount = this.itemsCount,
-	self = this;
-    if (!isAnimate) {
-        isAnimate = true;
-        $sliderMain.stop(true,true).animate({left: '+='+(itemsWidth*idx)},function(){
-            curIdx = (itemsCount+curIdx-idx)%itemsCount;
-            if (curIdx === (itemsCount-1)) { //检测是否移动到了队首克隆元素上
-                $sliderMain.css({left: 0-itemsWidth*itemsCount}); //把当前位置切换到初始位置;
-            }
-            isAnimate = false;
-            self.setBullet();
-        });
-    }
+  var self = this
+  this.$prev.on('click',function(){
+     self.prev()
+  })
+  this.$next.on('click',function(){
+     self.next()
+  })
+  this.$pics.on('mouseenter',function(){
+     window.clearInterval(self.timer)
+     self.hover = true
+  }).on('mouseleave',function(){
+  	if (self.options.auto) {
+  		self.autoPlay()
+        self.hover = false
+  	}
+     
+  })
 }
 
 Slides.prototype.autoPlay = function(){
-	var self = this;
-    this.clock = setInterval(function(){
-    	self.playNext()
-    },2000);
+	var self = this
+	this.timer = setInterval(function(){
+      self.next()
+    },2000)
 }
-Slides.prototype.stopPlay = function(){
-    clearInterval(clock)
+//动作go
+Slides.prototype.prev = function(){
+	this.go(this.current-1)
 }
-Slides.prototype.setBullet = function(){
-    this.$bullet.find('li').removeClass('active')
-                  .eq(curIdx).addClass('active')
+Slides.prototype.next = function(){
+	this.go(this.current+1)
+}
+Slides.prototype.go = function(index){
+	var options = this.options
+	var width = options.width
+	var left = index*(-width)
+	var $list = this.$list
+	var timer = this.timer
+	var hover = this.hover
+	var current = this.current
+	var number = this.number
+	var left = index*(-width)
+	var self = this
+    if(timer){
+        window.clearInterval(timer)
+      }
+    if(!hover){
+          this.autoPlay()
+        }
+    if(index!=0&&index!=number-1){
+    $list.stop(true,true).animate({
+        left: left 
+      },500,function(){
+        self.current = index        
+    })      
+    }else    
+      if(index == 0){
+        $list.stop(true,true).animate({left:0},500,function(){
+          $list.css({left:(-number+2)*width})
+          self.current = number-2
+        })        
+      }else
+      if(index == number-1){
+        $list.stop(true,true).animate({left:-(number-1)*width},500,function(){
+          $list.css({left:-width})
+          self.current = 1
+        })
+      }
 }
 
-$.fn.slides = function(options){
+$.fn.slides=function(options){
 	this.each(function(){
 		var element = this
 		var slides = new Slides($(element),options)
 	})
-	
 }
-$('.art').slides({width: 310,height: 206,auto: true})
+
+$('.arts').slides({
+	width: 200,
+	height: 150,
+	auto: true,
+	nav: true
+})
