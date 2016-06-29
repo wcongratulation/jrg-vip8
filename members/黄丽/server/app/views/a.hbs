@@ -1,16 +1,31 @@
-<!doctype html>
+<!doctype>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+<meta charset="UTF-8">
+<title>Document</title>
 </head>
 <body style="background:grey;">
 <div>
-
+  <form action="/" method=post>
+      <input type="next" name="username">
+      <input type="password" name="password">
+      <input type="submit" value="提交">
+  
+  </form>
 </div>
-
-
-<script src="http://style.c.aliimg.com/fdevlib/js/gallery/jquery/jquery-latest.js"></script>
-
+<script src="http://7xrxd2.com1.z0.glb.clouddn.com/jquery/jquery-1.12.3.min.js"></script>
+<script>
+     $('form').on('submit',function(e){
+         e.preventDefault();
+	 var form = this;
+	 var $form = $(this);
+	 var data= $form.serialize();
+         $.post('/a', data, function(response){
+	 var object = JSON.parse(response);
+	 console.log(object);
+	  }, 'json');
+	};)
+</script>
 </body>
 </html>
+
