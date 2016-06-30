@@ -58,8 +58,7 @@
 			if (myAudio.paused) {
 				play()
 			} else {
-				myAudio.pause();
-				$(this).removeClass('m-pause').addClass('m-play');
+				pause()
 			}
 		});
 		// 频道切换
@@ -73,7 +72,11 @@
 		});
 		function play(){
 			myAudio.play();
-	       $('.btn1').removeClass('m-play').addClass('m-pause');
+	        $('.btn1').removeClass('m-play').addClass('m-pause');
+		}
+		function pause(){
+			myAudio.pause();
+			$('.btn1').removeClass('m-pause').addClass('m-play');
 		}
 		//获取频道信息
 		function getChannel(){
@@ -148,11 +151,6 @@
 		$('.m-heart').on('click',function(){
 			$(this).toggleClass('loved').toggleClass('colored')
 		})
-		// 预加载
-		// function start(){
-		// 	getChannel();
-		// 	getmusic();
-		// }
 		$(document).ready(getChannel())
 	</script>
 </body>
