@@ -1,18 +1,20 @@
 function Slides($element,options){
-	this.options = options
-	this.$element = $element
-	this.timer = null 
+  this.options = options
+  this.$element = $element
+  this.timer = null 
     this.init()
 
 }
+//初始化
 Slides.prototype.init = function(){
-	this.prepareHtml()
-	this.bindEvents()
-	if(this.options.auto){
+  this.prepareHtml()
+  this.bindEvents()
+  if(this.options.auto){
       this.autoPlay()
     }
     console.log('s')
 }
+//准备HTML
 Slides.prototype.prepareHtml = function(){
   var $arts = this.$element
   var options = this.options
@@ -21,28 +23,11 @@ Slides.prototype.prepareHtml = function(){
   $list.wrapAll('<div class=viewpoint></div>')
   var $viewpoint = this.$viewpoint = $list.parent()
   if (options.nav) {
-  	  var $prev = this.$prev = $('<button class=next><</button>')
-	  var $next = this.$next = $('<button class=next>></button>')
-	  $prev.appendTo($arts)
-	  $next.appendTo($arts)
-	  $prev.css({
-      position:'absolute',
-      left:'0',
-      top:'50%',
-      border:'none',
-      height:'30px',
-      'margin-top':'-15px'
-    })
-    $next.css({
-      position:'absolute',
-      right:'0',
-      top:'50%',
-      border:'none',
-      height:'30px',
-      'margin-top':'-15px'
-    })
+      var $prev = this.$prev = $('<button class=next>prev</button>')
+    var $next = this.$next = $('<button class=next>next</button>')
+    $prev.appendTo($arts)
+    $next.appendTo($arts)
   }
- } 
   var width = this.width = options.width
   var height = this.height = options.height
   var current = this.current = 1
@@ -65,8 +50,8 @@ Slides.prototype.prepareHtml = function(){
     left: -width
   })
   $pics.css({
-  	float: 'left',
-  	width: width,
+    float: 'left',
+    width: width,
     height: height
  })
   
@@ -88,49 +73,49 @@ Slides.prototype.bindEvents = function(){
      window.clearInterval(self.timer)
      self.hover = true
   }).on('mouseleave',function(){
-  	if (self.options.auto) {
-  		self.autoPlay()
+    if (self.options.auto) {
+      self.autoPlay()
         self.hover = false
-  	}
-     
+    }    
   })
 }
-
+//自动播放
 Slides.prototype.autoPlay = function(){
-	var self = this
-	this.timer = setInterval(function(){
+  var self = this
+  this.timer = setInterval(function(){
       self.next()
     },2000)
 }
 //动作go
 Slides.prototype.prev = function(){
-	this.go(this.current-1)
+  this.go(this.current-1)
 }
 Slides.prototype.next = function(){
-	this.go(this.current+1)
+  this.go(this.current+1)
 }
 Slides.prototype.go = function(index){
-	var options = this.options
-	var width = options.width
-	var left = index*(-width)
-	var $list = this.$list
-	var timer = this.timer
-	var hover = this.hover
-	var current = this.current
-	var number = this.number
-	var left = index*(-width)
-	var self = this
+  var options = this.options
+  var width = options.width
+  var left = index*(-width)
+  var $list = this.$list
+  var timer = this.timer
+  var hover = this.hover
+  var current = this.current
+  var number = this.number
+  var left = index*(-width)
+  var self = this
     if(timer){
         window.clearInterval(timer)
       }
-    if(!hover){
+  if(!hover&&options.auto){
           this.autoPlay()
         }
     if(index!=0&&index!=number-1){
     $list.stop(true,true).animate({
         left: left 
       },500,function(){
-        self.current = index        
+        self.current = index
+
     })      
     }else    
       if(index == 0){
@@ -146,17 +131,10 @@ Slides.prototype.go = function(index){
         })
       }
 }
-
+//页面有多个轮播
 $.fn.slides=function(options){
-	this.each(function(){
-		var element = this
-		var slides = new Slides($(element),options)
-	})
+  this.each(function(){
+    var element = this
+    var slides = new Slides($(element),options)
+  })
 }
-
-$('.arts').slides({
-	width: 200,
-	height: 150,
-	auto: true,
-	nav: true
-})
