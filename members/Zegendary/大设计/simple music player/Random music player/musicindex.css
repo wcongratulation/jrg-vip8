@@ -28,11 +28,38 @@ a{
 }
 .background{
 	width: 100%;
-	height: 260px;
+	height: 270px;
 	position: relative;
+	text-align: center;
+}
+.background .music-lyric{
+	width: 100%;
+	height: 230px;
+	padding: 20px 0;
+	background-color: rgba(100, 100, 100, 0.5)
+}
+.background .music-lyric .lyric-view{
+	height: 230px;
+	overflow: hidden;
+}
+.background .music-lyric ul{
+	position: relative;
+	transition: all 0.5s;
+}
+.lyric li{
+	padding: 5px 0 2px 0;
+	position: relative;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 12px ;
+	transition: all 0.5s;
+}
+.lyric li.active {
+  font-size: 13px;
+  color: #ffffff;
 }
 .content{
-	height: 110px;
+	height: 100px;
 	width: 400px;
 	padding: 20px 20px 10px 20px;
 }
@@ -102,7 +129,7 @@ span.loved{color: #fe8698}
 }
 .controls{
 	width: 400px;
-	height: 60px;
+	height: 50px;
 	padding: 20px 20px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -145,3 +172,5 @@ span.loved{color: #fe8698}
 .controls .music-control span:hover{
 	text-shadow: 1px 1px 1px #ccc;
 }
+.controls .music-control span.lyriced{color: #414141}
+.controls .music-control span.recycleed{color: #414141}

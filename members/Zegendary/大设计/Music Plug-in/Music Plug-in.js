@@ -278,6 +278,3 @@ $.fn.Music = function(options){
   var element = this;
   var music = new Music($(element),options)
 }
-$('body').Music({
-  hide: true
-})
