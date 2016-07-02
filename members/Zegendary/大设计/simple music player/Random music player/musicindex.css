@@ -44,7 +44,7 @@ a{
 }
 .background .music-lyric ul{
 	position: relative;
-	transition: all 0.5s;
+	transition: all 1s;
 }
 .lyric li{
 	padding: 5px 0 2px 0;
@@ -52,7 +52,7 @@ a{
 	text-align: center;
 	color: rgba(255, 255, 255, 0.6);
 	font-size: 12px ;
-	transition: all 0.5s;
+	transition: all 1s;
 }
 .lyric li.active {
   font-size: 13px;

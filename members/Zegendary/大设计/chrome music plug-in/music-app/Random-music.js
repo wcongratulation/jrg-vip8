@@ -85,9 +85,7 @@ function getlyric(){
 	var Ssid = $('audio').attr('ssid');
 	$.post('http://api.jirengu.com/fm/getLyric.php', {ssid: Ssid, sid: Sid})
         .done(function (lyr){
-        	console.log(lyr);
         	var lyr = JSON.parse(lyr);;
-        	console.log(lyr);
         	if (!!lyr.lyric) {
 	        	$('.music-lyric .lyric').empty();//清空歌词信息
 	        	var line = lyr.lyric.split('\n');//歌词为以排数为界的数组
