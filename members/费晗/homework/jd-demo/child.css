@@ -19,7 +19,10 @@ a{
   text-decoration: none;
   color: inherit;
 }
-.icon-r-arrow{
+img{
+  border: none;
+}
+.icon-r-arrows{
   position: absolute;
   font: 12px/12px consolas;
   overflow: hidden;
@@ -39,16 +42,16 @@ a{
   color: #fff;
   border-bottom: 1px solid #c81623;
 }
-.list-slides-news-service .menu>li h3{
-  height: 31px;
+.list-slides-news-service .category h3{
   line-height: 31px;
   padding-left: 10px;
   font-size: 14px;
   font-family: "microsoft yahei";
   border-left: 1px solid #c81623;
   position: relative;
+  z-index: 3; /*盖住边框*/
 }
- .list-slides-news-service .menu>li h3:hover{
+ .list-slides-news-service .category:hover h3{
   background: #f7f7f7;
   color: #C81623;
   cursor: pointer;
@@ -56,22 +59,21 @@ a{
 
 
 /**submenu**/
-.list-slides-news-service>.productCategoryList li:hover .submenu{
+.list-slides-news-service>.productCategoryList .category:hover .submenu{
   display: block;
-}
-.list-slides-news-service>.productCategoryList li .submenu{
-  display: none;
 }
 .list-slides-news-service>.productCategoryList .submenu{
   position: absolute;
-  left: 210px;
+  left: 209px;
   top: 0;
   width: 999px;
-  height: 465px;
+  min-height: 465px;
   border: 1px solid #b61d1d;
   border-top: none;
   color: #666;
   background: #f7f7f7;
+  display: none;
+  z-index: 1;
 }
 .list-slides-news-service .submenu-items-left{
   display: inline-block;
@@ -105,18 +107,21 @@ a{
 .list-slides-news-service .item-name{
   float: left;
   padding-top: 8px;
-  padding-right: 30px;
-  width: 54px;
-  line-height: 25px;
+  padding-right: 23px;
+  width: 66px;
+  line-height: 26px;
   text-align: right;
+}
+.list-slides-news-service .item-name{
   font-weight: 700;
 }
-
+.list-slides-news-service .item-name:hover{
+  color: #C81623;
+}
 .list-slides-news-service .item-name .icon-r-arrow{
   color: #666;
-  margin-left: 9px;
-  margin-top: -3px;
-  right: auto;
+  margin-left: 8px;
+  margin-right: -3px;
 }
 .list-slides-news-service .item-list{
   float: left;
@@ -132,7 +137,7 @@ a{
   margin: 4px 0;
 }
 .list-slides-news-service .items-list a:hover{
-	color: #C81623 !important;
+	color: #C81623;
 }
 .list-slides-news-service .submenu-art-right{
   display: inline-block;
@@ -144,7 +149,6 @@ a{
 .list-slides-news-service .submenu-art-right a{
 	display: inline-block;
 	margin-left: -2px;
-	margin-top: -4px;
 }
 .list-slides-news-service .submenu-art-right .big-art{
 	padding-top: 10px;
