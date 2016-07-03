@@ -362,63 +362,141 @@ button{
 }
 /*categorys*/
 
-.list-slides-news-service-wrapper>.productCategoryList{
-	float: left;
+.product-category{
+  position: relative;
+  float: left;
 }
-.list-slides-news-service-wrapper>.productCategoryList>ul.menu{
+.product-category .menu{
   width: 210px;
-  background: #c81623;
-  color: #fff;
+  background: #b61d1d;
   border-bottom: 1px solid #c81623;
 }
-.list-slides-news-service-wrapper>.productCategoryList>ul.menu>li.items{
+.product-category .menu .category{
+  border-left: 1px solid #c81623;
+}
+.product-category .category h3{
   height: 31px;
   line-height: 31px;
   padding-left: 10px;
   font-size: 14px;
   font-family: "microsoft yahei";
-  border-left: 1px solid #c81623;
+  color: #fff;
+  cursor: pointer;
   position: relative;
+  
 }
-.list-slides-news-service-wrapper>.productCategoryList>ul.menu>li:hover{
-  background: #f7f7f7;
+.product-category .menu>.category:hover h3{
   color: #C81623;
+  background: #f7f7f7;
+  z-index: 100;
+  width: 200px;
 }
-.list-slides-news-service-wrapper>.productCategoryList>ul.menu>li:after{
-  content:'\e604';
-  font-family: 'jd-iconfont';
-  position: absolute;
-  right: 5px;  
-}
-.list-slides-news-service-wrapper>.productCategoryList>ul.menu>li:hover:after{
-  display: none;
-}
-/**menu**/
-
-.list-slides-news-service-wrapper>.productCategoryList{
-  position: relative;
-}
-.list-slides-news-service-wrapper>.productCategoryList ul.submenu{
+.product-category .menu .submenu{
   position: absolute;
   top: 0;
-  left: 210px;
-  z-index: 2;
-}
-
-.list-slides-news-service-wrapper>.productCategoryList>.submenu>li{
-  width: 700px;
-  background: #f9f9f9;
-  padding: 10px;
-  height: 500px;
-  color: #333;
-}
-
-.list-slides-news-service-wrapper>.productCategoryList>.submenu>li{
+  left: 209px;
+  width: 999px;
+  min-height: 450px;
+  border: 1px solid #c81623;
+  border-top: none;
+  padding: 20px 20px 10px 20px;
+  background: #f7f7f7;
   display: none;
+  z-index: 99;
 }
-
-.list-slides-news-service-wrapper>.productCategoryList>.submenu>li.active{
+.product-category .menu>.category:hover .submenu{
   display: block;
+}
+.product-category .submenu .submenu-items-left{
+  display: inline-block;
+  vertical-align: top;
+  width: 730px;
+}
+.submenu-items-left .items-head a{
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+}
+.submenu-items-left .items-head a span{
+  background: #7c7171;
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  padding-left: 10px;
+  font-family: 'microsoft yahei';
+  
+}
+.submenu-items-left .items-head a span:after{
+  display: inline-block;
+  vertical-align: top;
+  content: '\e604';
+  font-family: 'jd-iconfont';
+  background: #5C5251;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  margin-left: 8px;
+}
+.submenu-items-left .items-head a span:hover{
+    background-color: #c81623;
+}
+.submenu-items-left .items-head a span:hover:after{
+   background-color: #B1191A;
+}
+/*.submenu-items-left .items-content{
+   margin-top: 5px;
+}*/
+.submenu-items-left .items-content .item-box .item-name{
+  float: left;
+  padding-top: 10px;
+  margin-left: 6px;
+}
+.submenu-items-left .items-content .item-box .item-name a{
+  display: inline-block;
+  width: 70px; 
+  text-align: right;
+  font-weight: 700;
+}
+.submenu-items-left .items-content .item-box .item-name a:after{
+  content: '\e604';
+  font-family: 'jd-iconfont';
+  display: inline-block;
+  margin-left: 5px;
+}
+.submenu-items-left .items-content .item-box .item-list{
+  float: left;
+  width: 620px;
+  line-height: 16px;
+  padding: 6px 0;
+  margin-left: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.submenu-items-left .items-content .item-box .item-list a{
+  float: left;
+  border-left: 1px solid #ddd;
+  padding: 0 8px;
+  margin: 4px 0;
+
+}
+.submenu-items-left .items-content a:hover{
+  color: #B61D1D;
+}
+.product-category .submenu .submenu-art-right{
+  display: inline-block;
+  vertical-align: top; 
+  width: 169px;
+  margin-left: 95px;
+}
+.product-category .submenu .submenu-art-right .small-art a{
+  float: left;
+  margin-bottom: 1px;
+  margin-left: 1px;
+}
+.product-category .submenu .submenu-art-right .big-art{
+  margin-top: 15px;
+}
+.product-category .submenu .submenu-art-right .big-art a{
+  margin-bottom: 1px;
 }
 /**submenu**/
 

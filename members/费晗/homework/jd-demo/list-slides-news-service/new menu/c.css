@@ -37,6 +37,7 @@ img{
 }
 .product-category{
   position: relative;
+  float: left;
 }
 .product-category .menu{
   width: 210px;
@@ -60,13 +61,15 @@ img{
 .product-category .menu>.category:hover h3{
   color: #C81623;
   background: #f7f7f7;
+  z-index: 1;
+  width: 210px;
 }
 .product-category .menu .submenu{
   position: absolute;
   top: 0;
   left: 210px;
   width: 999px;
-  min-height: 500px;
+  min-height: 450px;
   border: 1px solid #c81623;
   border-top: none;
   padding: 20px 20px 10px 20px;
@@ -80,10 +83,6 @@ img{
   display: inline-block;
   vertical-align: top;
   width: 730px;
-}
-.submenu-items-left .items-head{
-  /* height: 24px;
-  line-height: 24px; */
 }
 .submenu-items-left .items-head a{
   display: inline-block;
