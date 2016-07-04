@@ -57,9 +57,18 @@ module.exports = {
         var username = this.request.body.username
         var password = this.request.body.password
         if(password === 123){
-	   yield this.render('post.hbs')
+	   yield this.render('post.hbs',{
+	    username: username,
+	    password: password
+	   });
 	}else{
-	   yield this.render('error.hbs')
+	   yield this.body = {
+	   errorCode:0,
+	   data: {
+	      username: username,
+	      password: password
+	   }
+	  }
 	}
 	// 提交到数据库...
         // mysql ...
