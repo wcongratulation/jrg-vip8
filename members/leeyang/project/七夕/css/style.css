@@ -62,6 +62,13 @@ button{
     animation-timing-function: steps(1,start);
 }
 
+.slowFlowerWalk {
+    animation-name: person-flower-slow;
+    animation-duration: 950ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1, start);
+}
+
 /*普通慢走*/
 @keyframes person-slow {
     0% {
@@ -80,6 +87,26 @@ button{
         background-position: -0px -291px;
     }       
 }
+
+/*带花*/
+@keyframes person-flower-slow {
+    0% {
+        background-position: -453px -0px;
+    }
+    25% {
+        background-position: -904px -0px;
+    }
+    50% {
+        background-position: -451px -0px; 
+    }
+    75% {
+        background-position: -753px -0px;
+    }
+    100% {
+        background-position: -300px -0px;
+    }
+}
+
 
 
 /*人物暂停样式*/

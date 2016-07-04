@@ -59,3 +59,41 @@
 	background: url(http://img.mukewang.com/55ade12100019f5b00910231.png);
 	background-size: 100% 100%;
 }
+
+
+/*鸟*/
+
+.bird {
+	min-width: 91px;
+	min-height: 71px;
+	top: 10%;
+	position: absolute;
+	z-index: 10;
+	right: -91px;
+	background: url(../img/bird.png) -182px 0px no-repeat;
+}
+
+
+.birdFly {
+	animation-name: bird-slow;
+	animation-duration: 400ms;
+	animation-timing-function: step-start;
+	animation-iteration-count: infinite;
+}
+
+
+/*鸟慢飞*/
+@keyframes bird-slow {
+	0% {
+		background-position: -182px 0px;
+	}
+	50% {
+		background-position: 0px 0px;
+	}
+	75% {
+		background-position: -91px 0px;
+	}
+	100% {
+		background-position: -182px 0px;
+	}
+}
