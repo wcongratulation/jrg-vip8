@@ -1,12 +1,12 @@
 @media (max-width: 640px){
-	.picture ,.profile-and-willing,.question-and-resume,.wrapper{
+	.summary>.picture,.profile-and-willing,.question-and-resume,.wrapper{
 		width: 100%;
 	}
-	.intro {
+	.summary .intro {
 		width: 90%;
 		padding: 5%;
 	}
-	.picture,.intro,.profile-and-willing,.question-and-resume{
+	.summary>.picture,.summary .intro,.profile-and-willing,.question-and-resume{
 		float: none;
 	}
 	.question-and-resume{
