@@ -1,0 +1,15 @@
+@media (max-width: 640px){
+	.picture ,.profile-and-willing,.question-and-resume,.wrapper{
+		width: 100%;
+	}
+	.intro {
+		width: 90%;
+		padding: 5%;
+	}
+	.picture,.intro,.profile-and-willing,.question-and-resume{
+		float: none;
+	}
+	.question-and-resume{
+		margin: 0;
+	}
+}

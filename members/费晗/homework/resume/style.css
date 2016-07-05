@@ -5,7 +5,7 @@
  * @date    2016-05-10
  * @version $Id$
  */
- body{
+body{
  	font: 16px/1.5 "微软雅黑","Open Sans",Helvetica,Arial,sans-serif;
 	color: #797979;
 	background-color: #F7F6F8;
@@ -28,8 +28,19 @@ a{
 .clearfix{
 	*zoom: 1;
 }
+button{
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.rf{
+	float: right;
+}
+.lf{
+	float: left;
+}
 .wrapper{
-	width: 970px;
+	width: 980px;
 	margin: 0 auto;
 }
 .header{
@@ -38,10 +49,9 @@ a{
 	left: 0;
 	right: 0;
 	width: 100%;
-	/*height: 100%;*/
 	background-color: #fff;
 	box-shadow: 0 0 12px rgba(0,0,0,.20);
-	z-index: 100;
+	z-index: 10;
 }
 .header>.wrapper{
 	line-height: 39px;
@@ -50,13 +60,11 @@ a{
 .header>.wrapper>h1{
 	font-size: 28px;
 	color: #bcbcbc;
-    /*line-height: 39px;*/
 }
 .header>.wrapper .menu{
 	font-size: 27px;
 }
 .header>.wrapper .share{
-	float: right;
 	color: #20b299;
 	font-size: 27px;
 }
@@ -66,25 +74,27 @@ a{
 	margin-bottom: 15px;
 }
 .summary>.picture{
-	float: left;
-	width: 220px;
-	height: 230px;
-	padding-top: 30px;
-	padding-left: 20px;
+	width: 240px;
+	height: 260px;
 	background-color: #58C1D3;;
 	color: #fff;
 	position: relative;
 }
 .summary>.picture img{
+	width: 164px;
+	height: 175px;
 	position: absolute;
-	left: 34px;
+	left: 50%;
+	margin-left: -82px;
 	bottom: 0;
+	z-index: 9;
 }
-.summary>.picture p{
+.summary>.picture .pic-info{
+	padding-top: 20px;
+	padding-left: 20px;
 	font-size: 18px;
 }
 .summary .intro{
-	float: left;
 	width: 630px;
 	height: 160px;
 	padding: 50px;
@@ -95,7 +105,7 @@ a{
 	font-size: 18px;
 }
 .panel h2{
-	color: #74bcaa;
+	color: #4cc1aa;
 	font-size: 24px;
 	font-weight: normal;
 }
@@ -113,7 +123,6 @@ a{
 	width: 50%;
 	line-height: 45px;
 	border-bottom: 1px dashed #e4e4e4;
-
 }
 .panel dd{
 	text-align: right;
@@ -123,19 +132,17 @@ a{
 	color: #74bcaa;
 }
 .profile-and-willing{
-	float: left;
 	width: 270px;
 }
 .question-and-resume{
-	float: left;
 	width: 685px;
 	margin-left : 15px;
 }
 .profile,.willing,.panel,.question,.resume{
-	padding: 12px 19px 35px;
+	padding: 12px 19px 20px;
 }
 .panel h3{
-	color: #74bcaa;
+	color: #4cc1aa;
 	font-size: 18px;
 	font-weight: normal;
 	padding-top: 15px;
@@ -146,14 +153,54 @@ a{
 	padding: 1px 6px 3px;
 	font-size: 16px;
 	color: #fff;
-	background-color: #74bcaa;
+	background-color: #36b39a;
 	border-radius: 5px;
-	/*position: relative;
-	right: 3px;*/
 }
 .question span{
 	padding-left: 6px;
 }
-button{
-
+.resume p{
+	color: #E4E4E4;
+	font-size: 20px;
+	padding: 40px 0 50px;
+	text-align: center;
+	border-bottom: 1px solid #f2f2f2;
 }
+.btn{
+	margin-top: 20px;
+	margin-right: 16px;
+	padding: 3px 15px;
+	font-family: '微软雅黑';
+	color: #fff;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 5px;
+	background: #36b39a;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);	
+	transition-duration: 0.4s;
+}
+.btn:hover{
+	background: #fff;
+	color: #4cc1aa;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.topbtn{
+	position: fixed;
+	right: 15px;
+	bottom: 10px;
+	display: inline-block;
+	padding: 15px;
+	text-align: center;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 14px;
+	background: rgba(0,0,0,.4);
+	display: none;
+}
+.topbtn:hover{
+	background: rgba(0,0,0,.6);
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
