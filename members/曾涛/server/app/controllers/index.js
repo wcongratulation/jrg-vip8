@@ -31,7 +31,7 @@ module.exports = {
         var username = this.request.body.username
         var password = this.request.body.password
 
-        if(password === '123'){
+        if(username === 'jimmzy'){
             yield this.render('post.hbs')
         }else{
             yield this.render('error.hbs')
