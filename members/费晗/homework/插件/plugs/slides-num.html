@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>多个图片一起滑动</title>
-<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
 <style>
 	html,body,ul,li,p{
 		margin: 0;
@@ -73,14 +73,15 @@
 	</div>
 
 	<script type="text/javascript">
+
 	$(function(){
-		var $art = $('.art'),
-			$viewpoint = $('.viewpoint'),
-			$items = $viewpoint.children(),
-			$prev = $('.prev'),
-			$next = $('.next'),
-			imgWidth = $items.width(),
-			imgCount = $viewpoint.children().length;
+		var $art = $('.art');
+		var	$viewpoint = $('.viewpoint');
+		var	$items = $viewpoint.children();
+		var	$prev = $('.prev');
+		var	$next = $('.next');
+		var	imgWidth = $items.width();
+		var	imgCount = $viewpoint.children().length;
 
 		$art.css({
 			'width': imgWidth*2
@@ -120,17 +121,16 @@
 			$viewpoint.stop(true,true).animate({'left': 0-imgWidth},function(){
 				$viewpoint.append($viewpoint.children().first());
 				$viewpoint.css('left',0);
-			},500)
+			})
 		}
 		function playPrev(){
 			$viewpoint.prepend($viewpoint.children().last());
 			$viewpoint.css('left',0-imgWidth);
 			$viewpoint.stop(true,true).animate({'left': 0});
 		}
-	},500);
+	});
 		
-
-	</script>
+</script>
 
 </body>
 </html>

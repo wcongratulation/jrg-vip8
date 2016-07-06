@@ -1,17 +1,8 @@
 <!DOCTYPE html>
-<!--
-Created using JS Bin
-http://js.jirengu.com
-
-Copyright (c) 2016 by fei-han (http://js.jirengu.com/kege/4/edit)
-
-Released under the MIT license: http://jsbin.mit-license.org
--->
-<meta name="robots" content="noindex">
 <html>
 <head>
 <meta name="description" content="stickup" />
-<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="../scripts/jquery-1.11.2.js"></script>
   <meta charset="utf-8">
   <title>JS Bin</title>
 <style id="jsbin-css">
@@ -64,52 +55,52 @@ Released under the MIT license: http://jsbin.mit-license.org
     <div class="footer">footer</div>
   </div>
 <script id="jsbin-javascript">
-var $nav = $('.nav')
-var navHeight = $nav.height()
-var navWidth = $nav.width()
-var offsetTop = $nav.offset().top
-var offsetLeft = $nav.offset().left
+    var $nav = $('.nav')
+    var navHeight = $nav.height()
+    var navWidth = $nav.width()
+    var offsetTop = $nav.offset().top
+    var offsetLeft = $nav.offset().left
 
 
 
-//把目标元素克隆一个用于占位，否则目标元素 Position 变为 fix后脱离文档流，导致页面跳动 
-var $navClone = $nav.clone().css({'visibility': 'hidden','display': 'none'}).insertBefore($nav)
+    //把目标元素克隆一个用于占位，否则目标元素 Position 变为 fix后脱离文档流，导致页面跳动 
+    var $navClone = $nav.clone().css({'visibility': 'hidden','display': 'none'}).insertBefore($nav)
 
-$(window).on('scroll',function(){
-  var scrollTop = $(this).scrollTop();
-  if(scrollTop >= offsetTop){
-    if(!isFixed()){
-      setFixed();
+    $(window).on('scroll',function(){
+      var scrollTop = $(this).scrollTop();
+      if(scrollTop >= offsetTop){
+        if(!isFixed()){
+          setFixed();
+        }
+      }else{
+        if(isFixed()){
+          unsetFixed()
+        }
+      }
+    })
+
+    function isFixed(){
+      return !!$nav.data('data-fixed');
     }
-  }else{
-    if(isFixed()){
-      unsetFixed()
+
+    function setFixed(){
+      $nav.data('data-fixed',true)
+          .css({
+            'position': 'fixed',
+            'top': 0,
+             'left': offsetLeft,
+            'width': navWidth,
+            'height': navHeight,
+            'margin': 0,
+            'z-index': 9999
+         });
+      $navClone.show()
     }
-  }
-})
 
-function isFixed(){
-  return !!$nav.data('data-fixed');
-}
-
-function setFixed(){
-  $nav.data('data-fixed',true)
-      .css({
-        'position': 'fixed',
-        'top': 0,
-         'left': offsetLeft,
-        'width': navWidth,
-        'height': navHeight,
-        'margin': 0,
-        'z-index': 9999
-     });
-  $navClone.show()
-}
-
-function unsetFixed(){
-  $nav.data('data-fixed',false).removeAttr('style')
-  $navClone.hide()
-}
+    function unsetFixed(){
+      $nav.data('data-fixed',false).removeAttr('style')
+      $navClone.hide()
+    }
 
 
 </script>

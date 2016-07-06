@@ -1,11 +1,36 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-<script src="scripts/jquery-1.11.2.js"></script>
-<meta name="description" content="回到顶部插件-button" />
+<script src="../scripts/jquery-1.11.2.js"></script>
+<meta name="description" content="回到顶部插件-p2" />
   <meta charset="utf-8">
   <title>JS Bin</title>
   
+<style id="jsbin-css">
+.goTopBotton{
+  background: red;
+  width: 40px;
+  height: 40px;
+  position: fixed; 
+  right: 10px;
+  bottom: 10px;
+} 
+.goTopBotton-arrow{
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -15px;
+  
+}
+</style>
 </head>
 <body>
   <p>1</p>
@@ -108,65 +133,21 @@
   <p>98</p>
   <p>99</p>
   <p>100</p>
-
-</body>
-<script type="text/javascript">
-
+<button>go to top</button>
+<script id="jsbin-javascript">
 //插件定义
-$.gotoTop = (function(){
+$.clickGoTop = function(node){
   
-var $botton = $('<div class = goTopBotton></div>');
-var $arrow = $('<div class = goTopBotton-arrow></div>');
-$botton.append($arrow);
-$('body').append($botton);
+  var $node = $(node);
+  $node.click(function(){
+    $('body').stop(true,true).animate({scrollTop: 0})
+  })
 
-$botton.css({
-  'background': 'red',
-  'width': '40px',
-  'height': '40px',
-  'position': 'fixed', 
-  'right': '10px',
-  'bottom': '10px',
-  'cursor': 'pointer',
-  'display': 'none'
-});
-$arrow.css({
-  'width': '0',
-  'height': '0',
-  'border-top': '10px solid transparent',
-  'border-left': '10px solid transparent',
-  'border-right': '10px solid transparent',
-  'border-bottom': '10px solid #000',
-  'position': 'absolute',
-  'top': '50%',
-  'left': '50%',
-  'margin-left': '-10px',
-  'margin-top': '-15px'
-});  //准备html
 
-function init(){
-     $botton.click(function(){
-      $('body').stop(true,true).animate({scrollTop: 0});
-    });
-
-    $(window).on('scroll',function(){
-      var offsetY = $('body').scrollTop();
-      console.log('here');
-      
-      if(offsetY > 100){
-        $botton.show();
-      }else{
-        $botton.hide();
-      }
-    });  //绑定鼠标滚动事件
-
-  }
-  
-   return { init: init };
-
-})();
+}
 
 //插件使用
-$.gotoTop.init();
+$.clickGoTop($('button'))
 </script>
+</body>
 </html>
