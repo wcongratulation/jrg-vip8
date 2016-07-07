@@ -12,8 +12,8 @@
 <body>
     <div class="header">
        <div class="wrapper">
-    	 <h1>
-    		<span class="menu beyond-icon  i-iconfontcaidan12"></span>
+    	 <h1 cleafix>
+    		<span class="menu lf beyond-icon  i-iconfontcaidan12"></span>
     		NO.1542号候选人
     		<span class="share rf beyond-icon i-solidshare"></span>
     	 </h1>
@@ -106,6 +106,13 @@
         }
 
         $.goTop($('.topbtn'))
+
+        $(window).on('scroll',function(){
+            $('.header').addClass('vary')
+            if ($(window).scrollTop()===0) {
+                $('.header').removeClass('vary')
+            }
+        })
         
     </script>
 
