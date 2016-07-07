@@ -405,3 +405,49 @@ ul,li{
 	color: #19273a;
 	padding: 0 15px;
 }
+
+
+/*slides button  css*/
+.arrow{
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  background: #4e443c;
+  box-shadow: 0 0 2px #999;
+  border-radius: 50%;
+  opacity: 0.8;  
+  display: none;
+}
+.prev{
+  left: 5px;
+}
+.next{
+  right: 5px;
+}
+
+.slider-nav{
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.slider-nav>.slider-item{
+  display: inline-block;
+  width: 16px;
+  height: 4px;
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+  margin: 0 0.3em;
+}
+.slider-nav>.slider-item.active{
+  background: #666;
+}

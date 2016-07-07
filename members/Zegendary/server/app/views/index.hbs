@@ -6,7 +6,7 @@
 </head>
 <body style="background:grey;">
 <div>
-    <form action="/" method=post>
+    <form>
         <input type="text" name=username>
         <input type="password" name="password">
         <input type="submit" value="提交">
@@ -21,9 +21,9 @@ $('form').on('submit',function(e){
     var $form = $(this)
     var data= $form.serialize()
     $.post('/', data, function(response){
-        var object = JSON.parse(response)
-        console.log(object)
-    }, 'json')
+        alert('提交成功')
+        console.log(response)
+    })
 })
 
 </script>

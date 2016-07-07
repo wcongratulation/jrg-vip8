@@ -19,7 +19,12 @@ a{
     text-decoration: none;
     color: inherit;     /*从父元素继承*/
 }
-
+img{
+    vertical-align: middle;
+}
+input,button {
+    outline: none;
+}
 /*字体图标*/
 .icon {
     font-family:"icon" !important;

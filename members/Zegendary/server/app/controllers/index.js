@@ -3,6 +3,10 @@ module.exports = {
         yield this.render('index.hbs');
         yield next;
     },
+    a: function *(next) {
+        yield this.render('a.hbs');
+        yield next;
+    },
     index2: function *(next) {
         yield this.render('index2.hbs');
         yield next;
@@ -31,7 +35,7 @@ module.exports = {
         var username = this.request.body.username
         var password = this.request.body.password
 
-        if(password === '123'){
+        if(password === 'Zegendary'){
             yield this.render('post.hbs')
         }else{
             yield this.render('error.hbs')

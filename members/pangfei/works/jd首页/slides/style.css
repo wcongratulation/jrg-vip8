@@ -77,3 +77,32 @@ body{
 	background: rgb(182,27,31);
 }
 
+#art-list .slides-arrow{
+	position: absolute;
+	z-index: 25;
+	top: 50%;
+	color: #fff;
+	background: rgba(0,0,0,.2);
+	height: 62px;
+	line-height: 62px;
+	width: 28px;
+	margin-top: -31px;
+	/*font-weight: bold;*/
+	font-size: 26px;
+	text-align: center;
+	display: none;
+}
+
+#art-list:hover .slides-arrow{
+	display: block;
+}
+
+#art-list .slides-arrow-right{
+	right: 0;
+	margin-left: -14px;
+}
+
+#art-list .slides-arrow-left{
+
+}
+

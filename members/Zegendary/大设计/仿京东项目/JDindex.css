@@ -838,6 +838,7 @@ i{font-style: normal;}
 .onsalewrapper .onsaleslides:hover .slidesjs-navigation{
 	display: block;
 }
+/*工具栏css*/
 .toolbar{
 	width: 6px;
 	height: 100%;
@@ -900,4 +901,94 @@ i{font-style: normal;}
 }
 .toolbar .toolbar-bottom  span{
 	width: 40px;
+}
+/*京东618活动css*/
+.jd618{
+	width: 1210px;
+	margin: 10px auto;
+}
+.jd618 .jd618select-background h3{
+	background-image: url(http://misc.360buyimg.com/product/home/1.0.0/widget/jd2016618-climax/i/jd2016climax01.png);
+	background-repeat: no-repeat;
+	width: 386px;
+	height: 51px;
+	margin: 0 auto 10px auto;
+}
+.jd618select-content ul{
+	margin-left: -10px;
+}
+.jd618select .jd618select-item{
+	float: left;
+	margin-left: 10px;
+}
+.jd618select .jd618select-item img{
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+}
+.jd618select .jd618select-item:hover img{
+	-moz-transform: scale3d(0.98,.98,1);
+	-ms-transform: scale3d(0.98,.98,1);
+	-webkit-transform: scale3d(0.98,.98,1);
+	transform: scale3d(0.98,.98,1);
+}
+.jd618 .jd618brand-background h3{
+	background-image: url(http://misc.360buyimg.com/product/home/1.0.0/widget/jd2016618-climax/i/jd2016climax01.png);
+	background-repeat: no-repeat;
+	background-position: 24px -52px;
+	width: 386px;
+	height: 51px;
+	margin: 10px auto;
+}
+.jd618brand ul{
+	margin-left: -10px;
+	margin-bottom: 5px;
+}
+.jd618brand .jd618brand-item{
+	float: left;
+	margin-left: 10px;
+}
+.jd618brand .jd618brand-item img{
+	height: 240px;
+}
+.jd618brand .jd618brand-content dl>dt,dd{
+	float: left;
+}
+.jd618brand-content dl dt{
+	margin-right: 10px;
+}
+.jd618brand-content dl dd{
+	width: 200px;
+	text-align: center;
+    height: 268px;
+    border: 1px solid #F0F0F0;
+    margin-left: -1px;
+    overflow: hidden;
+}
+.jd618brand-content dl .jd618brand-last{
+	width: 198px;
+}
+.jd618brand-content dl dd a{
+	display: block;
+}
+.jd618brand-content dl dd a:first-child{
+	margin-top: 25px;
+	margin-bottom: 12px;
+}
+.jd618brand-content dl dd .jd618brand-name{
+	background: #f6272b;
+    padding: 5px 9px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 20px;
+    font: 400 14px/1 "microsoft yahei";
+}
+.footerbanner{
+	width: 1210px;
+	margin: 0 auto;
+	font-size: 0px;
+}
+.footerbanner a{
+	display: inline-block;
 }
