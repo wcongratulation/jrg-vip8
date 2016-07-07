@@ -9,31 +9,31 @@
 body{
 	background: rgb(13, 206, 203);
 }
-.load,
-.load:before,
-.load:after{
+.load1,
+.load1:before,
+.load1:after{
 	background: #fff;
 	width: 10px;
 	height: 40px;
 	animation: loading 1s ease-in-out infinite;
 }
-.load:after,
-.load:before{
+.load1:after,
+.load1:before{
 	position: absolute;
 	top: 0;
 	content: '';
 }
-.load:before{
+.load1:before{
 	left: -15px;
 }
-.load{
+.load1{
 	text-indent: -9999px;
 	margin: 40px auto;
 	position: relative;
 	font-size: 12px;
 	animation-delay: 0.16s;
 }
-.load:after{
+.load1:after{
 	left: 15px;
 	animation-delay: 0.32s;
 }
@@ -52,6 +52,6 @@ body{
 </style>
 </head>
 <body>
-    <div class="load">loading...</div>
+    <div class="load1">loading...</div>
 </body>
 </html>
