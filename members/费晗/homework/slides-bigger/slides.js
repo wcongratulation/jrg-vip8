@@ -30,7 +30,7 @@
 		console.log('ni')
 		currentIndex++;
 	}
-	var changeEvery = 3;
+	var changeEvery = 5;
 
 	var itvl = setInterval(function(){autoPlay()},changeEvery*1000);
 
