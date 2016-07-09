@@ -6,7 +6,7 @@ body,html,ul,li,span,h2,h3,h4,h5,h6,p{
  	font-weight: normal;
  }
  body{
-	 font: 400 15px/1.8em "Microsoft YaHei","微软雅黑",sans-serif;
+	 font: 400 15px/1.8em "Microsoft YaHei","微软雅黑","\5b8b\4f53" sans-serif;
 	 color: #fff;
 	 text-rendering: optimizeLegibility;
 	 height: 100%;
@@ -122,16 +122,16 @@ ul,li{
 	background: #309ecc;
 }
 #site-header .course>.course-left>.banner>h2:before{
-	top: 65px;
+	top: 76px;
 	left: 40px;
 }
 #site-header .course>.course-left>.banner>h2:after{
-	top: 65px;
+	top: 76px;
 	right: 40px;
 }
-#site-header .course>.course-left>.banner .courseSlides{
+#site-header .course>.course-left>.banner .course-slide{
 	text-align: center;
-	padding: 25px 19px;
+	padding: 22px 19px;
 	
 }
 #site-header .course>.course-left>.desp{
@@ -190,6 +190,7 @@ ul,li{
 	float: left;
 	width: 590px;
 	margin-left: -10px;
+	margin-top: -12px;
 }
 
 #site-header .course>.course-right h3{
@@ -202,7 +203,6 @@ ul,li{
 }
 
 /**techer-introduction**/
-
 #techer-introduction>.wrapper{
 	margin-top: 100px;
 }
@@ -341,7 +341,7 @@ ul,li{
 #sign-up .information .detail>h6{
 	font-family: "宋体"; 
 	font-size: 52px;
-	padding: 40px 0 40px 30px;
+	padding: 20px 0 30px 30px;
 }
 #sign-up .information .detail>span{
 	font-family: "宋体"; 
@@ -405,49 +405,67 @@ ul,li{
 	color: #19273a;
 	padding: 0 15px;
 }
-
-
 /*slides button  css*/
-.arrow{
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  margin-top: -15px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  font-size: 20px;
-  color: #fff;
-  background: #4e443c;
-  box-shadow: 0 0 2px #999;
-  border-radius: 50%;
-  opacity: 0.8;  
-  display: none;
-}
-.prev{
-  left: 5px;
-}
-.next{
-  right: 5px;
-}
-
-.slider-nav{
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  transform: translateX(-50%);
-  z-index: 10;
-}
-.slider-nav>.slider-item{
-  display: inline-block;
-  width: 16px;
-  height: 4px;
-  border-radius: 3px;
-  background: #fff;
-  cursor: pointer;
-  margin: 0 0.3em;
-}
-.slider-nav>.slider-item.active{
-  background: #666;
-}
+	.course-slide{
+		position: relative;
+		margin: 0 auto;
+		width: 375px;
+		height: 209px;
+		overflow: hidden;
+	}
+	.viewpoint{
+		position: relative;
+	}
+	.viewpoint>li{
+		position: absolute;
+		display: none;
+	}
+	.arrow{
+		position: absolute;
+		top: 50%;
+		margin-top: -15px;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		font-size: 13px;
+		color: #fff;
+		background-color: #4e443c;
+		border-radius: 50%;
+		opacity: 0.3;
+		box-shadow: 0 0 2px #999;
+		display: none;
+	}
+	.course-slide .arrow:hover{
+		opacity: 0.8;
+	}
+	.course-slide:hover>.arrow{
+		display: block;
+	}
+	.pre{
+		left: 22px;
+	}
+	.next{
+		right: 22px;
+	}
+	ul.bullet{
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: 30px;
+		text-align: center;
+		z-index: 10;
+	}
+	ul.bullet>li{
+		display: inline-block;
+		margin: 0 0.3em;
+		width: 15px;
+		height: 5px;
+		border-radius: 2px;
+		background-color: #fff;
+		opacity: 0.8;
+		cursor: pointer;
+	}
+	ul.bullet>li.active{
+		background-color: #747474;
+	}

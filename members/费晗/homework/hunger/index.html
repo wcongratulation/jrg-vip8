@@ -7,8 +7,7 @@
 <title>jirengu招生官网</title>
 <link href="main.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1463820027_4467797.css">
-<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
-<script type="text/javascript" src="scripts/slides.js"></script>
+<script type="text/javascript" src="../scripts/jquery-1.11.2.js"></script>
 </head>
 <body>
 
@@ -32,16 +31,23 @@
         <div class="course clearfix">
             <div class="course-left">
               <div class="banner">
-                 <div class="course-border"></div>
-                 <h2>课程详情</h2>
-                  <div class="courseSlides">
-
-                      <img src="imgs/banner2.jpg" width="375" height="209">
-                      <img src="imgs/banner3.jpg" width="375" height="209">
-                      <img src="imgs/banner1.jpg" width="375" height="209">
-    
+                  <div class="course-border"></div>
+                  <h2>课程详情</h2>
+                  <div class="course-slide">
+                        <ul class="viewpoint">
+                            <li data-id=0><a href="javascript:void(0)"><img src="imgs/banner1.jpg" width="375" height="209"></a></li>
+                            <li data-id=0><a href="javascript:void(0)"><img src="imgs/banner2.jpg" width="375" height="209"></a></li>
+                            <li data-id=0><a href="javascript:void(0)"><img src="imgs/banner3.jpg" width="375" height="209"></a></li>
+                        </ul>
+                        <a class="pre arrow" href="javascript:void(0)"><</a>
+                        <a class="next arrow" href="javascript:void(0)">></a>
+                        <ul class="bullet">
+                            <li class="active"></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
                     </div>
-              </div>
+                  </div>
                  <div class="desp clearfix">
 
                     <p>更多往期公开课视频：<a href="http://www.jirengu.com/app/album/10">www.jirengu.com</a></p>
@@ -166,9 +172,70 @@
     </div>
   </div>
 <script>
+var   $art = $('.course-slide')
+      $viewpoint = $('.viewpoint'),
+        $pics = $viewpoint.children(),
+        $pre = $('.pre'),
+        $next = $('.next'),
+        $bullet = $('.bullet'),
+        imgWidth = $pics.width(),
+        imgCount = $viewpoint.children().size();
+        //.length 和 .size() 的效果一样
 
-$('.courseSlides').slides({width: 375,height:209, auto: true,nav: true})
-// $('.student-wrapper').slides({width: 1100,height:322, auto: true,nav: false})
+    //绑定事件
+      var curIdx = 0; //当前显示的pics
+      var isAnimate = false;
+      $pre.on('click',function(idx){
+        playPre();
+      });
+      $next.on('click',function(idx){
+        playNext();
+      });
+      $bullet.find('li').on('click',function(){
+        var idx = $(this).index();
+        console.log(idx)
+        play(idx);
+      });
+
+      play(0);
+      autoPlay();
+
+      $art.on('mouseenter',function(){
+        stopAuto()
+      }).on('mouseleave',function(){
+        autoPlay()
+      })
+    //绑定事件
+      function playPre(){
+        play((imgCount+curIdx-1)%imgCount);
+        //这里加imgCount是为了再保证nowIdx不为负值的同时,也不会影响取余;
+      }
+      function playNext(){
+        play((curIdx+1)%imgCount);
+      }
+      function play(idx){
+        if (isAnimate) {return;}
+        isAnimate = true;
+        $pics.eq(curIdx).fadeOut(500);
+        $pics.eq(idx).fadeIn(500,function(){
+          isAnimate = false;
+        });
+        curIdx = idx;
+        setBullet();
+      }
+      function setBullet(){
+        $bullet.children().removeClass('active')
+                  .eq(curIdx).addClass('active');
+      }
+      //停止自动播放
+      function stopAuto(){
+        clearInterval(clock);
+      }
+      function autoPlay(){
+        clock = setInterval(function(){
+          playNext();
+        },2000)
+      }
 </script>
 
 </body>
