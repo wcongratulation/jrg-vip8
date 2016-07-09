@@ -79,32 +79,32 @@
       // console.log(this) //每一个.nav元素
         var $navs = this
         $navs.each(function(){
-        $nav = $(this) //dom里的每一个nav
-        var navHeight = $nav.height()
-        var navWidth = $nav.width()
-        var offsetTop = $nav.offset().top
-        var offsetLeft = $nav.offset().left
+          $nav = $(this) //dom里的每一个nav
+          var navHeight = $nav.height()
+          var navWidth = $nav.width()
+          var offsetTop = $nav.offset().top
+          var offsetLeft = $nav.offset().left
 
-        var $navClone = $nav.clone().insertBefore($nav).css({display: 'none'})
+          var $navClone = $nav.clone().insertBefore($nav).css({display: 'none'})
 
-        $(window).on('scroll',function(){
-            var offset = $(this).scrollTop()
-            if(offset>=offsetTop){
-              $navClone.css({               
-                'position': 'fixed',
-                'top': 0,
-                'left': offsetLeft,
-                'width': navWidth,
-                'height': navHeight,
-                'z-index': 10,
-                'display': 'block'
-              })
-            }else{
-              $navClone.css({display: 'none'})
-            }
-        })
+          $(window).on('scroll',function(){
+              var offset = $(this).scrollTop()
+              if(offset>=offsetTop){
+                $navClone.css({               
+                  'position': 'fixed',
+                  'top': 0,
+                  'left': offsetLeft,
+                  'width': navWidth,
+                  'height': navHeight,
+                  'z-index': 10,
+                  'display': 'block'
+                })
+              }else{
+                $navClone.css({display: 'none'})
+              }
+          })
 
-      })
+       })
     }
 
   })(jQuery)
@@ -113,7 +113,7 @@
 
   /*
   *让 clone 的宽度实时等于被 clone 元素的宽度，左偏移等于被 clone 元素的偏移
-   */
+  */
 
 </script>
 </body>
