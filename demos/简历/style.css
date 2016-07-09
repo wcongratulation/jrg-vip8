@@ -25,7 +25,7 @@ body{
     line-height: 1.5;
     background-color: #F7F6F8;
 }
-.wrapped{
+.wrapper{
     margin: 0 auto;
     width: 970px;
 }
