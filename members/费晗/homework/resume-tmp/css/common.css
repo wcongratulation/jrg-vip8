@@ -1,0 +1,37 @@
+@charset "UTF-8";
+html{
+	font-size: 100%;
+}
+.wrapper{
+	margin: 0 auto;
+	padding: 60px;
+	max-width: 1300px;
+}
+html .btn{
+	border: 3px solid #E0CB77;
+	font-size: inherit;
+	padding: 1.4rem 4rem;
+	text-align: center;
+	font-weight: 100;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-radius: 2px;
+	display: inline-block;
+	position: relative;
+	transition: all .1s ease-in-out;
+}
+html .btn:hover{
+	background: #e5d38c;
+    color: #86711f;
+}
+.ribbon{
+	width: 70%;
+	max-width: 400px;
+	min-height: 66px;
+	position: relative;
+	text-align: center;
+	color: #fff;
+	background-color: #E0CB77;
+	font-size: 1em;
+}

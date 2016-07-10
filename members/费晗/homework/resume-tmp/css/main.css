@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/**header**/
+header.siteTop-wrapper{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	transition: all .3s ease-in-out;
+	z-index: 1000;
+}
+.visible{
+	background: rgba(0,0,0,.6);
+}
+nav{
+	font-family: "Open Sans",sans-serif;
+    font-weight: 100;
+	line-height: 3.5rem;
+	padding: 0 40px;
+	transition: all .3s ease-in-out;
+}
+nav .logo{
+	float: left;
+}
+nav ul>li{
+	display: inline;
+}
+nav ul{
+	float: right;
+}
+nav ul>li a{
+	color: #fff;
+	font-size: .85em;
+	text-transform: uppercase;
+	padding: 20px 0 20px 20px;
+	transition: all .3s ease-in-out;
+}
+nav ul>li a:hover{
+	color: #71601a;
+}
+header nav h1{
+	width: 36px;
+	height: 36px;
+	margin: 12px 0;
+	float: left;
+	text-indent: -9999px;
+	background: url(../images/logo-jesseshowalter-white.svg) 0 0/contain no-repeat;
+	transition: all .3s ease-in-out;
+}
+@keyframes buzz-out{
+	10%{
+		-webkit-transform:translateX(3px) rotate(2deg);
+		transform:translateX(3px) rotate(2deg)
+		}
+	20%{
+		-webkit-transform:translateX(-3px) rotate(-2deg);
+		transform:translateX(-3px) rotate(-2deg)
+		}
+	30%{
+		-webkit-transform:translateX(3px) rotate(2deg);
+		transform:translateX(3px) rotate(2deg)
+		}
+	40%{
+		-webkit-transform:translateX(-3px) rotate(-2deg);
+		transform:translateX(-3px) rotate(-2deg)
+		}
+	50%{
+		-webkit-transform:translateX(2px) rotate(1deg);
+		transform:translateX(2px) rotate(1deg)
+		}
+	60%{
+		-webkit-transform:translateX(-2px) rotate(-1deg);
+		transform:translateX(-2px) rotate(-1deg)
+	}
+	70%{
+		-webkit-transform:translateX(2px) rotate(1deg);
+		transform:translateX(2px) rotate(1deg)
+	}
+	80%{
+		-webkit-transform:translateX(-2px) rotate(-1deg);
+		transform:translateX(-2px) rotate(-1deg)
+	}
+	90%{
+		-webkit-transform:translateX(1px) rotate(0);
+		transform:translateX(1px) rotate(0)
+	}
+	100%{
+		-webkit-transform:translateX(-1px) rotate(0);
+		transform:translateX(-1px) rotate(0)
+	}
+}
+.buzz-out{
+	display: inline-block;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px transparent;
+	float: left;
+}
+.buzz-out:hover{
+	animation: buzz-out 075s linear 1;
+}
