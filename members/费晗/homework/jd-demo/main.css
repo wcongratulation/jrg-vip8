@@ -385,6 +385,15 @@ button{
   position: relative;
   
 }
+.product-category .category .cm-right-arrow:after{
+  position: absolute;
+  content: '\e604';
+  font-family: 'jd-iconfont';
+  right: 5px;
+  top: 2px;
+  line-height: 31px;
+  color: #f7f7f7;
+}
 .product-category .menu>.category:hover h3{
   color: #C81623;
   background: #f7f7f7;

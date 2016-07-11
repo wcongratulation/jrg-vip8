@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/**header**/
+/**====header====**/
 header.siteTop-wrapper{
 	position: fixed;
 	top: 0;
@@ -97,7 +97,7 @@ header nav h1{
 .buzz-out:hover{
 	animation: buzz-out 075s linear 1;
 }
-/**hero**/
+/**====hero====**/
 .siteHome-wrapper .hero{
 	background: url(../images/jesse-jump.jpg) top/cover no-repeat;
 	z-index: 1;
@@ -139,7 +139,7 @@ header nav h1{
 .hero .message .btn{
 	margin-top: 0.6rem;
 }
-/**projects**/
+/**====projects====**/
 .siteHome-wrapper .projects{
 	position: relative;
 	border: 1px solid red;
@@ -176,7 +176,7 @@ header nav h1{
 .siteHome-wrapper .projects article a:hover{
 	color: #E0CB77;
 }
-/**bio**/
+/**====bio====**/
 .siteHome-wrapper .bio{
 	width: 100%;
 	background: url(../images/banner-working.jpg)  center right/cover no-repeat #272d35;
@@ -215,7 +215,7 @@ header nav h1{
 	background: #e9dba1;
 	color: #71601a;
 }
-/**skillSet**/
+/**====skillSet====**/
 .siteHome-wrapper .skillSet{
 	background: url(../images/pattern.jpg) #F6F6F6;
 	padding-top: 30px;
@@ -262,7 +262,7 @@ header nav h1{
 .skillSet article p{
 	margin: 0;
 }
-/**latest**/
+/**====latest====**/
 .siteHome-wrapper .latest article{
 	width: 49%;
 	margin: 0 1%;
@@ -309,6 +309,7 @@ header nav h1{
 	margin-bottom: 20px;
 
 }
+/**====footer====**/
 .siteHome-wrapper footer{
 	background: #272D35;
 	min-height: 280px;
@@ -316,25 +317,114 @@ header nav h1{
 	color: #fff;
 	text-align: center;
 }
-.siteHome-wrapper footer .soc li{
-	display: inline-block;
+.siteHome-wrapper footer .soc {
 	margin-top: 10px;
+	font-size: 0;
 }
-.siteHome-wrapper footer .soc li a{
+.siteHome-wrapper footer .soc a{
 	position: relative;
-	display: block;
+	display: inline-block;
 	width: 60px;
 	height: 60px;
 	line-height: 60px;
 	border-radius: 50%;
-	margin-right: 10px;
+	margin-right: 15px;
 	text-align: center;
 	background: red;
 }
-.siteHome-wrapper footer .soc li a:hover{
-	opacity: 0.8;
+.siteHome-wrapper footer .soc span{
+	font-size: 33px;
+	color: #fff;
 }
-.siteHome-wrapper footer .soc li a:after{
+.siteHome-wrapper footer .soc .github{
+	background: #4da7de;
+}
+.siteHome-wrapper footer .soc .sina{
+	background: #e02a20;
+}
+.siteHome-wrapper footer .soc .email{
+	background: #9c7c6e;
+}
+.siteHome-wrapper footer .soc a:hover{
+	z-index: 2;
+	opacity: 0.8;
+	background: #e9dba1;
+}
+.siteHome-wrapper footer small{
+	display: block;
+	margin-top: 50px;
+	color: #758599;
+	font-size: 0.85rem;
+	line-height: 1.8rem;
+}
+.siteHome-wrapper footer small a{
+	color: #3195C2;
+}
+.siteHome-wrapper footer small a:hover{
+	background: #e9dba1;
+	color: #E0CB77;
+}
+/**====sub-footer====**/
+.siteHome-wrapper .sub-footer{
+	height: 130px;
+	background-image: -webkit-linear-gradient(top,#2b323b 0,#2b323b 45%,
+		             #343c47 45%,#343c47 78%,#3d4652 78%,#3d4652 100%);
+}
+.siteHome-wrapper .sub-footer .back-to-top{
+	display: block;
+	width: 44px;
+	height: 80px;
+	background: #e0cb77;
+	position: relative;
+	margin: 0 auto;
+	text-indent: -9999px;
+}
+.siteHome-wrapper .sub-footer .back-to-top:before{
 	position: absolute;
+	content: '';
+	width: 30px;
+	height: 30px;
+	display: table;
+	left: 9px;
+	top: 15px;
+	background: url(../images/logo-jesseshowalter-inverse.svg) 0px 0px / contain no-repeat;
+}
+.siteHome-wrapper .sub-footer .back-to-top:after{
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 0;
+	border-width: 0 22px 14px;
+	border-style: solid;
+	border-color: transparent transparent #343c47; 
+	display: table;
+	bottom: 0;
 	
+}
+[data-tooltip]{
+	position: relative;
+	cursor: pointer;
+}
+.tooltip-top:before,
+[data-tooltip]:before{
+	margin-left: -6px;
+	margin-bottom: -12px;
+	border-top-color: #3d4652;
+}
+.tooltip-top:after,
+[data-tooltip]:after{
+	margin-left: -80px;
+	bottom: 100%;
+	left: 50%;
+}
+[data-tooltip]:after{
+    /*z-index: 1000;*/
+    padding: 8px;
+    width: 160px;
+    background-color: #3d4652;
+    color: #fff;
+    content: attr(data-tooltip);
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
 }
