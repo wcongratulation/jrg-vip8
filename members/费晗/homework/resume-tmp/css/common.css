@@ -3,9 +3,9 @@ html{
 	font-size: 100%;
 }
 .wrapper{
-	margin: 0 auto;
-	padding: 60px;
 	max-width: 1300px;
+	padding: 60px;
+	margin: 0 auto;	
 }
 html .btn{
 	border: 3px solid #E0CB77;
@@ -31,7 +31,41 @@ html .btn:hover{
 	min-height: 66px;
 	position: relative;
 	text-align: center;
+	line-height: 4rem;
+	margin: -3em auto 2em;
 	color: #fff;
 	background-color: #E0CB77;
 	font-size: 1em;
+	z-index: 100;
+}
+.ribbon:before{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: -60px;
+	border-bottom: 0;
+	width: 95px;
+	height: 78px;
+	background: url(../images/ribbonTail.png) no-repeat;
+}
+.ribbon:after{
+	position: absolute;
+	content: '';
+	top: 0;
+	right: -60px;
+	border-bottom: 0;
+	width: 95px;
+	height: 78px;
+	background: url(../images/ribbonTail.png) no-repeat;
+	transform: scaleX(-1);
+}
+p{
+	margin: 1.2rem 0;
+	line-height: 2.3rem;
+}
+h2{
+	font-size: 2.6rem;
+}
+h3{
+	font-size: 1.7rem;
 }

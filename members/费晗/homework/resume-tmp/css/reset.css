@@ -11,6 +11,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 4rem;
     font-weight: 700;
 }
+*{box-sizing: border-box;}
 li {
 	list-style: none;
 }
@@ -20,6 +21,7 @@ img {
 }
 a {
 	text-decoration: none;
+	transition: all .1s ease-in-out;
 }
 body {
 	font-family: "Open Sans",sans-serif;
@@ -32,8 +34,6 @@ body {
 }*/
 .clearfix:after {
 	display: block;
-	content: 'clear';
+	content: '';
 	clear: both;
-	line-height: 0;
-	visibility: hidden;
 }
