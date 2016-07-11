@@ -156,8 +156,17 @@
 	</div>	
 
 	<ul class="aside-to-top">
-        <li class="kefu"><a class="red" target="_blank" href="http://chat.meiqia.com/mechat_pc.html?unitid=561698274eae35e04a00000f&color=initial&win=max&ol=auto"><i class="fa fa-comment"></i></a></li>
-        <li class="qq"><a class="red" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2054185664&amp;site=qq&amp;menu=yes"><i class="fa fa-qq"></i></a></li>
+        <li class="kefu"><a target="_blank" href="javascript:void(0); "><i class="fa-comment"></i></a></li>
+        <li class="qq"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2054185664&amp;site=qq&amp;menu=yes"><i class="fa-qq"></i></a>
+        </li>
+        <div class="tel-box">        	
+			<div class="tel">
+				<p>青青：13018975363</p>
+				<p>墨凌：18458241825</p>
+			</div>
+			<div class="triangle"></div>
+			<div class="triangle2"></div>
+        </div>
     </ul>
 
 </div>  
@@ -177,6 +186,11 @@ $(function(){
 	$("#close").click(function(){
   		$(".author-wrapper").removeClass("active");
 	});
+
+	$('.kefu').click(function() {
+		$('.tel-box').toggle();
+	});
+
 });
 </script>
 

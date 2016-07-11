@@ -133,9 +133,9 @@ h4{ color: #00c3fc; font-size: 16px; text-align: center; }
 	right: 1em;
 	z-index: 999
 }
-
 .aside-to-top li {
 	list-style: none;
+	position: relative;
 	transition: all .3s
 }
 
@@ -153,16 +153,33 @@ h4{ color: #00c3fc; font-size: 16px; text-align: center; }
 	-ms-transition: .2s;
 	transition: .2s;
 	opacity: .8;
-	border-bottom: none
 }
-.aside-to-top>li:last-child a {
-	border: 1px solid rgba(0,0,0,.4)
-}
-
 .aside-to-top li:hover {
 	opacity: .9
 }
+.aside-to-top>li:first-child>a {
+	border-bottom: none;
+}
+
 .aside-to-top i{font-family: 'iconfont'; font-style: normal; font-size: 24px; color: #E84E41;}
 .fa-comment:before{ content: "\e609";}
 .fa-qq:before{ content: "\e608";}
 
+.tel-box{ position: absolute; right: 55px;bottom: 34px;border: 1px solid #b1b1b1; display: none;}
+.tel-box .tel{background: #fff;color: #222222;font-size: 14px; width: 140px;line-height: 22px;padding: 8px 16px;}
+.tel-box .triangle{
+    border-style: solid;
+    border-color: transparent transparent transparent #b1b1b1;
+    border-width: 8px 22px 8px 8px;
+    right: -30px;
+    bottom: 21px;
+    position: absolute;
+}
+.tel-box .triangle2{
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+    border-width: 8px 22px 8px 8px;
+    right: -29px;
+    bottom: 21px;
+    position: absolute;
+}
