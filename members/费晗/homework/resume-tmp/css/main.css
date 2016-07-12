@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /**====header====**/
 header.siteTop-wrapper{
+	background: transparent;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -11,6 +12,7 @@ header.siteTop-wrapper{
 }
 .visible{
 	background: rgba(0,0,0,.6);
+	transition: all .3s ease-in-out;
 }
 nav{
 	font-family: "Open Sans",sans-serif;
