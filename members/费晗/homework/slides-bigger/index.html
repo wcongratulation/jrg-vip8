@@ -17,10 +17,10 @@
     </div>
     <div class="slides wrapper"><!-- 播放窗口 -->
     	<div class="art"><!-- 屏步 -->
-	    	<div class="slide"><img src="imgs/sample_slides/macbook.jpg" width="920" height="400" alt="side" /></div>
-    		<div class="slide"><img src="imgs/sample_slides/iphone.jpg" width="920" height="400" alt="side" /></div>
-    		<div class="slide"><img src="imgs/sample_slides/imac.jpg" width="920" height="400" alt="side" /></div>
-   			 <div class="slide"><a href="http://tutorialzine.com/2009/10/beautiful-apple-gallery-slideshow/" target="_blank"><img src="imgs/sample_slides/info.jpg" width="920" height="400" alt="side" /></a></div>
+	    	<div class="slide"><img src="imgs/sample_slides/macbook.jpg" width="920" height="400" alt="slide" /></div>
+    		<div class="slide"><img src="imgs/sample_slides/iphone.jpg" width="920" height="400" alt="slide" /></div>
+    		<div class="slide"><img src="imgs/sample_slides/imac.jpg" width="920" height="400" alt="slide" /></div>
+   			<div class="slide"><img src="imgs/sample_slides/info.jpg" width="920" height="400" alt="slide" /></a></div>
     	</div>
     	<div class="slides-menu">
 	    	<ul>
@@ -38,18 +38,7 @@
     </div>
     <script type="text/javascript">
 
-		// $('li.menu-items').on('click',function(e){
-		// 	console.log($(this))
-		// 	var $current = $(e.currentTarget)
-		// 	$current.removeClass('inact').addClass('active').siblings('.active').removeClass('active').addClass('inact');
-		// 	var index = $current.attr('data-index');
-		// 	// var index =+current;    //因在html里面已经写上了"",所以不用加上这句转换了;
-		// 	console.log('here')
-		// 	console.log(index)   //这个index打出来是NAN，为啥不是对应的数字？
-		// 	var left = index*920;
-		// 	$('.art').stop(true,true).animate({marginLeft: -left},300)
-		// })
-		 	$('li.menu-items').slides()
+        $('li.menu-items').slides()
 
     </script>
 </body>

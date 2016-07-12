@@ -12,7 +12,6 @@ Slides.prototype.init = function(){
   if(this.options.auto){
       this.autoPlay()
     }
-    console.log('s')
 }
 //准备HTML
 Slides.prototype.prepareHtml = function(){
@@ -24,9 +23,9 @@ Slides.prototype.prepareHtml = function(){
   var $viewpoint = this.$viewpoint = $list.parent()
   if (options.nav) {
       var $prev = this.$prev = $('<button class=next>prev</button>')
-    var $next = this.$next = $('<button class=next>next</button>')
-    $prev.appendTo($arts)
-    $next.appendTo($arts)
+      var $next = this.$next = $('<button class=next>next</button>')
+      $prev.appendTo($arts)
+      $next.appendTo($arts)
   }
   var width = this.width = options.width
   var height = this.height = options.height
@@ -111,12 +110,11 @@ Slides.prototype.go = function(index){
           this.autoPlay()
         }
     if(index!=0&&index!=number-1){
-    $list.stop(true,true).animate({
-        left: left 
-      },500,function(){
-        self.current = index
-
-    })      
+      $list.stop(true,true).animate({
+          left: left 
+        },500,function(){
+          self.current = index
+      })      
     }else    
       if(index == 0){
         $list.stop(true,true).animate({left:0},500,function(){

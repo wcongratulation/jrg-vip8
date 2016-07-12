@@ -1,0 +1,430 @@
+@charset "UTF-8";
+/**====header====**/
+header.siteTop-wrapper{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	transition: all .3s ease-in-out;
+	z-index: 1000;
+}
+.visible{
+	background: rgba(0,0,0,.6);
+}
+nav{
+	font-family: "Open Sans",sans-serif;
+    font-weight: 100;
+	line-height: 3.5rem;
+	padding: 0 40px;
+	transition: all .3s ease-in-out;
+}
+nav .logo{
+	float: left;
+}
+nav ul>li{
+	display: inline;
+}
+nav ul{
+	float: right;
+}
+nav ul>li a{
+	color: #fff;
+	font-size: .85em;
+	text-transform: uppercase;
+	padding: 20px 0 20px 20px;
+}
+nav ul>li a:hover{
+	color: #E0CB77;
+}
+header nav h1{
+	width: 36px;
+	height: 36px;
+	margin: 12px 0;
+	float: left;
+	text-indent: -9999px;
+	background: url(../images/logo-jesseshowalter-white.svg) 0 0/contain no-repeat;
+	transition: all .3s ease-in-out;
+}
+@keyframes buzz-out{
+	10%{
+		-webkit-transform:translateX(3px) rotate(2deg);
+		transform:translateX(3px) rotate(2deg)
+		}
+	20%{
+		-webkit-transform:translateX(-3px) rotate(-2deg);
+		transform:translateX(-3px) rotate(-2deg)
+		}
+	30%{
+		-webkit-transform:translateX(3px) rotate(2deg);
+		transform:translateX(3px) rotate(2deg)
+		}
+	40%{
+		-webkit-transform:translateX(-3px) rotate(-2deg);
+		transform:translateX(-3px) rotate(-2deg)
+		}
+	50%{
+		-webkit-transform:translateX(2px) rotate(1deg);
+		transform:translateX(2px) rotate(1deg)
+		}
+	60%{
+		-webkit-transform:translateX(-2px) rotate(-1deg);
+		transform:translateX(-2px) rotate(-1deg)
+	}
+	70%{
+		-webkit-transform:translateX(2px) rotate(1deg);
+		transform:translateX(2px) rotate(1deg)
+	}
+	80%{
+		-webkit-transform:translateX(-2px) rotate(-1deg);
+		transform:translateX(-2px) rotate(-1deg)
+	}
+	90%{
+		-webkit-transform:translateX(1px) rotate(0);
+		transform:translateX(1px) rotate(0)
+	}
+	100%{
+		-webkit-transform:translateX(-1px) rotate(0);
+		transform:translateX(-1px) rotate(0)
+	}
+}
+.buzz-out{
+	display: inline-block;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px transparent;
+	float: left;
+}
+.buzz-out:hover{
+	animation: buzz-out 075s linear 1;
+}
+/**====hero====**/
+.siteHome-wrapper .hero{
+	background: url(../images/jesse-jump.jpg) top/cover no-repeat;
+	z-index: 1;
+	width: 100%;
+	height: 700px;
+	position: relative;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.siteHome-wrapper .hero:after{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	background: rgba(2,15,23,.55);
+	width: 100%;
+	height: auto;
+	z-index: -1;
+}
+.siteHome-wrapper .hero .message{
+	width: 80%;
+	margin: 0 auto;
+}
+.siteHome-wrapper .hero .message h1{
+	color: #fff;
+	font-size: 3.2rem;
+	text-transform: uppercase;
+}
+.siteHome-wrapper .hero .message .flipup{
+	border-bottom: 1px dotted #fff;
+}
+.siteHome-wrapper .hero .message p{
+	color: #fff;
+}
+.hero .message .btn{
+	margin-top: 0.6rem;
+}
+/**====projects====**/
+.siteHome-wrapper .projects{
+	position: relative;
+	border: 1px solid red;
+}
+.siteHome-wrapper .projects h2.ribbon{
+	margin-top: -5em;
+}
+.siteHome-wrapper  .projects article{
+	float: left;
+	width: 31.25%;
+	padding: 30px 0;
+	margin: 0 1.04167%;
+	text-align: center;
+	transition: all .3s ease-in-out;
+}
+.siteHome-wrapper .projects article img{
+	max-width: 403px;
+	width: 90%;
+	height: auto;
+}
+.siteHome-wrapper .projects article h3{
+	margin-top: 20px;
+	color: #3195C2;
+	font-weight: 300;
+	transition: all .3s ease-in-out;
+}
+.siteHome-wrapper .projects article p{
+	font-style: italic;
+	margin: 0;
+}
+.siteHome-wrapper .projects article a{
+	color: #8492a4;
+}
+.siteHome-wrapper .projects article a:hover{
+	color: #E0CB77;
+}
+/**====bio====**/
+.siteHome-wrapper .bio{
+	width: 100%;
+	background: url(../images/banner-working.jpg)  center right/cover no-repeat #272d35;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+}
+.siteHome-wrapper .bio:after{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	content: '';
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(2,15,23,.55);
+	z-index: -1;
+}
+.siteHome-wrapper .bio article{
+	width: 55%;
+	max-width: 600px;
+	padding: 40px 0;
+}
+.siteHome-wrapper article .bio-content h2{
+	color: #d0cb77;
+	line-height: 2em;
+}
+.siteHome-wrapper article .bio-content p{
+	line-height: 2.4rem;
+}
+.siteHome-wrapper article .bio-content p a{
+	color: #3195C2;
+}
+.siteHome-wrapper article .bio-content p a:hover{
+	background: #e9dba1;
+	color: #71601a;
+}
+/**====skillSet====**/
+.siteHome-wrapper .skillSet{
+	background: url(../images/pattern.jpg) #F6F6F6;
+	padding-top: 30px;
+}
+.siteHome-wrapper .skillSet-inner{
+	padding: 40px;
+	background: #fff;
+	position: relative;
+}
+.siteHome-wrapper .skillSet-inner:before{
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	background: url(../images/curl.png) no-repeat;
+	width: 69px;
+	height: 63px;
+	z-index: 1;
+}
+.skillSet article.skill:nth-child(2){
+	background: url(../images/skills/icon-web.svg);
+}
+.skillSet article.skill:nth-child(3){
+	background: url(../images/skills/icon-ux.svg);
+}
+.skillSet article.skill:nth-child(4){
+	background: url(../images/skills/icon-dev.svg);
+}
+.skillSet article.skill:nth-child(5){
+	background: url(../images/skills/icon-ui.svg);
+}
+.skillSet article.skill{
+    display: inline;
+    float: left;
+    width: 22.91667%;
+    margin: 30px 1.04167%;
+    text-align: center;
+    padding-top: 160px;
+    overflow: hidden;
+    background-repeat: no-repeat!important;
+    background-size: auto 130px!important;
+    background-position: center top!important;
+}
+.skillSet article p{
+	margin: 0;
+}
+/**====latest====**/
+.siteHome-wrapper .latest article{
+	width: 49%;
+	margin: 0 1%;
+	position: relative;
+	z-index: 1;
+	height: 400px;
+	text-align: center;
+	padding: 40px;
+}
+.siteHome-wrapper .latest .blo{
+	background: url(../images/hawaiifirstBanner.jpg) center/cover no-repeat;
+	float: left;
+	margin-left: 0; 
+}
+.siteHome-wrapper .latest .foundry{
+	background: url(../images/cssoverlay.jpg) center/cover no-repeat;
+	float: right;
+	margin-right: 0;
+}
+.siteHome-wrapper .latest .blo,
+.siteHome-wrapper .latest .foundry{
+	position: relative;
+	display: flex!important;
+	justify-content: center!important;
+	align-items: center!important;
+	z-index: 1;
+}
+.siteHome-wrapper .latest .blo:after,
+.siteHome-wrapper .latest .foundry:after{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	content: '';
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(2,15,23,.55);
+	z-index: -1;
+}
+.siteHome-wrapper article .latest-content h2{
+	color: #fff;
+	line-height: 1.4em;
+	margin-bottom: 20px;
+
+}
+/**====footer====**/
+.siteHome-wrapper footer{
+	background: #272D35;
+	min-height: 280px;
+	padding: 20px 0;
+	color: #fff;
+	text-align: center;
+}
+.siteHome-wrapper footer .soc {
+	margin-top: 10px;
+	font-size: 0;
+}
+.siteHome-wrapper footer .soc a{
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	border-radius: 50%;
+	margin-right: 15px;
+	text-align: center;
+	background: red;
+}
+.siteHome-wrapper footer .soc span{
+	font-size: 33px;
+	color: #fff;
+}
+.siteHome-wrapper footer .soc .github{
+	background: #4da7de;
+}
+.siteHome-wrapper footer .soc .sina{
+	background: #e02a20;
+}
+.siteHome-wrapper footer .soc .email{
+	background: #9c7c6e;
+}
+.siteHome-wrapper footer .soc a:hover{
+	z-index: 2;
+	opacity: 0.8;
+	background: #e9dba1;
+}
+.siteHome-wrapper footer small{
+	display: block;
+	margin-top: 50px;
+	color: #758599;
+	font-size: 0.85rem;
+	line-height: 1.8rem;
+}
+.siteHome-wrapper footer small a{
+	color: #3195C2;
+}
+.siteHome-wrapper footer small a:hover{
+	background: #e9dba1;
+	color: #E0CB77;
+}
+/**====sub-footer====**/
+.siteHome-wrapper .sub-footer{
+	height: 130px;
+	background-image: -webkit-linear-gradient(top,#2b323b 0,#2b323b 45%,
+		             #343c47 45%,#343c47 78%,#3d4652 78%,#3d4652 100%);
+}
+.siteHome-wrapper .sub-footer .back-to-top{
+	display: block;
+	width: 44px;
+	height: 80px;
+	background: #e0cb77;
+	position: relative;
+	margin: 0 auto;
+	text-indent: -9999px;
+}
+.siteHome-wrapper .sub-footer .back-to-top:before{
+	position: absolute;
+	content: '';
+	width: 30px;
+	height: 30px;
+	display: table;
+	left: 9px;
+	top: 15px;
+	background: url(../images/logo-jesseshowalter-inverse.svg) 0px 0px / contain no-repeat;
+}
+.siteHome-wrapper .sub-footer .back-to-top:after{
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 0;
+	border-width: 0 22px 14px;
+	border-style: solid;
+	border-color: transparent transparent #343c47; 
+	display: table;
+	bottom: 0;
+	
+}
+[data-tooltip]{
+	position: relative;
+	cursor: pointer;
+}
+.tooltip-top:before,
+[data-tooltip]:before{
+	margin-left: -6px;
+	margin-bottom: -12px;
+	border-top-color: #3d4652;
+}
+.tooltip-top:after,
+[data-tooltip]:after{
+	margin-left: -80px;
+	bottom: 100%;
+	left: 50%;
+}
+[data-tooltip]:after{
+    /*z-index: 1000;*/
+    padding: 8px;
+    width: 160px;
+    background-color: #3d4652;
+    color: #fff;
+    content: attr(data-tooltip);
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+}

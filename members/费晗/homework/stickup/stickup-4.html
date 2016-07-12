@@ -86,7 +86,7 @@
     var $currentNav = $(this)
     var offsetTop = $currentNav.offset().top
 
-    //把目标元素克隆一个用于占位，否则目标元素 Position 变为 fix后脱离文档流，导致页面跳动 
+    /* 把目标元素克隆一个用于占位，否则目标元素 Position 变为 fix后脱离文档流，导致页面跳动 */
     var $navClone = $currentNav.clone().css({'visibility': 'hidden','display': 'none'}).insertBefore($currentNav)
 
     $(window).on('scroll',function(){     
