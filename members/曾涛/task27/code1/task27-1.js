@@ -14,7 +14,7 @@ function Slider(node, options) {
 
     // 将需要使用的参数提前获取出来   
     this.container = this.config.container;
-    this.currentIndex = this.config.index;
+    this.currentIndex = this.config.index > 5 ? 0 : this.config.index;
     this.timer = null;
 
     // 调用方法
@@ -62,6 +62,13 @@ Slider.prototype.init = function () {
     $imgItem.each(function (index, elem) {
         _self.$sliderNav.append($('<li class="slider-item">' + (index + 1) + '</li>'));
     });
+
+    // 显示索引为index的图片和指示器
+    $li.eq(this.currentIndex).css('opacity', 1);
+
+    this.$sliderNav.children().eq(this.currentIndex)
+                   .addClass('slider-selected')
+                   .css('opacity', 1);
 
     // 创建左箭头和右箭头
     var $prev = $('<a class="slider-prev arrow">' + '<' + '</a>'),
