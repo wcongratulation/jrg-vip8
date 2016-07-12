@@ -8,12 +8,13 @@
 body{ background: url(../images/bg.jpg) #041428;}  
 @font-face {
   font-family: 'iconfont';
-  src: url('https://at.alicdn.com/t/font_1468220279_63835.eot'); /* IE9*/
-  src: url('https://at.alicdn.com/t/font_1468220279_63835.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('https://at.alicdn.com/t/font_1468220279_63835.woff') format('woff'), /* chrome、firefox */
-  url('https://at.alicdn.com/t/font_1468220279_63835.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('https://at.alicdn.com/t/font_1468220279_63835.svg#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('https://at.alicdn.com/t/font_1468285877_5633333.eot'); /* IE9*/
+  src: url('https://at.alicdn.com/t/font_1468285877_5633333.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('https://at.alicdn.com/t/font_1468285877_5633333.woff') format('woff'), /* chrome、firefox */
+  url('https://at.alicdn.com/t/font_1468285877_5633333.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('https://at.alicdn.com/t/font_1468285877_5633333.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
+
 
 .iconfont{font-family:'iconfont', 微软雅黑, 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Hiragino Sans GB W3', 'WenQuanYi Micro Hei', sans-serif;; font-style: normal; display: inline-block; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
 
@@ -129,8 +130,8 @@ h4{ color: #00c3fc; font-size: 16px; text-align: center; }
 
 .aside-to-top {
 	position: fixed;
-	bottom: 1em;
-	right: 1em;
+	bottom: 2.5em;
+	right: 2em;
 	z-index: 999
 }
 .aside-to-top li {
@@ -161,18 +162,18 @@ h4{ color: #00c3fc; font-size: 16px; text-align: center; }
 	border-bottom: none;
 }
 
-.aside-to-top i{font-family: 'iconfont'; font-style: normal; font-size: 24px; color: #E84E41;}
-.fa-comment:before{ content: "\e609";}
-.fa-qq:before{ content: "\e608";}
+.aside-to-top i{font-family: 'iconfont'; font-style: normal; color: #E84E41;}
+.fa-comment:before{ content: "\e60a"; font-size: 28px;}
+.fa-qq:before{ content: "\e608"; font-size: 24px;}
 
-.tel-box{ position: absolute; right: 55px;bottom: 34px;border: 1px solid #b1b1b1; display: none;}
-.tel-box .tel{background: #fff;color: #222222;font-size: 14px; width: 140px;line-height: 22px;padding: 8px 16px;}
+.tel-box{position: absolute;right: 60px;bottom: 51px;border: 1px solid #b1b1b1;display: none;}
+.tel-box .tel{background: #fff;color: #222222;font-size: 14px;width: 161px;line-height: 22px;padding: 8px 15px;}
 .tel-box .triangle{
     border-style: solid;
     border-color: transparent transparent transparent #b1b1b1;
     border-width: 8px 22px 8px 8px;
     right: -30px;
-    bottom: 21px;
+    bottom: 11px;
     position: absolute;
 }
 .tel-box .triangle2{
@@ -180,6 +181,6 @@ h4{ color: #00c3fc; font-size: 16px; text-align: center; }
     border-color: transparent transparent transparent white;
     border-width: 8px 22px 8px 8px;
     right: -29px;
-    bottom: 21px;
+    bottom: 11px;
     position: absolute;
 }
