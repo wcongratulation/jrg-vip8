@@ -11,7 +11,7 @@ header.siteTop-wrapper{
 	z-index: 1000;
 }
 .visible{
-	background: rgba(0,0,0,.6);
+	background: rgba(0,0,0,.6) !important;
 	transition: all .3s ease-in-out;
 }
 nav{
@@ -21,7 +21,8 @@ nav{
 	padding: 0 40px;
 	transition: all .3s ease-in-out;
 }
-nav .logo{
+
+nav .control{
 	float: left;
 }
 nav ul>li{
@@ -46,7 +47,78 @@ header nav h1{
 	float: left;
 	text-indent: -9999px;
 	background: url(../images/logo-jesseshowalter-white.svg) 0 0/contain no-repeat;
-	transition: all .3s ease-in-out;
+	/* transition: all .3s ease-in-out; */
+}
+@media (max-width: 867px){
+	nav{
+	    line-height: 1rem;
+	    height: auto;
+	    border-bottom: 0;
+	    padding: 0;
+	}
+	nav ul{
+	    width: 100%;
+	    display: none;
+	    height: auto;
+	}
+	nav ul>li a{
+	    display: block;
+	    position: relative;
+	    width: 100%;
+	    padding: 20px 0;
+	    text-align: left;
+	    text-indent: 25px;
+	    background: #1c2126;
+	    border-bottom: 1px solid #272d35;
+	    /* transition: all .1s ease-in-out; */
+	}
+	.control{
+	  padding: 1px 7px;
+	  position: relative;
+	  overflow: hidden;
+	}
+	.control .nav-toggle{
+	   position: relative;
+	   float: right;
+	}
+	#nav-toggle span{
+	  right: 10px;
+	  top: 18px;
+	} 
+	#nav-toggle span:before,
+	#nav-toggle span:after,
+	#nav-toggle span{
+	  position: absolute;
+	  width: 25px;
+	  height: 4px;
+	  background: #fff;
+	  border-radius: 1px;
+	  cursor: pointer;
+	  transition: all 500ms ease-in-out;
+	}
+	#nav-toggle span:before,
+	#nav-toggle span:after{
+	  content: '';
+	}
+	#nav-toggle span:before{
+	  top: -8px;
+	}
+	#nav-toggle span:after{
+	  bottom: -8px;
+	}
+	#nav-toggle.active span{
+	  background: transparent;
+	}
+	#nav-toggle.active span:before{
+	  transform: rotate(45deg)
+	}
+	#nav-toggle.active span:after{
+	  transform: rotate(-45deg);
+	}
+	#nav-toggle.active span:before,
+	#nav-toggle.active span:after{
+	  top: 0;
+	}
 }
 @keyframes buzz-out{
 	10%{
@@ -97,7 +169,10 @@ header nav h1{
 	float: left;
 }
 .buzz-out:hover{
-	animation: buzz-out 075s linear 1;
+    animation-name: buzz-out;
+    animation-duration: .75s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
 }
 /**====hero====**/
 .siteHome-wrapper .hero{
@@ -127,6 +202,11 @@ header nav h1{
 	width: 80%;
 	margin: 0 auto;
 }
+@media handheld, only screen and (max-width: 867px){
+    .siteHome-wrapper .hero .message{
+		width: 95%;
+	}
+}
 .siteHome-wrapper .hero .message h1{
 	color: #fff;
 	font-size: 3.2rem;
@@ -144,7 +224,6 @@ header nav h1{
 /**====projects====**/
 .siteHome-wrapper .projects{
 	position: relative;
-	border: 1px solid red;
 }
 .siteHome-wrapper .projects h2.ribbon{
 	margin-top: -5em;

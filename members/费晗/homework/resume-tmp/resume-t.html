@@ -9,23 +9,21 @@
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<link rel="stylesheet" type="text/css" href="css/media.css">
 <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_1468241895_9049811.css">
 </head>
 <body>
 <header class="siteTop-wrapper">
 	<nav class="clearfix">
-		<div class="logo buzz-out">
-			<a href="#">
-				<h1>beyond</h1>
-			</a>
-		</div>
 		<ul>
 			<li><a href="#">Work</a></li>
 			<li><a href="#">Articles</a></li>
 			<li><a href="#">Bio</a></li>
 			<li><a href="#">Contact</a></li>
 		</ul>
+		<div class="control">
+			<a href="#" class="logo buzz-out"><h1>beyond</h1></a>
+			<a id="nav-toggle" href="#"><span></span></a>
+		</div>
 	</nav>
 </header>
 <div class="siteHome-wrapper">
@@ -179,10 +177,19 @@
 		</div>
 	</footer>
 	<div class="sub-footer tooltip-top" data-tooltip="Back to the Top">
-		<a href="#" class="back-to-top">Back to top</a>
+		<a href="#" class="back-to-top gotop-js">Back to top</a>
 	</div>
 </div>
 <script src="js/scripts/jquery-1.11.2.js"></script>
 <script src="js/animationHeader.js"></script>
+<script>
+	var $navToggle = $('#nav-toggle')
+	var $menu = $('nav ul')
+	$navToggle.on('click',function(e){
+	  e.preventDefault();
+	  $menu.slideToggle('slow')
+	  this.classList.toggle('active')
+	})
+</script>
 </body>
 </html>
