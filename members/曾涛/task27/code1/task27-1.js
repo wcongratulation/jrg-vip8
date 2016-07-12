@@ -79,8 +79,6 @@ Slider.prototype.init = function () {
     $sliderExtra.append(this.$sliderNav).append($arrowWrapper);
     $container.append($sliderExtra);
 
-    $('.slider-item:first').addClass('slider-selected');
-
     // 自动播放
     if (this.config.autoPlay) {
         this.autoPlay();
