@@ -153,5 +153,5 @@ Slider.prototype.bindEvent = function () {
 };
 
 var test = new Slider($('.slider'));
-var test1 = new Slider($('.slider1'));
-var test2 = new Slider($('.slider2'));
+var test1 = new Slider($('.slider1'), { index: 3 });
+var test2 = new Slider($('.slider2'), { index: 5 });
